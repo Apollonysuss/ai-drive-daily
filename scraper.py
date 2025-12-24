@@ -4,38 +4,31 @@ import xml.etree.ElementTree as ET
 import datetime
 import os
 import time
+import arxiv # 需要在 workflow 里 pip install arxiv
 
 API_KEY = os.environ.get("DEEPSEEK_API_KEY")
 
-# --- 升级版数据源配置：广撒网 ---
+# --- 1. Google News 泛搜索源 ---
 RSS_SOURCES = [
-    # 1. 国内产业/资本 (覆盖 36氪, 虎嗅, 钛媒体, 机器之心等)
     {
-        "tag": "CN·行业",
-        "url": "https://news.google.com/rss/search?q=具身智能+OR+人形机器人+OR+端到端自动驾驶+OR+Robotaxi+OR+世界模型+when:1d&hl=zh-CN&gl=CN&ceid=CN:zh-CN"
+        "tag": "CN·行业动态",
+        "url": "https://news.google.com/rss/search?q=具身智能+OR+人形机器人+OR+端到端自动驾驶+OR+世界模型+when:1d&hl=zh-CN&gl=CN&ceid=CN:zh-CN"
     },
     {
-        "tag": "CN·公司",
-        "url": "https://news.google.com/rss/search?q=宇树科技+OR+智元机器人+OR+华为ADS+OR+小鹏NGP+OR+特斯拉FSD+OR+FigureAI+when:1d&hl=zh-CN&gl=CN&ceid=CN:zh-CN"
-    },
-    # 2. 国际前沿 (覆盖 TechCrunch, TheVerge, Medium 等)
-    {
-        "tag": "EN·Tech",
-        "url": "https://news.google.com/rss/search?q=\"Embodied+AI\"+OR+\"Humanoid+Robot\"+OR+\"Foundation+Model+for+Robotics\"+OR+\"Sim-to-Real\"+when:1d&hl=en-US&gl=US&ceid=US:en"
-    },
-    {
-        "tag": "EN·Auto",
-        "url": "https://news.google.com/rss/search?q=\"End-to-end+Autonomous+Driving\"+OR+\"Waymo\"+OR+\"Tesla+Optimus\"+OR+\"NVIDIA+Isaac\"+when:1d&hl=en-US&gl=US&ceid=US:en"
-    },
-    # 3. 学术论文 (覆盖 Arxiv, CVPR, ICLR 等会议相关报道)
-    {
-        "tag": "Paper·论文",
-        "url": "https://news.google.com/rss/search?q=site:arxiv.org+(\"Embodied+AI\"+OR+\"Autonomous+Driving\"+OR+\"World+Model\"+OR+\"Imitation+Learning\")+when:1d&hl=en-US&gl=US&ceid=US:en"
+        "tag": "EN·Global Tech",
+        "url": "https://news.google.com/rss/search?q=\"Embodied+AI\"+OR+\"Humanoid+Robot\"+OR+\"Tesla+Optimus\"+OR+\"NVIDIA+Gr00t\"+when:1d&hl=en-US&gl=US&ceid=US:en"
     }
 ]
 
+# --- 2. ArXiv 论文精准源关键词 ---
+ARXIV_QUERIES = [
+    "abs:\"Embodied AI\"", 
+    "abs:\"Autonomous Driving\" AND abs:\"End-to-end\"",
+    "abs:\"Humanoid Robot\""
+]
+
 def fetch_rss(source_config):
-    print(f"📡 抓取源: {source_config['tag']} ...")
+    print(f"📡 正在扫描新闻源: {source_config['tag']} ...")
     try:
         resp = requests.get(source_config['url'], timeout=15)
         root = ET.fromstring(resp.content)
@@ -49,35 +42,58 @@ def fetch_rss(source_config):
             except:
                 date_str = datetime.date.today().strftime('%Y-%m-%d')
             
-            source_name = source_config['tag']
-            if "arxiv" in title.lower() or "arxiv" in link.lower():
-                source_name = "Paper·论文"
-
+            # 来源标签清洗
+            source = source_config['tag']
+            if "arxiv" in title.lower(): source = "Paper·论文"
+            
             items.append({
-                "title": title,
-                "link": link,
-                "date": date_str,
-                "source": source_name,
-                "lang": "CN" if "CN" in source_config['tag'] else "EN"
+                "title": title, "link": link, "date": date_str, 
+                "source": source, "lang": "CN" if "CN" in source else "EN"
             })
         return items
     except Exception as e:
-        print(f"❌ 失败: {e}")
+        print(f"❌ RSS抓取错误: {e}")
+        return []
+
+def fetch_arxiv_papers():
+    print("🎓 正在连接 ArXiv 学术数据库...")
+    items = []
+    try:
+        # 搜索最近提交的论文
+        for query in ARXIV_QUERIES:
+            search = arxiv.Search(
+                query = query,
+                max_results = 5, # 每个词抓5篇，保证全
+                sort_by = arxiv.SortCriterion.SubmittedDate
+            )
+            for result in search.results():
+                # 只保留最近2天的，保证新鲜
+                published_date = result.published.date()
+                if (datetime.date.today() - published_date).days > 2:
+                    continue
+                    
+                items.append({
+                    "title": result.title,
+                    "link": result.entry_id,
+                    "date": str(published_date),
+                    "source": "Paper·论文",
+                    "lang": "EN"
+                })
+        print(f"   -> 抓取到 {len(items)} 篇新论文")
+        return items
+    except Exception as e:
+        print(f"❌ ArXiv 接口报错: {e}")
         return []
 
 def call_ai_summary(text, lang):
     if not API_KEY: return "未配置 API Key"
     
     prompt = """
-    你是一名科技情报分析师。请阅读新闻标题，用中文生成一段约 80-100 字的深度解读。
-    格式要求：
-    1. 【核心内容】：简述发生了什么。
-    2. 【关键意义】：对行业意味着什么。
-    不要使用Markdown格式。
+    你是一名科技情报分析师。请判断以下标题是否与“具身智能”或“自动驾驶”高度相关。
+    如果【无关】（如广告、股市、无关社会新闻），请只回复“SKIP”。
+    如果【相关】，请用中文生成80字左右的深度解读（包含核心内容+行业意义）。
     """
-    if "arxiv" in text.lower():
-        prompt = "你是一名学术助手。请阅读论文标题，用中文简述其研究方向和核心创新点（80字左右）。"
-
+    
     url = "https://api.deepseek.com/chat/completions"
     payload = {
         "model": "deepseek-chat",
@@ -88,18 +104,59 @@ def call_ai_summary(text, lang):
 
     try:
         res = requests.post(url, headers=headers, json=payload, timeout=20)
-        return res.json()['choices'][0]['message']['content']
+        content = res.json()['choices'][0]['message']['content']
+        if "SKIP" in content: return None # AI 认为无关，过滤掉
+        return content
     except:
-        return "AI 分析超时"
+        return None
 
 def job():
-    all_new_items = []
+    all_items = []
+    
+    # 1. 抓 RSS 新闻
     for source in RSS_SOURCES:
-        items = fetch_rss(source)
-        all_new_items.extend(items[:3])
+        all_items.extend(fetch_rss(source))
         time.sleep(1)
+        
+    # 2. 抓 ArXiv 论文
+    all_items.extend(fetch_arxiv_papers())
 
+    # 3. 读取旧数据
     if os.path.exists('data.json'):
-        with open('data.json', 'r', encoding='utf-8') as f:
-            try: old_data = json.load(f)
-            except: old_data = []
+        try:
+            with open('data.json', 'r', encoding='utf-8') as f:
+                old_data = json.load(f)
+        except: old_data = []
+    else:
+        old_data = []
+
+    seen = set(i['title'] for i in old_data)
+    final_data = old_data
+    
+    # 4. AI 过滤与总结
+    print(f"🔍 原始抓取 {len(all_items)} 条，开始 AI 智能清洗...")
+    new_count = 0
+    
+    for item in all_items:
+        if item['title'] in seen: continue
+        
+        # 让 AI 决定留不留
+        summary = call_ai_summary(item['title'], item['lang'])
+        if summary: 
+            item['summary'] = summary
+            final_data.insert(0, item)
+            seen.add(item['title'])
+            new_count += 1
+            print(f"✅ 收录: {item['title'][:15]}...")
+        else:
+            print(f"🗑️ 剔除无关: {item['title'][:15]}...")
+        
+        time.sleep(0.5) # 防止 API 超限
+
+    # 保留 500 条
+    with open('data.json', 'w', encoding='utf-8') as f:
+        json.dump(final_data[:500], f, ensure_ascii=False, indent=2)
+    print(f"🎉 更新完成，经 AI 筛选后新入库 {new_count} 条。")
+
+if __name__ == "__main__":
+    job()
