@@ -6,97 +6,178 @@
     <title>具身智能 & 自动驾驶内参</title>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
-        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f0f2f5; color: #333; margin: 0; padding: 0; }
+        /* --- 全局设置：更现代的字体和背景 --- */
+        :root {
+            --primary-color: #3498db; /* 主色调：科技蓝 */
+            --secondary-color: #2c3e50; /* 深色文字 */
+            --bg-light: #f8f9fa; /* 浅色背景 */
+            --sidebar-bg: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); /* 侧边栏渐变背景 */
+        }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
+            background: var(--bg-light); color: #333; margin: 0; padding: 0; line-height: 1.6;
+        }
         
-        /* --- 核心布局：Grid 双栏 --- */
+        /* --- 核心布局：Grid 双栏 (增加整体内边距) --- */
         .container {
-            max-width: 1200px; margin: 0 auto; padding: 20px;
+            max-width: 1200px; margin: 0 auto; padding: 30px 20px;
             display: grid; 
-            grid-template-columns: 320px 1fr; /* 左侧320px固定，右侧自适应 */
-            gap: 25px; align-items: start;
+            grid-template-columns: 340px 1fr; /* 左侧稍宽一点 */
+            gap: 35px; align-items: start;
         }
 
-        /* --- 左侧日报栏 --- */
+        /* --- 左侧日报栏 (美化重点) --- */
         .sidebar {
-            background: #2c3e50; color: #ecf0f1; border-radius: 12px; padding: 25px;
-            position: sticky; top: 20px; /* 滚动吸附 */
-            max-height: 90vh; overflow-y: auto;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            background: var(--sidebar-bg); color: rgba(255,255,255,0.9); 
+            border-radius: 16px; padding: 30px;
+            position: sticky; top: 30px;
+            max-height: calc(100vh - 60px); overflow-y: auto;
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* 更强的立体感 */
         }
-        .brief-content { line-height: 1.6; font-size: 0.95em; }
-        .brief-content h3 { color: #3498db; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 20px; }
-        .brief-content strong { color: #f1c40f; }
-        .sidebar-loading { text-align: center; color: #bdc3c7; padding: 20px; }
+        .sidebar-header { border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 15px; margin-bottom: 20px; }
+        .sidebar h2 { margin: 0; font-size: 1.5em; color: white; display: flex; align-items: center; gap: 10px; }
+        .sidebar-date { font-size: 0.85em; color: rgba(255,255,255,0.6); margin-top: 5px; display: block; }
+        
+        /* Markdown 内容美化 */
+        .brief-content { font-size: 0.95em; }
+        .brief-content h3 { color: #5dade2; margin-top: 25px; font-size: 1.15em; display: flex; align-items: center; }
+        .brief-content h3::before { content: '🔹'; font-size: 0.8em; margin-right: 8px; } /* 给小标题加装饰 */
+        .brief-content strong { color: #f4d03f; font-weight: 600; } /* 强调文字标黄 */
+        .brief-content ul { padding-left: 20px; }
+        .brief-content li { margin-bottom: 10px; }
+        .sidebar-loading { text-align: center; color: rgba(255,255,255,0.5); padding: 40px 20px; background: rgba(0,0,0,0.1); border-radius: 12px; }
 
         /* --- 右侧新闻流 --- */
         .main-content { min-width: 0; }
         
-        .header { background: white; padding: 20px; border-radius: 12px; margin-bottom: 20px; text-align: center; }
-        .header h1 { margin: 0; color: #2c3e50; font-size: 1.8em; }
+        .header { margin-bottom: 30px; text-align: center; }
+        .header h1 { margin: 0; color: var(--secondary-color); font-size: 2em; font-weight: 800; letter-spacing: -1px; }
+        .header p { color: #666; margin-top: 5px; }
 
-        .filters { display: flex; gap: 8px; justify-content: center; margin-bottom: 20px; flex-wrap: wrap; }
-        .filter-btn { background: white; border: 1px solid #ddd; padding: 6px 14px; border-radius: 20px; cursor: pointer; color: #666; transition: 0.2s; }
-        .filter-btn.active { background: #3498db; color: white; border-color: #3498db; }
+        /* 筛选按钮 (胶囊样式) */
+        .filters { display: flex; gap: 12px; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; }
+        .filter-btn { 
+            background: white; border: none; padding: 8px 18px; border-radius: 30px; 
+            cursor: pointer; color: #555; font-weight: 600; font-size: 0.9em;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.05); transition: all 0.2s;
+        }
+        .filter-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+        .filter-btn.active { background: var(--primary-color); color: white; box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3); }
 
-        .card { background: white; border-radius: 10px; padding: 20px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.03); border: 1px solid #eef; cursor: pointer; transition: 0.2s; }
-        .card:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); border-color: #3498db; }
+        /* --- 新闻卡片 (更干净、悬浮感) --- */
+        .card { 
+            background: white; border-radius: 16px; padding: 25px; margin-bottom: 20px; 
+            /* 去掉边框，改用柔和的阴影 */
+            border: none;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03); 
+            cursor: pointer; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            position: relative; overflow: hidden;
+        }
+        .card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); }
+        /* 给卡片加一个微妙的顶部彩色条装饰 */
+        .card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--primary-color), #a1c4fd); opacity: 0; transition: opacity 0.3s; }
+        .card:hover::before { opacity: 1; }
+
+        .meta { display: flex; justify-content: space-between; align-items: center; font-size: 0.85em; color: #aaa; margin-bottom: 15px; }
+        .tag { padding: 4px 10px; border-radius: 6px; font-weight: 600; font-size: 0.85em; letter-spacing: 0.5px; }
+        .tag-cn { background: #ebf5fb; color: #2980b9; }
+        .tag-en { background: #f4ecf7; color: #8e44ad; }
+        .tag-paper { background: #fef5e7; color: #d35400; }
+
+        .title { font-size: 1.3em; font-weight: 700; color: #2c3e50; margin-bottom: 15px; line-height: 1.4; }
         
-        .meta { display: flex; justify-content: space-between; font-size: 0.85em; color: #999; margin-bottom: 10px; }
-        .tag { padding: 3px 8px; border-radius: 4px; font-weight: 500; }
-        .tag-cn { background: #ecf5ff; color: #409eff; }
-        .tag-en { background: #f3e5f5; color: #7b1fa2; }
-        .tag-paper { background: #fdf6ec; color: #e6a23c; }
-
-        .title { font-size: 1.15em; font-weight: 700; color: #333; margin-bottom: 10px; }
-        .summary-box { background: #f8f9fa; padding: 10px 15px; border-radius: 6px; font-size: 0.95em; color: #555; border-left: 3px solid #3498db; }
+        /* AI 摘要框 (重新设计成对话气泡风格) */
+        .summary-box { 
+            background: #f1f9ff; /* 极淡的蓝色背景 */
+            padding: 15px 20px; border-radius: 12px; 
+            font-size: 0.95em; color: #445566; line-height: 1.6;
+            position: relative;
+            display: flex; gap: 12px; align-items: flex-start;
+        }
+        /* 加一个机器人图标 */
+        .summary-box::before { content: '🤖'; font-size: 1.4em; }
 
         /* --- 翻页 & 跳转 --- */
-        .pagination { display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 30px; background: white; padding: 15px; border-radius: 12px; }
-        .page-btn { background: #f4f4f5; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; }
-        .page-btn:hover:not(:disabled) { background: #3498db; color: white; }
+        .pagination { 
+            display: flex; justify-content: center; align-items: center; gap: 15px; 
+            margin-top: 40px; background: white; padding: 20px; border-radius: 16px; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+        }
+        .page-btn { background: var(--bg-light); border: none; padding: 10px 20px; border-radius: 8px; cursor: pointer; font-weight: 600; color: #555; transition: 0.2s; }
+        .page-btn:hover:not(:disabled) { background: var(--primary-color); color: white; }
         .page-btn:disabled { opacity: 0.5; cursor: not-allowed; }
         
-        .jump-box { display: flex; align-items: center; gap: 5px; margin-left: 10px; border-left: 1px solid #ddd; padding-left: 15px; }
-        .jump-input { width: 40px; padding: 6px; border: 1px solid #ddd; border-radius: 4px; text-align: center; }
-        .jump-btn { background: #2c3e50; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; }
+        .jump-box { display: flex; align-items: center; gap: 8px; margin-left: 15px; padding-left: 20px; border-left: 2px solid #eee; }
+        .jump-input { width: 50px; padding: 8px; border: 2px solid #eee; border-radius: 8px; text-align: center; font-weight: bold; color: #555; outline: none; transition: 0.2s; }
+        .jump-input:focus { border-color: var(--primary-color); }
+        .jump-btn { background: var(--secondary-color); color: white; border: none; padding: 10px 18px; border-radius: 8px; cursor: pointer; font-weight: 600; transition: 0.2s; }
+        .jump-btn:hover { background: black; }
 
-        /* 弹窗 */
-        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center; }
-        .modal-content { background: white; width: 90%; max-width: 600px; border-radius: 12px; padding: 25px; position: relative; }
-        .close-btn { position: absolute; top: 15px; right: 20px; font-size: 24px; cursor: pointer; color: #999; }
-        .read-btn { display: block; width: 100%; text-align: center; background: #2c3e50; color: white; padding: 12px; border-radius: 8px; text-decoration: none; margin-top: 20px; }
+        /* --- 弹窗美化 --- */
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(44, 62, 80, 0.7); /* 深色半透明背景 */ z-index: 1000; align-items: center; justify-content: center; backdrop-filter: blur(5px); /* 背景模糊 */ }
+        .modal-content { background: white; width: 90%; max-width: 650px; border-radius: 20px; padding: 35px; position: relative; box-shadow: 0 20px 40px rgba(0,0,0,0.2); animation: slideUp 0.3s ease; }
+        @keyframes slideUp { from {transform: translateY(20px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
+        .close-btn { position: absolute; top: 20px; right: 25px; font-size: 28px; cursor: pointer; color: #ccc; transition: 0.2s; }
+        .close-btn:hover { color: #333; transform: rotate(90deg); }
+        .modal-title { font-size: 1.5em; font-weight: 800; color: #2c3e50; margin-top: 10px; }
+        .modal-body { font-size: 1.05em; line-height: 1.8; color: #444; margin: 25px 0; background: var(--bg-light); padding: 20px; border-radius: 12px; }
+        .read-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; text-align: center; background: var(--primary-color); color: white; padding: 15px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 1.1em; transition: 0.2s; box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4); }
+        .read-btn:hover { background: #2980b9; transform: translateY(-2px); }
 
-        @media (max-width: 768px) { .container { grid-template-columns: 1fr; } .sidebar { position: static; max-height: none; } }
+        /* 移动端适配 */
+        @media (max-width: 900px) { 
+            .container { grid-template-columns: 1fr; gap: 30px; } 
+            .sidebar { position: static; max-height: 500px; } 
+            .header h1 { font-size: 1.5em; }
+            .pagination { flex-direction: column; gap: 20px; }
+            .jump-box { border-left: none; padding-left: 0; }
+        }
     </style>
 </head>
 <body>
 
 <div class="container">
     <aside class="sidebar">
+        <div class="sidebar-header">
+            <h2>📰 每日行业内参</h2>
+            <span class="sidebar-date" id="brief-date">加载中...</span>
+        </div>
         <div id="brief-container">
-            <div class="sidebar-loading">正在加载今日内参...<br>请确保已运行抓取脚本</div>
+            <div class="sidebar-loading">
+                <p style="font-size: 3em; margin-bottom: 10px;">📊</p>
+                正在分析今日数据，生成 AI 综述...<br>
+                <span style="font-size:0.8em; opacity:0.7;">(若长时间未显示，请检查 Actions 运行状态)</span>
+            </div>
         </div>
     </aside>
 
     <main class="main-content">
-        <div class="header"><h1>🤖 具身智能 & 自动驾驶情报</h1></div>
+        <div class="header">
+            <h1>🤖 具身智能 & 自动驾驶情报站</h1>
+            <p>全球前沿技术与产业动态追踪</p>
+        </div>
         
         <div class="filters">
-            <button class="filter-btn active" onclick="filter('all')">全部</button>
-            <button class="filter-btn" onclick="filter('Paper')">📄 论文</button>
+            <button class="filter-btn active" onclick="filter('all')">全部动态</button>
+            <button class="filter-btn" onclick="filter('Paper')">📄 学术论文</button>
             <button class="filter-btn" onclick="filter('具身智能')">🦾 具身智能</button>
             <button class="filter-btn" onclick="filter('自动驾驶')">🚗 自动驾驶</button>
         </div>
 
-        <div id="list">加载中...</div>
+        <div id="list" style="min-height: 300px;">
+            <div style="text-align:center; padding:60px; color:#aaa; font-size: 1.1em;">
+                🔄 正在连接数据库加载最新情报...
+            </div>
+        </div>
 
         <div class="pagination" id="pagination" style="display:none;">
-            <button class="page-btn" id="prev" onclick="changePage(-1)">上一页</button>
-            <span id="pageInfo">1 / 1</span>
-            <button class="page-btn" id="next" onclick="changePage(1)">下一页</button>
+            <button class="page-btn" id="prev" onclick="changePage(-1)">← 上一页</button>
+            <span id="pageInfo" style="font-weight:600; color:#555;">1 / 1</span>
+            <button class="page-btn" id="next" onclick="changePage(1)">下一页 →</button>
             
             <div class="jump-box">
-                <input type="number" id="jumpInput" class="jump-input" placeholder="#">
+                <span style="color:#999; font-size: 0.9em;">跳转至</span>
+                <input type="number" id="jumpInput" class="jump-input" min="1">
                 <button class="jump-btn" onclick="jumpToPage()">Go</button>
             </div>
         </div>
@@ -106,9 +187,12 @@
 <div class="modal-overlay" id="modal" onclick="document.getElementById('modal').style.display='none'">
     <div class="modal-content" onclick="event.stopPropagation()">
         <span class="close-btn" onclick="document.getElementById('modal').style.display='none'">&times;</span>
-        <h3 id="m-title" style="margin-top:0"></h3>
-        <div id="m-body" style="line-height:1.6; color:#444;"></div>
-        <a id="m-link" href="#" target="_blank" class="read-btn">阅读原文</a>
+        <span id="m-tag" class="tag" style="font-size: 0.8em;">TAG</span>
+        <h3 id="m-title" class="modal-title"></h3>
+        <div id="m-body" class="modal-body"></div>
+        <a id="m-link" href="#" target="_blank" class="read-btn">
+            阅读原文 / 查看详情 ↗
+        </a>
     </div>
 </div>
 
@@ -117,24 +201,25 @@
 
     // 1. 加载新闻
     fetch('data.json?t='+Date.now()).then(r=>r.json()).then(data => {
-        if(!data.length) { document.getElementById('list').innerHTML='暂无数据'; return; }
+        if(!data.length) { document.getElementById('list').innerHTML='<div style="text-align:center;padding:60px;color:#aaa;">📭 暂无数据，请等待 AI 抓取...</div>'; return; }
         data.sort((a,b) => new Date(b.date)-new Date(a.date));
         allData = data; filter('all');
         document.getElementById('pagination').style.display='flex';
     }).catch(e=>console.log(e));
 
-    // 2. 加载日报 (daily_brief.json)
+    // 2. 加载日报
     fetch('daily_brief.json?t='+Date.now())
         .then(r => r.ok ? r.json() : Promise.reject())
         .then(data => {
-            // 使用 marked 把 Markdown 渲染成 HTML
+            document.getElementById('brief-date').innerText = data.date;
+            // 使用 marked 渲染 Markdown
             const htmlContent = marked.parse(data.content);
             document.getElementById('brief-container').innerHTML = `
                 <div class="brief-content">${htmlContent}</div>
             `;
         })
         .catch(() => {
-            document.getElementById('brief-container').innerHTML = `<div class="sidebar-loading">今日综述尚未生成。<br>请去 Actions 运行一次 "每日抓取"。</div>`;
+            // 保持默认的加载中占位符即可，不需要额外操作
         });
 
     function filter(tag) {
@@ -147,16 +232,18 @@
     function render() {
         const list = document.getElementById('list'); list.innerHTML='';
         const pageData = filteredData.slice((curPage-1)*perPage, curPage*perPage);
-        if(!pageData.length) { list.innerHTML='<div style="text-align:center;padding:20px;color:#999">暂无内容</div>'; return;}
+        if(!pageData.length) { list.innerHTML='<div style="text-align:center;padding:60px;color:#aaa;">该分类下暂无内容</div>'; return;}
         
         pageData.forEach(item => {
             let tagType = item.lang==='EN'?'tag-en':(item.source.includes('Paper')?'tag-paper':'tag-cn');
             const d = document.createElement('div'); d.className='card';
-            d.onclick=()=>openModal(item);
+            d.onclick=()=>openModal(item, tagType); // 传 tagType 进去
             d.innerHTML = `
                 <div class="meta"><span class="tag ${tagType}">${item.source}</span><span>${item.date}</span></div>
                 <div class="title">${item.title}</div>
-                <div class="summary-box">AI 摘要：${item.summary||"生成中..."}</div>
+                <div class="summary-box">
+                    <div>${item.summary||"AI 正在全力生成解读中，请稍后..."}</div>
+                </div>
             `;
             list.appendChild(d);
         });
@@ -170,18 +257,27 @@
         document.getElementById('next').disabled = curPage===total||total===0;
     }
 
-    function changePage(d) { curPage+=d; render(); window.scrollTo(0,0); }
+    function changePage(d) { curPage+=d; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); } // 平滑滚动到顶部
     
     function jumpToPage() {
-        const p = parseInt(document.getElementById('jumpInput').value);
+        const input = document.getElementById('jumpInput');
+        const p = parseInt(input.value);
         const total = Math.ceil(filteredData.length/perPage);
-        if(p>=1 && p<=total) { curPage=p; render(); window.scrollTo(0,0); document.getElementById('jumpInput').value=''; }
-        else alert('页码无效');
+        if(p>=1 && p<=total) { curPage=p; render(); window.scrollTo({ top: 0, behavior: 'smooth' }); input.value=''; }
+        else alert('请输入有效的页码 (1-' + total + ')');
     }
 
-    function openModal(item) {
+    function openModal(item, tagType) {
+        // 设置标签样式
+        const tagEl = document.getElementById('m-tag');
+        tagEl.className = `tag ${tagType}`;
+        tagEl.innerText = item.source;
+
         document.getElementById('m-title').innerText=item.title;
-        document.getElementById('m-body').innerText=item.summary||"暂无";
+        // 如果摘要是默认的占位符，弹窗里给个更有好的提示
+        const bodyText = item.summary === "AI 正在全力生成解读中，请稍后..." ? "🤖 AI 尚未完成对该内容的深度分析，请稍后再试。" : (item.summary || "暂无解读");
+        document.getElementById('m-body').innerText = bodyText;
+
         document.getElementById('m-link').href=item.link;
         document.getElementById('modal').style.display='flex';
     }
