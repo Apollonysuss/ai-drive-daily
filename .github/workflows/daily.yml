@@ -21,6 +21,7 @@ jobs:
     # 👇 重点：这里加上了 arxiv
     - run: pip install requests arxiv
     
+    # 这一步其实可以保留，作为运行脚本前的同步
     - name: 拉取最新代码
       run: |
         git config --local user.email "action@github.com"
@@ -34,7 +35,20 @@ jobs:
     
     - name: 保存数据
       run: |
-        # 👇 重点：要把 data.json 和 daily_brief.json 都传上去
+        # 1. 再次配置用户信息（确保在当前步骤有效）
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        # 2. 添加所有 json 文件
         git add *.json
-        git commit -m "Daily update" || echo "无新数据"
+        
+        # 3. 提交。如果 "没有新数据" (exit 0)，则整个步骤结束，不执行后面的 push
+        git commit -m "Daily update" || exit 0
+        
+        # 👇👇👇 核心修复在这里 👇👇👇
+        # 4. 在推送前，强制拉取远程最新代码并变基（Rebase）
+        # 这能解决 "rejected ... fetch first" 的报错
+        git pull --rebase origin main
+        
+        # 5. 推送
         git push origin main
