@@ -4,23 +4,31 @@ import xml.etree.ElementTree as ET
 import datetime
 import os
 import time
-import arxiv # 需要在 workflow 里 pip install arxiv
+import arxiv # 必须在 daily.yml 里 pip install arxiv
 
 API_KEY = os.environ.get("DEEPSEEK_API_KEY")
 
-# --- 1. Google News 泛搜索源 ---
+# --- 1. 广撒网：Google News 源 ---
 RSS_SOURCES = [
     {
-        "tag": "CN·行业动态",
+        "tag": "CN·行业",
         "url": "https://news.google.com/rss/search?q=具身智能+OR+人形机器人+OR+端到端自动驾驶+OR+世界模型+when:1d&hl=zh-CN&gl=CN&ceid=CN:zh-CN"
     },
     {
-        "tag": "EN·Global Tech",
-        "url": "https://news.google.com/rss/search?q=\"Embodied+AI\"+OR+\"Humanoid+Robot\"+OR+\"Tesla+Optimus\"+OR+\"NVIDIA+Gr00t\"+when:1d&hl=en-US&gl=US&ceid=US:en"
+        "tag": "CN·企业",
+        "url": "https://news.google.com/rss/search?q=宇树科技+OR+智元机器人+OR+华为ADS+OR+特斯拉FSD+OR+Waymo+when:1d&hl=zh-CN&gl=CN&ceid=CN:zh-CN"
+    },
+    {
+        "tag": "EN·Tech",
+        "url": "https://news.google.com/rss/search?q=\"Embodied+AI\"+OR+\"Humanoid+Robot\"+OR+\"Tesla+Optimus\"+OR+\"NVIDIA+Isaac\"+when:1d&hl=en-US&gl=US&ceid=US:en"
+    },
+    {
+        "tag": "EN·Auto",
+        "url": "https://news.google.com/rss/search?q=\"End-to-end+Autonomous+Driving\"+OR+\"Robotaxi\"+OR+\"Waymo\"+when:1d&hl=en-US&gl=US&ceid=US:en"
     }
 ]
 
-# --- 2. ArXiv 论文精准源关键词 ---
+# --- 2. 精准打击：ArXiv 论文源 ---
 ARXIV_QUERIES = [
     "abs:\"Embodied AI\"", 
     "abs:\"Autonomous Driving\" AND abs:\"End-to-end\"",
@@ -28,7 +36,7 @@ ARXIV_QUERIES = [
 ]
 
 def fetch_rss(source_config):
-    print(f"📡 正在扫描新闻源: {source_config['tag']} ...")
+    print(f"📡 扫描 RSS: {source_config['tag']} ...")
     try:
         resp = requests.get(source_config['url'], timeout=15)
         root = ET.fromstring(resp.content)
@@ -42,58 +50,37 @@ def fetch_rss(source_config):
             except:
                 date_str = datetime.date.today().strftime('%Y-%m-%d')
             
-            # 来源标签清洗
             source = source_config['tag']
             if "arxiv" in title.lower(): source = "Paper·论文"
-            
-            items.append({
-                "title": title, "link": link, "date": date_str, 
-                "source": source, "lang": "CN" if "CN" in source else "EN"
-            })
+            items.append({"title": title, "link": link, "date": date_str, "source": source, "lang": "CN" if "CN" in source else "EN"})
         return items
-    except Exception as e:
-        print(f"❌ RSS抓取错误: {e}")
+    except:
         return []
 
 def fetch_arxiv_papers():
-    print("🎓 正在连接 ArXiv 学术数据库...")
+    print("🎓 连接 ArXiv 学术库...")
     items = []
     try:
-        # 搜索最近提交的论文
         for query in ARXIV_QUERIES:
-            search = arxiv.Search(
-                query = query,
-                max_results = 5, # 每个词抓5篇，保证全
-                sort_by = arxiv.SortCriterion.SubmittedDate
-            )
+            search = arxiv.Search(query=query, max_results=5, sort_by=arxiv.SortCriterion.SubmittedDate)
             for result in search.results():
-                # 只保留最近2天的，保证新鲜
-                published_date = result.published.date()
-                if (datetime.date.today() - published_date).days > 2:
-                    continue
-                    
+                pub_date = result.published.date()
+                if (datetime.date.today() - pub_date).days > 3: continue
                 items.append({
                     "title": result.title,
                     "link": result.entry_id,
-                    "date": str(published_date),
+                    "date": str(pub_date),
                     "source": "Paper·论文",
                     "lang": "EN"
                 })
-        print(f"   -> 抓取到 {len(items)} 篇新论文")
         return items
     except Exception as e:
-        print(f"❌ ArXiv 接口报错: {e}")
+        print(f"❌ ArXiv 错误: {e}")
         return []
 
 def call_ai_summary(text, lang):
     if not API_KEY: return "未配置 API Key"
-    
-    prompt = """
-    你是一名科技情报分析师。请判断以下标题是否与“具身智能”或“自动驾驶”高度相关。
-    如果【无关】（如广告、股市、无关社会新闻），请只回复“SKIP”。
-    如果【相关】，请用中文生成80字左右的深度解读（包含核心内容+行业意义）。
-    """
-    
+    prompt = "你是一名科技分析师。判断标题是否与具身智能/自动驾驶/机器人高度相关。无关回复SKIP。相关则用中文生成80字深度解读（核心+意义）。"
     url = "https://api.deepseek.com/chat/completions"
     payload = {
         "model": "deepseek-chat",
@@ -101,62 +88,99 @@ def call_ai_summary(text, lang):
         "stream": False
     }
     headers = {"Content-Type": "application/json", "Authorization": f"Bearer {API_KEY}"}
-
     try:
         res = requests.post(url, headers=headers, json=payload, timeout=20)
         content = res.json()['choices'][0]['message']['content']
-        if "SKIP" in content: return None # AI 认为无关，过滤掉
-        return content
+        return None if "SKIP" in content else content
     except:
         return None
 
+# --- 新增功能：生成左侧显示的“每日综述” ---
+def generate_daily_brief(today_items):
+    if not API_KEY or not today_items: return
+    
+    print("📝 正在生成【每日行业日报】...")
+    # 取前 20 条最重要的新闻标题
+    titles = [item['title'] for item in today_items[:20]]
+    titles_text = "\n".join(titles)
+    
+    prompt = """
+    你是一名顶级行业分析师。请根据今日抓取的新闻标题，写一篇【具身智能与自动驾驶日报】。
+    
+    【格式要求】：
+    1. 使用 Markdown 格式。
+    2. 第一行必须是：### 📅 行业趋势分析 (YYYY-MM-DD)
+    3. 内容包含三个板块：
+       - 🚀 **重点突发**：今日最重要的1-2件事。
+       - 💡 **技术风向**：有什么新技术或论文出现。
+       - 📊 **市场动态**：企业融资或合作动态。
+    4. 字数控制在 400 字以内，语言犀利，观点鲜明。
+    """
+    
+    url = "https://api.deepseek.com/chat/completions"
+    payload = {
+        "model": "deepseek-chat",
+        "messages": [{"role": "system", "content": prompt}, {"role": "user", "content": f"今日新闻:\n{titles_text}"}],
+        "stream": False
+    }
+    headers = {"Content-Type": "application/json", "Authorization": f"Bearer {API_KEY}"}
+    
+    try:
+        res = requests.post(url, headers=headers, json=payload, timeout=60)
+        content = res.json()['choices'][0]['message']['content']
+        
+        # 存为一个单独的文件，供左侧栏读取
+        with open('daily_brief.json', 'w', encoding='utf-8') as f:
+            json.dump({"date": str(datetime.date.today()), "content": content}, f, ensure_ascii=False, indent=2)
+        print("✅ 日报生成成功！(daily_brief.json)")
+    except Exception as e:
+        print(f"❌ 日报生成失败: {e}")
+
 def job():
     all_items = []
-    
-    # 1. 抓 RSS 新闻
+    # 1. 抓 RSS
     for source in RSS_SOURCES:
         all_items.extend(fetch_rss(source))
         time.sleep(1)
-        
-    # 2. 抓 ArXiv 论文
+    
+    # 2. 抓 ArXiv
     all_items.extend(fetch_arxiv_papers())
 
     # 3. 读取旧数据
     if os.path.exists('data.json'):
         try:
-            with open('data.json', 'r', encoding='utf-8') as f:
-                old_data = json.load(f)
+            with open('data.json', 'r', encoding='utf-8') as f: old_data = json.load(f)
         except: old_data = []
-    else:
-        old_data = []
+    else: old_data = []
 
     seen = set(i['title'] for i in old_data)
     final_data = old_data
     
-    # 4. AI 过滤与总结
-    print(f"🔍 原始抓取 {len(all_items)} 条，开始 AI 智能清洗...")
-    new_count = 0
-    
+    today_new_items = [] # 专门记录今天的新闻，用来写日报
+
+    print(f"🔍 原始抓取 {len(all_items)} 条，开始 AI 清洗...")
     for item in all_items:
         if item['title'] in seen: continue
         
-        # 让 AI 决定留不留
         summary = call_ai_summary(item['title'], item['lang'])
         if summary: 
             item['summary'] = summary
             final_data.insert(0, item)
+            today_new_items.append(item)
             seen.add(item['title'])
-            new_count += 1
             print(f"✅ 收录: {item['title'][:15]}...")
-        else:
-            print(f"🗑️ 剔除无关: {item['title'][:15]}...")
-        
-        time.sleep(0.5) # 防止 API 超限
+        time.sleep(0.5)
 
-    # 保留 500 条
+    # 保存数据库
     with open('data.json', 'w', encoding='utf-8') as f:
-        json.dump(final_data[:500], f, ensure_ascii=False, indent=2)
-    print(f"🎉 更新完成，经 AI 筛选后新入库 {new_count} 条。")
+        json.dump(final_data[:600], f, ensure_ascii=False, indent=2)
+    
+    # 4. 生成日报 (如果有新数据，或者强制用最新的数据生成)
+    if len(today_new_items) > 0:
+        generate_daily_brief(today_new_items)
+    elif len(final_data) > 0:
+        # 如果今天没新数据，就拿最近的凑合写一个，保证页面有东西显示
+        generate_daily_brief(final_data[:15])
 
 if __name__ == "__main__":
     job()
