@@ -7,26 +7,30 @@ import time
 
 API_KEY = os.environ.get("DEEPSEEK_API_KEY")
 
+# --- 升级版数据源配置：广撒网 ---
 RSS_SOURCES = [
+    # 1. 国内产业/资本 (覆盖 36氪, 虎嗅, 钛媒体, 机器之心等)
     {
-        "tag": "CN·具身智能",
-        "url": "https://news.google.com/rss/search?q=具身智能+OR+人形机器人+OR+宇树科技+OR+智元机器人+when:1d&hl=zh-CN&gl=CN&ceid=CN:zh-CN"
+        "tag": "CN·行业",
+        "url": "https://news.google.com/rss/search?q=具身智能+OR+人形机器人+OR+端到端自动驾驶+OR+Robotaxi+OR+世界模型+when:1d&hl=zh-CN&gl=CN&ceid=CN:zh-CN"
     },
     {
-        "tag": "CN·自动驾驶",
-        "url": "https://news.google.com/rss/search?q=端到端自动驾驶+OR+萝卜快跑+OR+华为ADS+when:1d&hl=zh-CN&gl=CN&ceid=CN:zh-CN"
+        "tag": "CN·公司",
+        "url": "https://news.google.com/rss/search?q=宇树科技+OR+智元机器人+OR+华为ADS+OR+小鹏NGP+OR+特斯拉FSD+OR+FigureAI+when:1d&hl=zh-CN&gl=CN&ceid=CN:zh-CN"
+    },
+    # 2. 国际前沿 (覆盖 TechCrunch, TheVerge, Medium 等)
+    {
+        "tag": "EN·Tech",
+        "url": "https://news.google.com/rss/search?q=\"Embodied+AI\"+OR+\"Humanoid+Robot\"+OR+\"Foundation+Model+for+Robotics\"+OR+\"Sim-to-Real\"+when:1d&hl=en-US&gl=US&ceid=US:en"
     },
     {
-        "tag": "EN·Embodied AI",
-        "url": "https://news.google.com/rss/search?q=%22Embodied+AI%22+OR+%22Humanoid+Robot%22+OR+%22Figure+AI%22+OR+%22Tesla+Optimus%22+when:1d&hl=en-US&gl=US&ceid=US:en"
+        "tag": "EN·Auto",
+        "url": "https://news.google.com/rss/search?q=\"End-to-end+Autonomous+Driving\"+OR+\"Waymo\"+OR+\"Tesla+Optimus\"+OR+\"NVIDIA+Isaac\"+when:1d&hl=en-US&gl=US&ceid=US:en"
     },
-    {
-        "tag": "EN·AutoDriving",
-        "url": "https://news.google.com/rss/search?q=%22Autonomous+Driving%22+OR+%22Robotaxi%22+OR+%22FSD+v12%22+OR+%22Waymo%22+when:1d&hl=en-US&gl=US&ceid=US:en"
-    },
+    # 3. 学术论文 (覆盖 Arxiv, CVPR, ICLR 等会议相关报道)
     {
         "tag": "Paper·论文",
-        "url": "https://news.google.com/rss/search?q=site:arxiv.org+%22Embodied+AI%22+OR+%22End-to-end+driving%22+OR+%22World+Model%22+when:1d&hl=en-US&gl=US&ceid=US:en"
+        "url": "https://news.google.com/rss/search?q=site:arxiv.org+(\"Embodied+AI\"+OR+\"Autonomous+Driving\"+OR+\"World+Model\"+OR+\"Imitation+Learning\")+when:1d&hl=en-US&gl=US&ceid=US:en"
     }
 ]
 
