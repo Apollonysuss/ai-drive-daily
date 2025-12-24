@@ -17,9 +17,10 @@ jobs:
     - uses: actions/setup-python@v2
       with:
         python-version: '3.9'
+    
+    # 👇 重点：这里加上了 arxiv
     - run: pip install requests arxiv
     
-    # 关键步骤：先拉取远程最新数据
     - name: 拉取最新代码
       run: |
         git config --local user.email "action@github.com"
@@ -33,6 +34,7 @@ jobs:
     
     - name: 保存数据
       run: |
-        git add data.json
+        # 👇 重点：要把 data.json 和 daily_brief.json 都传上去
+        git add *.json
         git commit -m "Daily update" || echo "无新数据"
         git push origin main
