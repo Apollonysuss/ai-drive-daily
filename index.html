@@ -3,228 +3,188 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>具身智能 & 自动驾驶情报站</title>
+    <title>具身智能 & 自动驾驶内参</title>
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
-        /* --- 基础布局 --- */
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-            max-width: 800px; margin: 0 auto; padding: 20px 15px;
-            background: #f4f6f9; color: #333; font-size: 14px; 
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f0f2f5; color: #333; margin: 0; padding: 0; }
+        
+        /* --- 核心布局：Grid 双栏 --- */
+        .container {
+            max-width: 1200px; margin: 0 auto; padding: 20px;
+            display: grid; 
+            grid-template-columns: 320px 1fr; /* 左侧320px固定，右侧自适应 */
+            gap: 25px; align-items: start;
         }
-        
-        .header { 
-            text-align: center; margin-bottom: 25px; padding-bottom: 15px; 
-            border-bottom: 1px solid #e1e4e8; background: white; padding: 20px; border-radius: 12px;
-        }
-        .header h1 { margin: 0 0 10px 0; color: #2c3e50; font-size: 1.8em; }
-        .header p { color: #7f8c8d; margin: 0; }
-        
-        /* --- 筛选按钮 --- */
-        .filters { display: flex; gap: 10px; justify-content: center; margin-bottom: 25px; flex-wrap: wrap; }
-        .filter-btn {
-            background: white; border: 1px solid #dcdfe6; padding: 8px 16px; border-radius: 20px;
-            cursor: pointer; color: #606266; transition: all 0.2s; font-size: 0.9em;
-        }
-        .filter-btn:hover { border-color: #409eff; color: #409eff; }
-        .filter-btn.active { background: #409eff; color: white; border-color: #409eff; font-weight: bold; }
-        
-        /* --- 新闻卡片 (重点修改) --- */
-        .card { 
-            background: white; border-radius: 10px; padding: 20px; margin-bottom: 15px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.04); border: 1px solid #ebeef5;
-            transition: transform 0.2s;
-        }
-        .card:hover { transform: translateY(-2px); box-shadow: 0 8px 16px rgba(0,0,0,0.08); }
-        
-        /* 顶部元数据 */
-        .meta { display: flex; align-items: center; justify-content: space-between; margin-bottom: 12px; font-size: 0.85em; color: #909399; }
-        .tag { padding: 3px 8px; border-radius: 4px; font-weight: 500; font-size: 0.85em; }
-        
-        /* 标签配色 */
-        .tag-cn { background: #ecf5ff; color: #409eff; }      /* 蓝 */
-        .tag-en { background: #f4f4f5; color: #909399; }      /* 灰 */
-        .tag-paper { background: #fdf6ec; color: #e6a23c; }   /* 橙 */
 
-        /* 标题 */
-        .title { 
-            font-size: 1.2em; font-weight: 700; color: #303133; margin-bottom: 12px; 
-            line-height: 1.5; display: block;
+        /* --- 左侧日报栏 --- */
+        .sidebar {
+            background: #2c3e50; color: #ecf0f1; border-radius: 12px; padding: 25px;
+            position: sticky; top: 20px; /* 滚动吸附 */
+            max-height: 90vh; overflow-y: auto;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
-        
-        /* --- 总结内容 (直接显示，不再隐藏) --- */
-        .summary-box {
-            background: #fcfcfc; border-left: 4px solid #409eff;
-            padding: 12px 16px; border-radius: 4px; margin-bottom: 15px;
-            color: #555; line-height: 1.6; font-size: 0.95em;
-        }
-        .summary-label { font-weight: bold; color: #409eff; margin-right: 5px; }
+        .brief-content { line-height: 1.6; font-size: 0.95em; }
+        .brief-content h3 { color: #3498db; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 5px; margin-top: 20px; }
+        .brief-content strong { color: #f1c40f; }
+        .sidebar-loading { text-align: center; color: #bdc3c7; padding: 20px; }
 
-        /* 原文链接按钮 */
-        .read-link {
-            display: inline-block; text-decoration: none; background: #303133; color: white;
-            padding: 6px 14px; border-radius: 6px; font-size: 0.9em; transition: background 0.2s;
-        }
-        .read-link:hover { background: #000; }
+        /* --- 右侧新闻流 --- */
+        .main-content { min-width: 0; }
         
-        /* --- 翻页控件 --- */
-        .pagination { 
-            display: flex; justify-content: center; align-items: center; gap: 15px; 
-            margin-top: 30px; padding-bottom: 20px;
-        }
-        .page-btn {
-            background: white; border: 1px solid #dcdfe6; padding: 8px 20px; 
-            border-radius: 20px; cursor: pointer; color: #606266;
-        }
-        .page-btn:disabled { background: #f5f7fa; color: #c0c4cc; cursor: not-allowed; }
-        .page-btn:hover:not(:disabled) { border-color: #409eff; color: #409eff; }
-        .page-info { color: #606266; font-weight: 500; }
+        .header { background: white; padding: 20px; border-radius: 12px; margin-bottom: 20px; text-align: center; }
+        .header h1 { margin: 0; color: #2c3e50; font-size: 1.8em; }
+
+        .filters { display: flex; gap: 8px; justify-content: center; margin-bottom: 20px; flex-wrap: wrap; }
+        .filter-btn { background: white; border: 1px solid #ddd; padding: 6px 14px; border-radius: 20px; cursor: pointer; color: #666; transition: 0.2s; }
+        .filter-btn.active { background: #3498db; color: white; border-color: #3498db; }
+
+        .card { background: white; border-radius: 10px; padding: 20px; margin-bottom: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.03); border: 1px solid #eef; cursor: pointer; transition: 0.2s; }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,0.08); border-color: #3498db; }
         
-        .loading { text-align: center; padding: 50px; color: #909399; }
+        .meta { display: flex; justify-content: space-between; font-size: 0.85em; color: #999; margin-bottom: 10px; }
+        .tag { padding: 3px 8px; border-radius: 4px; font-weight: 500; }
+        .tag-cn { background: #ecf5ff; color: #409eff; }
+        .tag-en { background: #f3e5f5; color: #7b1fa2; }
+        .tag-paper { background: #fdf6ec; color: #e6a23c; }
+
+        .title { font-size: 1.15em; font-weight: 700; color: #333; margin-bottom: 10px; }
+        .summary-box { background: #f8f9fa; padding: 10px 15px; border-radius: 6px; font-size: 0.95em; color: #555; border-left: 3px solid #3498db; }
+
+        /* --- 翻页 & 跳转 --- */
+        .pagination { display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 30px; background: white; padding: 15px; border-radius: 12px; }
+        .page-btn { background: #f4f4f5; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; }
+        .page-btn:hover:not(:disabled) { background: #3498db; color: white; }
+        .page-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+        
+        .jump-box { display: flex; align-items: center; gap: 5px; margin-left: 10px; border-left: 1px solid #ddd; padding-left: 15px; }
+        .jump-input { width: 40px; padding: 6px; border: 1px solid #ddd; border-radius: 4px; text-align: center; }
+        .jump-btn { background: #2c3e50; color: white; border: none; padding: 6px 12px; border-radius: 4px; cursor: pointer; }
+
+        /* 弹窗 */
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); z-index: 1000; align-items: center; justify-content: center; }
+        .modal-content { background: white; width: 90%; max-width: 600px; border-radius: 12px; padding: 25px; position: relative; }
+        .close-btn { position: absolute; top: 15px; right: 20px; font-size: 24px; cursor: pointer; color: #999; }
+        .read-btn { display: block; width: 100%; text-align: center; background: #2c3e50; color: white; padding: 12px; border-radius: 8px; text-decoration: none; margin-top: 20px; }
+
+        @media (max-width: 768px) { .container { grid-template-columns: 1fr; } .sidebar { position: static; max-height: none; } }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>🤖 具身智能 & 自动驾驶情报站</h1>
-        <p>AI 驱动 · 每日更新 · 深度摘要</p>
-    </div>
+<div class="container">
+    <aside class="sidebar">
+        <div id="brief-container">
+            <div class="sidebar-loading">正在加载今日内参...<br>请确保已运行抓取脚本</div>
+        </div>
+    </aside>
 
-    <div class="filters">
-        <button class="filter-btn active" onclick="filterData('all')">全部</button>
-        <button class="filter-btn" onclick="filterData('Paper')">📄 论文</button>
-        <button class="filter-btn" onclick="filterData('具身智能')">🦾 具身智能</button>
-        <button class="filter-btn" onclick="filterData('自动驾驶')">🚗 自动驾驶</button>
-    </div>
+    <main class="main-content">
+        <div class="header"><h1>🤖 具身智能 & 自动驾驶情报</h1></div>
+        
+        <div class="filters">
+            <button class="filter-btn active" onclick="filter('all')">全部</button>
+            <button class="filter-btn" onclick="filter('Paper')">📄 论文</button>
+            <button class="filter-btn" onclick="filter('具身智能')">🦾 具身智能</button>
+            <button class="filter-btn" onclick="filter('自动驾驶')">🚗 自动驾驶</button>
+        </div>
 
-    <div id="list">
-        <div class="loading">正在加载最新数据...</div>
-    </div>
+        <div id="list">加载中...</div>
 
-    <div class="pagination" id="pagination" style="display:none;">
-        <button class="page-btn" id="prevBtn" onclick="changePage(-1)">← 上一页</button>
-        <span class="page-info" id="pageInfo">1 / 1</span>
-        <button class="page-btn" id="nextBtn" onclick="changePage(1)">下一页 →</button>
-    </div>
-
-    <script>
-        // --- 核心变量 ---
-        let allData = [];       // 存放所有数据
-        let filteredData = [];  // 存放筛选后的数据
-        let currentPage = 1;    // 当前页码
-        const itemsPerPage = 6; // 每页显示几条
-
-        // --- 1. 加载数据 ---
-        // 加时间戳防止缓存
-        fetch('data.json?t=' + Date.now())
-            .then(res => res.json())
-            .then(data => {
-                if(!data || data.length === 0) {
-                    document.getElementById('list').innerHTML = '<div class="loading">暂无数据，请去 Actions 运行一次抓取脚本。</div>';
-                    return;
-                }
-                
-                // 按日期倒序 (最新的在最前)
-                data.sort((a, b) => new Date(b.date) - new Date(a.date));
-                
-                allData = data;
-                filteredData = data; // 初始显示全部
-                
-                // 初始化界面
-                renderPage();
-                document.getElementById('pagination').style.display = 'flex';
-            })
-            .catch(err => {
-                document.getElementById('list').innerHTML = '<div class="loading">⚠️ 数据读取失败，请检查 data.json 是否存在。</div>';
-            });
-
-        // --- 2. 筛选功能 ---
-        function filterData(category) {
-            // 按钮样式切换
-            document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove('active'));
-            event.target.classList.add('active');
-
-            // 数据过滤
-            if(category === 'all') {
-                filteredData = allData;
-            } else {
-                filteredData = allData.filter(item => 
-                    item.source.includes(category) || 
-                    (category === '具身智能' && item.source.includes('Embodied')) // 兼容英文标签
-                );
-            }
+        <div class="pagination" id="pagination" style="display:none;">
+            <button class="page-btn" id="prev" onclick="changePage(-1)">上一页</button>
+            <span id="pageInfo">1 / 1</span>
+            <button class="page-btn" id="next" onclick="changePage(1)">下一页</button>
             
-            // 重置回第一页
-            currentPage = 1;
-            renderPage();
-        }
+            <div class="jump-box">
+                <input type="number" id="jumpInput" class="jump-input" placeholder="#">
+                <button class="jump-btn" onclick="jumpToPage()">Go</button>
+            </div>
+        </div>
+    </main>
+</div>
 
-        // --- 3. 渲染页面 (核心) ---
-        function renderPage() {
-            const list = document.getElementById('list');
-            list.innerHTML = ''; // 清空当前内容
+<div class="modal-overlay" id="modal" onclick="document.getElementById('modal').style.display='none'">
+    <div class="modal-content" onclick="event.stopPropagation()">
+        <span class="close-btn" onclick="document.getElementById('modal').style.display='none'">&times;</span>
+        <h3 id="m-title" style="margin-top:0"></h3>
+        <div id="m-body" style="line-height:1.6; color:#444;"></div>
+        <a id="m-link" href="#" target="_blank" class="read-btn">阅读原文</a>
+    </div>
+</div>
 
-            // 计算分页数据
-            const start = (currentPage - 1) * itemsPerPage;
-            const end = start + itemsPerPage;
-            const pageData = filteredData.slice(start, end);
+<script>
+    let allData=[], filteredData=[], curPage=1; const perPage=6;
 
-            // 如果筛选后没数据
-            if(pageData.length === 0) {
-                list.innerHTML = '<div class="loading">该分类下暂无内容</div>';
-                updatePagination();
-                return;
-            }
+    // 1. 加载新闻
+    fetch('data.json?t='+Date.now()).then(r=>r.json()).then(data => {
+        if(!data.length) { document.getElementById('list').innerHTML='暂无数据'; return; }
+        data.sort((a,b) => new Date(b.date)-new Date(a.date));
+        allData = data; filter('all');
+        document.getElementById('pagination').style.display='flex';
+    }).catch(e=>console.log(e));
 
-            // 生成卡片
-            pageData.forEach(item => {
-                // 判断标签颜色
-                let tagClass = 'tag-cn';
-                if(item.lang === 'EN') tagClass = 'tag-en';
-                if(item.source.includes('Paper')) tagClass = 'tag-paper';
+    // 2. 加载日报 (daily_brief.json)
+    fetch('daily_brief.json?t='+Date.now())
+        .then(r => r.ok ? r.json() : Promise.reject())
+        .then(data => {
+            // 使用 marked 把 Markdown 渲染成 HTML
+            const htmlContent = marked.parse(data.content);
+            document.getElementById('brief-container').innerHTML = `
+                <div class="brief-content">${htmlContent}</div>
+            `;
+        })
+        .catch(() => {
+            document.getElementById('brief-container').innerHTML = `<div class="sidebar-loading">今日综述尚未生成。<br>请去 Actions 运行一次 "每日抓取"。</div>`;
+        });
 
-                // 处理摘要显示：如果没有摘要，显示提示
-                const summaryText = item.summary ? item.summary : "正在等待 AI 生成摘要...";
+    function filter(tag) {
+        document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+        event.target.classList.add('active');
+        filteredData = tag==='all'?allData:allData.filter(i=>i.source.includes(tag)||(tag==='具身智能'&&i.source.includes('Embodied')));
+        curPage=1; render();
+    }
 
-                const card = document.createElement('div');
-                card.className = 'card';
-                card.innerHTML = `
-                    <div class="meta">
-                        <span class="tag ${tagClass}">${item.source}</span>
-                        <span>${item.date}</span>
-                    </div>
-                    <div class="title">${item.title}</div>
-                    
-                    <div class="summary-box">
-                        <span class="summary-label">AI 划重点：</span>${summaryText}
-                    </div>
-                    
-                    <a href="${item.link}" target="_blank" class="read-link">阅读原文 &rarr;</a>
-                `;
-                list.appendChild(card);
-            });
+    function render() {
+        const list = document.getElementById('list'); list.innerHTML='';
+        const pageData = filteredData.slice((curPage-1)*perPage, curPage*perPage);
+        if(!pageData.length) { list.innerHTML='<div style="text-align:center;padding:20px;color:#999">暂无内容</div>'; return;}
+        
+        pageData.forEach(item => {
+            let tagType = item.lang==='EN'?'tag-en':(item.source.includes('Paper')?'tag-paper':'tag-cn');
+            const d = document.createElement('div'); d.className='card';
+            d.onclick=()=>openModal(item);
+            d.innerHTML = `
+                <div class="meta"><span class="tag ${tagType}">${item.source}</span><span>${item.date}</span></div>
+                <div class="title">${item.title}</div>
+                <div class="summary-box">AI 摘要：${item.summary||"生成中..."}</div>
+            `;
+            list.appendChild(d);
+        });
+        updatePageInfo();
+    }
 
-            // 更新页码按钮状态
-            updatePagination();
-            
-            // 回到顶部
-            window.scrollTo(0, 0);
-        }
+    function updatePageInfo() {
+        const total = Math.ceil(filteredData.length/perPage);
+        document.getElementById('pageInfo').innerText = `${curPage} / ${total||1}`;
+        document.getElementById('prev').disabled = curPage===1;
+        document.getElementById('next').disabled = curPage===total||total===0;
+    }
 
-        // --- 4. 更新翻页控件 ---
-        function updatePagination() {
-            const totalPages = Math.ceil(filteredData.length / itemsPerPage);
-            const safeTotal = totalPages > 0 ? totalPages : 1;
-            
-            document.getElementById('pageInfo').innerText = `${currentPage} / ${safeTotal}`;
-            document.getElementById('prevBtn').disabled = (currentPage === 1);
-            document.getElementById('nextBtn').disabled = (currentPage === safeTotal || totalPages === 0);
-        }
+    function changePage(d) { curPage+=d; render(); window.scrollTo(0,0); }
+    
+    function jumpToPage() {
+        const p = parseInt(document.getElementById('jumpInput').value);
+        const total = Math.ceil(filteredData.length/perPage);
+        if(p>=1 && p<=total) { curPage=p; render(); window.scrollTo(0,0); document.getElementById('jumpInput').value=''; }
+        else alert('页码无效');
+    }
 
-        // --- 5. 翻页动作 ---
-        function changePage(direction) {
-            currentPage += direction;
-            renderPage();
-        }
-    </script>
+    function openModal(item) {
+        document.getElementById('m-title').innerText=item.title;
+        document.getElementById('m-body').innerText=item.summary||"暂无";
+        document.getElementById('m-link').href=item.link;
+        document.getElementById('modal').style.display='flex';
+    }
+</script>
 </body>
 </html>
