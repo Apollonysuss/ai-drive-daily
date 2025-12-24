@@ -1,33 +1,38 @@
-name: 每日抓取
+name: 手动挖掘历史
 
 on:
-  schedule:
-    - cron: '0 0 * * *'
   workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  daily-job:
+  history-job:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
+    
     - uses: actions/setup-python@v2
       with:
         python-version: '3.9'
     - run: pip install requests
     
-    - name: 运行每日抓取
-      env:
-        DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
-      run: python scraper.py
-    
-    - name: 保存数据
+    # 👇【核心修改1】在运行脚本前，先把远程最新的 data.json 拉下来
+    # 如果远程没有 data.json，这一步会提示但不会报错，不影响后续
+    - name:以此为基准拉取最新数据
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
+        git pull origin main || echo "远程还没有 data.json，跳过拉取"
+    
+    - name: 运行历史挖掘
+      env:
+        DEEPSEEK_API_KEY: ${{ secrets.DEEPSEEK_API_KEY }}
+      run: python get_history.py
+      
+    - name: 保存结果
+      run: |
         git add data.json
-        git commit -m "Daily update" || echo "无新数据"
-        git pull --rebase
-        git push
+        git commit -m "History update" || echo "无新数据"
+        # 👇【核心修改2】最后上传时，如果又冲突了，强制以现在的为准
+        git push origin main
