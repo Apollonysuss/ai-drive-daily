@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>具身智能 & 自动驾驶情报站</title>
+    <style>
+        /* --- 基础样式 --- */
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            max-width: 800px; margin: 0 auto; padding: 20px 15px;
+            background: #f4f6f9; color: #333; font-size: 14px; 
+        }
+        
+        /* --- 头部 --- */
+        .header { text-align: center; margin-bottom: 25px; padding-bottom: 15px; border-bottom: 1px solid #ddd; }
+        .header h1 { margin: 0 0 8px 0; color: #111; letter-spacing: -0.5px; }
+        .header p { color: #666; font-size: 0.9em; margin: 0; }
+        
+        /* --- 筛选器 --- */
+        .filters { display: flex; gap: 8px; justify-content: center; margin-bottom: 20px; flex-wrap: wrap; }
+        .filter-btn {
+            background: white; border: 1px solid #ccc; padding: 6px 14px; border-radius: 20px;
+            cursor: pointer; font-size: 0.9em; color: #555; transition: 0.2s;
+        }
+        .filter-btn.active { background: #222; color: white; border-color: #222; }
+        
+        /* --- 卡片列表 --- */
+        .card { 
+            background: white; border-radius: 10px; padding: 18px; margin-bottom: 12px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.03); border: 1px solid #eef;
+            transition: all 0.2s; cursor: pointer; /* 鼠标变手型 */
+        }
+        .card:hover { transform: translateY(-2px); box-shadow: 0 5px 15px rgba(0,0,0,0.08); border-color: #1976d2; }
+        
+        .meta { display: flex; justify-content: space-between; font-size: 0.8em; color: #999; margin-bottom: 8px; }
+        .tag { padding: 2px 6px; border-radius: 4px; font-weight: 500; }
+        .tag-cn { background: #e3f2fd; color: #1565c0; }
+        .tag-en { background: #f3e5f5; color: #7b1fa2; }
+        .tag-paper { background: #fff3e0; color: #e65100; border: 1px solid #ffe0b2; }
+
+        .title { 
+            font-size: 1.15em; font-weight: 600; color: #222; 
+            margin-bottom: 6px; line-height: 1.4; 
+        }
+        /* 预览摘要（只显示一行） */
+        .preview-summary {
+            color: #666; font-size: 0.9em; 
+            white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+        }
+
+        /* --- 弹窗 (Modal) 样式 --- */
+        .modal-overlay {
+            display: none; /* 默认隐藏 */
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.5); z-index: 1000;
+            align-items: center; justify-content: center;
+        }
+        .modal-content {
+            background: white; width: 90%; max-width: 600px;
+            border-radius: 12px; padding: 25px;
+            position: relative; animation: popIn 0.3s ease;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+        }
+        @keyframes popIn { from {transform: scale(0.9); opacity: 0;} to {transform: scale(1); opacity: 1;} }
+        
+        .close-btn {
+            position: absolute; top: 15px; right: 20px;
+            font-size: 24px; cursor: pointer; color: #999;
+        }
+        .close-btn:hover { color: #333; }
+        
+        /* 弹窗内部排版 */
+        .modal-tag { display: inline-block; padding: 4px 10px; border-radius: 4px; font-size: 0.85em; margin-bottom: 10px; }
+        .modal-title { font-size: 1.4em; font-weight: bold; margin-bottom: 15px; color: #111; line-height: 1.4; }
+        .modal-body { 
+            background: #f8f9fa; padding: 15px; border-radius: 8px; 
+            font-size: 1em; line-height: 1.7; color: #444; margin-bottom: 20px;
+            border-left: 4px solid #1976d2; 
+            white-space: pre-line; /* 保持换行 */
+        }
+        
+        .read-btn {
+            display: block; width: 100%; text-align: center;
+            background: #111; color: white; padding: 12px; 
+            border-radius: 8px; text-decoration: none; font-weight: bold;
+            transition: 0.2s;
+        }
+        .read-btn:hover { background: #333; }
+
+        /* --- 翻页 --- */
+        .pagination { display: flex; justify-content: center; gap: 15px; margin-top: 25px; }
+        .page-btn { background: white; border: 1px solid #ddd; padding: 6px 16px; border-radius: 6px; cursor: pointer; }
+        .page-btn:disabled { opacity: 0.5; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>🤖 具身智能 & 自动驾驶情报站</h1>
+        <p>学术论文 · 产业动态 · 深度解读</p>
+    </div>
+
+    <div class="filters">
+        <button class="filter-btn active" onclick="filter('all')">全部</button>
+        <button class="filter-btn" onclick="filter('Paper')">📄 论文</button>
+        <button class="filter-btn" onclick="filter('具身智能')">🦾 具身智能</button>
+        <button class="filter-btn" onclick="filter('自动驾驶')">🚗 自动驾驶</button>
+    </div>
+
+    <div id="list"><div style="text-align:center; padding:40px; color:#999;">Loading...</div></div>
+
+    <div class="pagination" id="pagination" style="display:none;">
+        <button class="page-btn" id="prev" onclick="changePage(-1)">上一页</button>
+        <span id="pageInfo">1</span>
+        <button class="page-btn" id="next" onclick="changePage(1)">下一页</button>
+    </div>
+
+    <div class="modal-overlay" id="modal" onclick="closeModal(event)">
+        <div class="modal-content" onclick="event.stopPropagation()"> <span class="close-btn" onclick="closeModal()">&times;</span>
+            
+            <div id="m-tag" class="modal-tag tag-cn">TAG</div>
+            <div id="m-title" class="modal-title">标题加载中...</div>
+            <div id="m-body" class="modal-body">AI 摘要加载中...</div>
+            
+            <a id="m-link" href="#" target="_blank" class="read-btn">阅读原文 &rarr;</a>
+        </div>
+    </div>
+
+    <script>
+        let allData=[], filteredData=[], curPage=1;
+        const perPage = 7;
+
+        fetch('data.json?t='+Date.now()).then(r=>r.json()).then(data => {
+            if(!data.length) { document.getElementById('list').innerHTML='暂无数据'; return; }
+            data.sort((a,b) => new Date(b.date)-new Date(a.date));
+            allData = data;
+            filter('all');
+            document.getElementById('pagination').style.display='flex';
+        }).catch(()=> document.getElementById('list').innerHTML='请运行 Actions 初始化数据');
+
+        function filter(tag) {
+            document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+            event.target.classList.add('active');
+            if(tag==='all') filteredData = allData;
+            else filteredData = allData.filter(i=>i.source.includes(tag) || (tag==='具身智能'&&i.source.includes('Embodied')));
+            curPage=1; render();
+        }
+
+        function render() {
+            const list = document.getElementById('list');
+            list.innerHTML = '';
+            const pageData = filteredData.slice((curPage-1)*perPage, curPage*perPage);
+            
+            pageData.forEach(item => {
+                let tagType = 'tag-cn';
+                if(item.lang==='EN') tagType='tag-en';
+                if(item.source.includes('Paper')) tagType='tag-paper';
+
+                // 注意：这里不再用 <a> 标签包裹标题，而是整个卡片都有 onclick 事件
+                const div = document.createElement('div');
+                div.className = 'card';
+                // 将数据绑定到点击事件中
+                div.onclick = () => openModal(item, tagType); 
+                
+                div.innerHTML = `
+                    <div class="meta">
+                        <span class="tag ${tagType}">${item.source}</span>
+                        <span>${item.date}</span>
+                    </div>
+                    <div class="title">${item.title}</div>
+                    <div class="preview-summary">💡 点击查看 AI 深度解读...</div>
+                `;
+                list.appendChild(div);
+            });
+            updatePageInfo();
+        }
+
+        function updatePageInfo() {
+            const total = Math.ceil(filteredData.length/perPage);
+            document.getElementById('pageInfo').innerText = `${curPage} / ${total||1}`;
+            document.getElementById('prev').disabled = curPage===1;
+            document.getElementById('next').disabled = curPage===total||total===0;
+        }
+        function changePage(d) { curPage+=d; render(); window.scrollTo(0,0); }
+
+        // --- 弹窗逻辑 ---
+        function openModal(item, tagType) {
+            const modal = document.getElementById('modal');
+            
+            // 填充数据
+            document.getElementById('m-title').innerText = item.title;
+            document.getElementById('m-body').innerText = item.summary || "暂无详细解读";
+            document.getElementById('m-link').href = item.link;
+            
+            // 设置标签样式
+            const tagEl = document.getElementById('m-tag');
+            tagEl.className = `modal-tag ${tagType}`;
+            tagEl.innerText = item.source;
+
+            // 显示弹窗
+            modal.style.display = 'flex';
+        }
+
+        function closeModal(e) {
+            // 如果传入了事件(e)，说明是点击背景关闭，无需额外判断，直接关
+            document.getElementById('modal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
