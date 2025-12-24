@@ -1,5 +1,733 @@
 [
   {
+    "title": "Offline Reinforcement Learning for End-to-End Autonomous Driving",
+    "link": "http://arxiv.org/abs/2512.18662v1",
+    "date": "2025-12-21",
+    "source": "Paper·论文",
+    "lang": "EN",
+    "summary": "相关。该研究聚焦于离线强化学习在端到端自动驾驶中的应用，核心在于利用历史驾驶数据训练智能体，无需在线交互即可学习驾驶策略。其意义在于降低训练成本与风险，提升模型在复杂交通场景下的决策安全性与泛化能力，为自动驾驶技术的大规模落地提供更高效、稳定的算法支撑。"
+  },
+  {
+    "title": "CrashChat: A Multimodal Large Language Model for Multitask Traffic Crash Video Analysis",
+    "link": "http://arxiv.org/abs/2512.18878v1",
+    "date": "2025-12-21",
+    "source": "Paper·论文",
+    "lang": "EN",
+    "summary": "相关。CrashChat是一款多模态大语言模型，专为交通事故视频分析设计。其核心在于融合视觉与语言信息，实现对事故场景的深度理解与多任务处理（如原因分析、责任判定等）。这一技术将提升交通管理智能化水平，为自动驾驶安全评估和智慧交通系统提供关键工具，推动AI在公共安全领域的实用化进程。"
+  },
+  {
+    "title": "FatPipe Inc Highlights Proven Fail-Proof Autonomous Vehicle Connectivity Solutions to Avoid Waymo San Francisco Outage-like Situations - Milwaukee Journal Sentinel",
+    "link": "https://news.google.com/rss/articles/CBMilgJBVV95cUxNWUF3TnlkU2xMV3M5MXlVWHU0YmhVdG1ITUF5OTJjeXpsQ1d2S284RFB3QlB1X1hOSGFWQndmQURGcnhSalRHUG5lcUkyZHQ1aE9kbUloVmljNmVsd25MWC1qalBZYlMxcmFPTEhQLWtVdGY5dURja1czSGJIZk9KZ2xJWEJ6aVJod2h1ZGF3dGp0ZFBGdkNlaFVyeGhQVTZxNERsd3p0NkszLWNDU3FyWjRReTVWRFI2M21PaWdnTjZUQnN5QVJDS2hsZHA2YkRoeWNuTGxHQzZVZXJJWERTRk9nRy1hTDl0QlBEczNKTGpPZ0xvSHMySzFWUjl2V2NYQjRtb0pua2FjZDVoX1pKSS1xanN0UQ?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "相关。核心是FatPipe公司强调其自动驾驶车辆连接解决方案的可靠性，旨在避免类似Waymo在旧金山服务中断的情况。意义在于凸显了自动驾驶技术中稳定网络连接的关键作用，以及相关企业在提升系统鲁棒性、确保服务连续性方面的竞争与创新。"
+  },
+  {
+    "title": "FatPipe Inc Highlights Proven Fail-Proof Autonomous Vehicle Connectivity Solutions to Avoid Waymo San Francisco Outage-like Situations - Greenville Online",
+    "link": "https://news.google.com/rss/articles/CBMinwJBVV95cUxOVG9JZlNQMmI1TW5fV1pfcGoxUHBmajZrS0l4M3lFV21zbE55bEUwVE5aMlVhbTlMaTQyZUpCMGhMdWlXdXUzNGRRTmlMODRhNWstVGhmdTBLajlFa1lLOHZIY2d0SGVJanBFVzE5ak9sS2VQcURRVHZRQ05NT2R3QW85RHB0MkE4d1JndXhjRzlQbUlYTHhtYmJKemVhbWlvcVhybE44VmdrQklDeUw2NlZMQlpFdmlDWVZYOTlRT3paVHVpcU9zTGpLc0VERXRTQlRzMUFDX1BMUlQ5blFCMVpQUFVFc1FEWG5pTVRLeWE3ckJQRlZiQVhZNDB2ZVEwQVVnd2VJSzd0aDVLUXplZjZ4dkpBdUNFeGNBNl9IUQ?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：FatPipe公司强调其自动驾驶车辆连接方案能避免类似Waymo在旧金山出现的服务中断问题，通过冗余网络设计确保车辆持续在线。\n\n意义：这凸显了自动驾驶技术中稳定通信的重要性，FatPipe的解决方案有助于提升整个行业的系统可靠性，减少因网络问题导致的安全隐患和运营中断。"
+  },
+  {
+    "title": "FatPipe Inc Highlights Proven Fail-Proof Autonomous Vehicle Connectivity Solutions to Avoid Waymo San Francisco Outage-like Situations - The Herald-Times",
+    "link": "https://news.google.com/rss/articles/CBMioAJBVV95cUxNRTdIWldTRFdzNjZDbGpjZTRneVRPOWlFSDMxTlVuLUNLQ2pSemxsWW93Q2YtRmRLU1J4M1NrZXpLNllWajJ2SlBuMzFMQ0lYN2VKazBPQjRQT1hPOFlHcTZyZkJMb2YtMF81b1RyVnZFVGpQRWVkWFY0RmFxN1lMMFNnVE1GakszOXVKODdnNWJGYU9vWVBBM1pneUdRZnlDdkhFQlNJMkV3X0ZrUmdjbGpKeTBNRkRiaHpRZmhoY0tMaXc0cDNiVTR1UW41bEtHVHZBT093c3h1bXExam5XRUcyQklHLTB5b3NXcVdnMDFhdkQ3b0tQRGFVSlNualQ1LTIzMGVMUnYtYVRpZUZjM3BVWlUwbF9KWXZCbU9peFA?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "相关。核心：FatPipe公司强调其自动驾驶车辆连接方案可避免类似Waymo旧金山服务中断的情况，突出高可靠性网络连接对自动驾驶安全运营的关键作用。意义：这指向自动驾驶技术落地中常被忽视的通信冗余问题，随着自动驾驶商业化加速，稳定数据传输成为保障公共安全与系统信任的基础设施要素。"
+  },
+  {
+    "title": "FatPipe Inc Highlights Proven Fail-Proof Autonomous Vehicle Connectivity Solutions to Avoid Waymo San Francisco Outage-like Situations - The Courier-Journal",
+    "link": "https://news.google.com/rss/articles/CBMinwJBVV95cUxPdFdkMXpfTTN2NnN5VjljejZJT2ZXZnlkXzhFVjc2MlppaXlkQl9UY3QyRHNNUjNoMWxTYW9SNTFhNV9pX1NQVTRkRVpXMXhQMmNYMllzemJaRkIzMTc2YmlQYm96OU1rZmVGVkNNbi1xb19sWVdaT3ZzWFZ6UzlEaV96YWs3SzdxVmM5cWZOcm1WcUxWLUd5cm83aG92cmpJalRGaElpdWJvX1o4M2NUMmc0aHo4VzJMcU5GVWxvM2hkWVdWbnRqZWtqdUI2Yk5RaFEwVWQtNWh3YTJCQUgzS296NEhObXZKLVIyUlhUa3ZLdHFRZ0xRWHBCaERuMmtyelA4MllhaW1CaEJKenFGZXQ0Qi1WMm85LThQYkxuVQ?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "相关。核心：FatPipe公司强调其自动驾驶车辆连接方案能避免类似Waymo旧金山服务中断的情况，突出高可靠性网络对自动驾驶安全运营的关键作用。意义：随着自动驾驶商业化加速，稳定、低延迟的车联网成为行业刚需，此类解决方案有助于提升系统鲁棒性，推动全无人驾驶大规模落地。"
+  },
+  {
+    "title": "FatPipe Inc Highlights Proven Fail-Proof Autonomous Vehicle Connectivity Solutions to Avoid Waymo San Francisco Outage-like Situations - Morris County NJ News | Daily Record",
+    "link": "https://news.google.com/rss/articles/CBMimAJBVV95cUxQMmNZQ2I3YXhpQzFKSEFZUEx4UlpmZGN2UWplSFdlN3BIZzRXN2JjMlZOLUFBbi1oaTZLemI3b2dxTy1NVER2V3EzSGRKTG5rZkRwbU5NYWw3VjEwOXRvcDJ6ZWZJSEtjV1V6NDVPQTE5bEw1czBnQW9RdDZWT25VM1Z6SVp5bDU3UHBXNTR6b0RUMHNUa2duSENuZE9Vd0ZRZ3hYaFZsSGNnVThmWDFPbkE2YURVV1dzUXJCLWRINkdZTU5pb1dmcjhzeG8zZjBhWjdXUTR5cEwwRktZc3B6UU5xNjFPbWhfemJhTXhfMlctV3BadXZULVFPendXMFVxTzZxc3ZHY2pZaGZSWkJ5R2dvRGhPajdm?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "相关。核心：FatPipe公司强调其自动驾驶车辆连接解决方案的可靠性，旨在避免类似Waymo在旧金山遇到的网络中断问题。意义：这突显了自动驾驶技术中稳定通信的重要性，确保车辆在复杂环境中持续运行，提升安全性和系统韧性。"
+  },
+  {
+    "title": "Tesla surprises by testing driverless Robotaxi in the US days before official launch - MSN",
+    "link": "https://news.google.com/rss/articles/CBMi4wJBVV95cUxOWkktcjM3dHNVY0JvMGY1eGJJNnRpNHZqRGVVOGxFQ25kZFhJSnZ3VGZCVDNmZGRzTWR0ei15TmQzc0ktc2lTMDFqczBxUGlEbDlHUFlSRExSODRfa3lFOWsyQWtOLXBiRTNDelhYRmN0ckNRb0Y0N0dQRFJTT1VWOUFBRzlUV2lRTWYtZUtZalRfMkNtZzFEcHFIM0JGcFRmSWQyajRSWVRidExiSUZCMlI0V1FLRU4xVUtaSjRvZkJkLS1BM1lmcF9NaUh3eWotVkhSeFlWbGJZSnhnSkFkMXpQYlJxMFdTZ3BDcVd2M0ZUX2VpVFJDRngtR1ZhRjQ1VDYzYWVPOXJBUTdnZU9wLUZiUlBYM1lxNHZQZU1JVEVjUXNPcmp0dXVSQ2pEcE9vdUtTY3c5V2JKZWp2Z2pMYjFGZW90bm5OQ2V4UF9ycUhOY0VWaWc3aUl5ejFpOTRCSGsw?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "特斯拉在Robotaxi正式发布前进行无人驾驶测试，核心在于加速自动驾驶商业化进程。此举不仅验证了技术成熟度，更意味着特斯拉正从汽车制造商向出行服务商转型，可能重塑城市交通生态。"
+  },
+  {
+    "title": "FatPipe Inc Highlights Proven Fail-Proof Autonomous Vehicle Connectivity Solutions to Avoid Waymo San Francisco Outage-like Situations - Peoria Journal Star",
+    "link": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNX0ZIam84bmM3YVloQU5PME5QYkxQOThHNEpRQk1PcDZOVUpYY1N0bkJfSHllWDdveEstWmpmNXEtNlIzRHBqejRYYlA5LVJDZVoxeVpnaEROT2ZFSXZPbjdEb2g5MUpRUDdEWHlJNm5oTFlVelFPZnl3b243Q0Q0T2JsUnFDRVY1b3VqUkpvc2xwNzJzVUhaSmZ6UG5ZSG9COXQ2T0EzTjF5a1RzYUZLVG91OE5QV2c5V0x1b1dGN09EUDFfYU11SnpBLXdCTzNxVVp6T2F0VkJNbnAwS1ZuVFNzaWpLUXBEYllVcWtwNm5oM085YndrRmtNTHVwTndNUHFjb3QtSXMyZTNWenVhZEdR?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "相关。核心：FatPipe公司强调其自动驾驶车辆连接解决方案可避免类似Waymo在旧金山服务中断的情况，突出网络冗余与可靠性。意义：这指向自动驾驶技术中常被忽视的通信基础设施问题，稳定的网络连接是确保自动驾驶车辆持续安全运行的关键，尤其在复杂城市环境中。企业级网络解决方案的介入可能成为自动驾驶商业化的重要支撑。"
+  },
+  {
+    "title": "FatPipe Inc Highlights Proven Fail-Proof Autonomous Vehicle Connectivity Solutions to Avoid Waymo San Francisco Outage-like Situations - The Tuscaloosa News",
+    "link": "https://news.google.com/rss/articles/CBMinAJBVV95cUxQc1lRTnJiZHRPTHF6eHNtQ3NYYmpsMUtzRlZKUVlpM2dRczB4cVFhWHc2bHVDOFB3YXYtMUpSNHo0Zmpvdm5kRWhMUnVOb0ZDa2F0OS1ISnN2d2RscmRibGt0eV8xZzRQcGNSTzhkS21fOElDbExTZ2NkWFBxbXk2NTE2ZkJFaUZhdFBjSnc4Zjh0cU1UaU1FZlBsd3pjU0FUVE1iVUpfcUdaeW81WDdPRHRZZjdLYTNScC1xV2xjV1hsN1pURXhyWHE3TE0wbnFSeHJlWkFuMmxOVnNZVkk4NFppOVBPaGhsY3p2SHFMT0JlVmRkQU5XNVBrZGxnSmkxemoyWi01Vm5PSWx1V2VlYVhfODlOdUo2NWQ5Ng?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：FatPipe公司强调其自主车辆连接解决方案的可靠性，旨在避免类似Waymo在旧金山服务中断的情况，确保自动驾驶系统在复杂环境中的稳定通信。\n\n意义：这突显了自动驾驶技术中高可靠性网络连接的重要性，不仅关乎技术稳定性，也是推动自动驾驶商业化落地的关键保障，为行业提供了应对网络脆弱性的解决方案。"
+  },
+  {
+    "title": "FatPipe Inc Highlights Proven Fail-Proof Autonomous Vehicle Connectivity Solutions to Avoid Waymo San Francisco Outage-like Situations - Sarasota Herald-Tribune",
+    "link": "https://news.google.com/rss/articles/CBMinAJBVV95cUxPVTIydTlGN1M2WklfbzY4Y01nV0FqWjhPdzM4Ri1pbHdIR2s2VWJmNUVPWnlhVGpmbGE5S1R5Ulk2Q2V2bzR3VDBXc0xkWkozVVBwajdnZDNsV2RKaHBUTHFlVnpudDJVa1ltUF8xUzBzanB4ZHYzVnVEdlQ4TzJtcjR0N2E3N0VfZk91cnljelRqd1dLUFI4dzVhMHRzVUR5QXFIbmlYc3R6dHUxTTVWTjRUUDVtOFlEWm5zTjZ4Ri1kZmZTdDg5aFlxM01PTlV1elNyTTJQOGt5bGNGMUpRUEpqQ1hxMVdqU0FXai1fb3lNS1JaV3NWTWdQNm1mR3BpdjBvMlFsR2lwdXFDako4ZWQyeTFxZjlXWUZDUg?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "相关。核心：FatPipe公司强调其自动驾驶车辆连接方案可避免类似Waymo旧金山服务中断的情况，突出网络冗余与可靠性。意义：在自动驾驶规模化部署中，稳定的网络连接是安全运营的关键基础设施，此类解决方案有助于提升系统鲁棒性与公众信任。"
+  },
+  {
+    "title": "After power outage, SF wonders: can robot taxis handle a big earthquake? - San Francisco Examiner",
+    "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQUkdtUHFpUjNTd0lSVk1IajJVNWhvc0tSS0g5MWF5S0ptV3NSbFRQRXU1djk0dFhuVW4xOFNNTDJSWGNvTHgxa1ZLX1FYdnFrRXpyZ3VXMjRyUW1UN0U2SFNOYXE5U2lQeVNkMDBLckx2TTlwN2N0TTlBZ3dza2ZDUTF6dUkxbzdlVE9STmZ6S1pJaXB5eTVReGplalFVdVZZOTdqdTNGMUJsNG1Fdmg4ekFPVXlnZ2t6TjROR2xPYnItU0JzbHZjY2pFZlJHMXRNMDR5SDA5QVlEQ0d6em1j?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：旧金山停电事件引发对自动驾驶出租车在重大自然灾害（如地震）中应急能力的质疑。\n\n意义：这凸显了自动驾驶技术在实际应用中的关键短板，即面对复杂、不可预测的极端情况时，其决策系统与适应性仍需完善。事件促使行业重新评估技术成熟度与公共安全之间的平衡，对推动更具鲁棒性的自动驾驶系统研发具有警示意义。"
+  },
+  {
+    "title": "FatPipe Inc Highlights Proven Fail-Proof Autonomous Vehicle Connectivity Solutions to Avoid Waymo San Francisco Outage-like Situations - The Topeka Capital-Journal",
+    "link": "https://news.google.com/rss/articles/CBMilAJBVV95cUxPY1NiOHhKOEJram1KS3l2UzdQaWtzYjVHWWhPb09mWFhCVl81NWhDU1NERUNsaXBfbHd4eTQ1TUstN21zQ25UWE9jSW9mcUlUUmJVeEMyWlA1VnNWbDQwM2lmM3M3SkJ0Z1ctUjRZLWlIbHhGekx2T3JBSU55SGZENHo4Y0Vlem9xUEpFSi10c2s2MmN5TW0weHhocGpuU05KTXRhUG8xSm5kRDB2ZFJLMmtLZlRmQmZRT0R3b2p2V3F0SDB1MkdfdXkwZkItSGJ1cVlEWW1iU0o3TElpWFpPOWVCY0UySGhIODF4VXRUN1NyZVB6SEZHemFvTGlZakdSR0EySGNKYmMwRGZwLWQ5UGlHQV8?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "【核心】FatPipe公司强调其自动驾驶车辆连接解决方案可避免类似Waymo旧金山服务中断的情况，突出网络冗余与可靠性。\n\n【意义】这指向自动驾驶规模化落地中通信稳定性的关键挑战，企业正通过技术加固提升系统鲁棒性，为全无人驾驶的商业化铺平道路。"
+  },
+  {
+    "title": "Tesla explores incentive plan to prepare workforce for robotaxi operations - HR Katha",
+    "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxNNWtxNmgxazB0OFhXbHlVMlFBOUgwYkR6R0lNOGpLNXZYRy1Wd2w4dnBXT0MtdHVBQzhBT1lScF9XdkwxZUpxNTVndUNoZ09wanJWaEdpWEhOSmpScVFtai0xVUl2TFNQVzJaWnBDS0ZKM0xiYmVSUmxuMXVaWWdPQkwwQmdJa2J6SHlRMExvRDJjUVVHVG9aOEtpdFZEaHJzd0E2QnZJYw?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "特斯拉正探索通过激励计划培训员工适应机器人出租车运营，这标志着公司正加速从传统汽车制造商向自动驾驶服务提供商转型。该计划的核心是通过内部培训体系，将现有员工转化为未来机器人出租车网络的关键运营力量，既降低人力资源成本，又加速技术落地进程。这意味着特斯拉正在构建“技术+运营”的双重护城河，其自动驾驶生态系统的闭环正在从研发端向服务端延伸，可能重塑未来城市交通的人力资源结构。"
+  },
+  {
+    "title": "The latest on Tesla and robotaxi competition - MSN",
+    "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQemg3Wmpyb2N0eWR3R1o0R21CYzZXV2gtMkNmdW9lN1RlNHRXUmxURFN6cm02SEUzSWQyc2Y3bEdVTnlWY2pjVGRMdkhPYmNERHRmVl9QTjJWY2VEZzRFRlNreE9DUEtqYTMzalJmTUZYVWpGMzNBYmVnZ29UVFBvSTJzRHB0OGtmVFRHRG1uclhtbHc5NG1BQ1VnUXpLTkk?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "特斯拉近期宣布将推出专用机器人出租车，这标志着自动驾驶技术从辅助驾驶向完全无人驾驶服务的重要跨越。这一战略布局不仅将重塑城市出行生态，更可能成为自动驾驶技术商业化落地的关键转折点。"
+  },
+  {
+    "title": "Waymo robotaxis blink out and block traffic in San Francisco blackout. What happens in the next emergency? - The Press Democrat",
+    "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQNEZ6a2JWdUdOUHBlOGN3a1haRTVFUjEzQVJXZWtGS3VzczVPZnVISm5IVWxfRjE4aXMyYkg1ME5IQklJbVFyX1pFdW81WXpPWEJ5My1Rbmo3eURKenpEeWNyNjM1dEhvMUkzOXRmalF5am9FYmZ3TmV5QktUTW9GU05EcmlwaFhzT3Q3WGxaSmdGUFRLNEtuRmtMRmNwLVJlZkcyVHZrdGY2UQ?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：Waymo自动驾驶出租车因旧金山停电导致系统集体离线，车辆停在路中造成交通堵塞，暴露了自动驾驶在极端场景下的脆弱性。\n\n意义：事件凸显了自动驾驶技术对基础设施的高度依赖，以及应对突发公共事件的应急方案缺失。这不仅是技术问题，更是城市智慧交通系统必须解决的安全冗余和协同管理挑战。"
+  },
+  {
+    "title": "FatPipe Inc Highlights Proven Fail-Proof Autonomous Vehicle Connectivity Solutions to Avoid Waymo San Francisco Outage-like Situations - Detroit Free Press",
+    "link": "https://news.google.com/rss/articles/CBMikgJBVV95cUxNZVZDVUphTmFEdzEzZF9VSnJyYXUtYXJXRGlkbXpVenFPM3czQ1M4akJzU2VGN001Q1pWU0t3REptM3Y1TzFXcnZNWElQYS1xZC1DUm9iaU81SEg0azJTNkNKbXY2dkozYktVcEoyY1FTWWRvQjExVWtMVUt2VHJtaGFkNE84ak8tcTJXUnpLeVEzQU9SZTZHLUdSdXdiWDNkQ0dsZTg5bDluR0UtTW1sdnhJcEJjLWh6dk00ZDdZVk12MUFzSEQtd1IxdzFCeW1fSUc4NnlhQmNwNnVUY3J2RkJKWlFyeUtPMzlRaEdjMjNRVmNiYnF4ekZSSUQ3aDl1RElBTi1NTGp6RG9xbzFNZjl3?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "相关。核心：FatPipe公司强调其自动驾驶车辆连接方案可避免类似Waymo在旧金山出现的服务中断问题，确保车辆通信的稳定性和可靠性。意义：这突显了自动驾驶技术中高可靠网络连接的重要性，为行业提供了应对通信故障的解决方案，有助于提升自动驾驶系统的安全性和公众信任度。"
+  },
+  {
+    "title": "FatPipe Inc Highlights Proven Fail-Proof Autonomous Vehicle Connectivity Solutions to Avoid Waymo San Francisco Outage-like Situations - Fall River Herald News",
+    "link": "https://news.google.com/rss/articles/CBMilwJBVV95cUxNSXZveHdkR21DY0k0cXR5SENVWlMwNFhFaU9ya19PLThwVlRVX0pMSlpoSzBLeDllTGZKSEVSQ0FYcWYxZ2ozZFlEVVpzLXVzUFdzc3g3bFJrWURpbmo1MjNwNnUyRnZyc0F0em0zTGxCZnNmNVZwdDE5TUkzcWVXWUY2eFBYOHBZQmp6UlFXenhiVGRnZnp3SFpFWlJSbHRkNDF3SXpLbkJoZDFVZ2pzYzZMaU1JVUZ4aWVOYTc0TEtwN0VNam5jOEplaUo2ZkhKbUpFY2lENGllS2x1c3RHTmdwZzRLWFVHdFRDSGRLaEZ4c0VMemNBYTFwMXBSRVVvakFobmt3c2RPaU41WXE1SVNwOEg2Szg?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：FatPipe公司强调其自动驾驶车辆连接解决方案可避免类似Waymo在旧金山出现的服务中断问题，通过冗余网络设计确保车辆持续在线。\n\n意义：这凸显了自动驾驶商业化中通信可靠性的关键作用，为大规模部署提供了重要的技术保障，推动行业从单车智能向车路协同的稳健演进。"
+  },
+  {
+    "title": "Tesla Stock News Today (Dec. 24, 2025): TSLA Hovers Near $500 as Robotaxi Hype Meets Fresh NHTSA Safety Probe - ts2.tech",
+    "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNY3dTUUJnRTYxS1ZMMXFQbjUtejlPVmYwUGlZbEFoLUs4TGhDbWRDY3ZXcGV5bHlvS3dEZS1mSzUtNlplem5uYnotMTQ4MG5MYVJMSEtfV2VYUURKMU1MM3Z6enl5UmVsWHJNc2RrOHZKd19ucmtPbWJVem92MjRwTVVpSmh0alRySVhzWVAzamxVQ2xCV2tIbGZKYk95czRpWThsYXI0VzRkMkNhcWpQb2l2RERaNVp1MHdobGhYVUtjQQ?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "特斯拉股价在500美元附近震荡，机器人出租车热潮遭遇美国国家公路交通安全管理局（NHTSA）新的安全调查。这表明，尽管市场对特斯拉的自动驾驶和机器人出租车愿景抱有高度期待，但监管审查和实际安全性能仍是其商业化道路上的关键变量。这一动态凸显了具身智能技术在从实验室走向大规模应用过程中，必须跨越技术可靠性与法规合规的双重门槛。"
+  },
+  {
+    "title": "FatPipe Inc Highlights Proven Fail-Proof Autonomous Vehicle Connectivity Solutions to Avoid Waymo San Francisco Outage-like Situations - Burlington County Times",
+    "link": "https://news.google.com/rss/articles/CBMipgJBVV95cUxPMEdRbl92R1NsLU9BS2VjSmJubjdFS2ladmxRMjRxSFBlb1lPMzNEWFNfSTFUMXQzT09xVFFZTi1GcnRYYXFMRGdTb1B1dG50eUVqeTI5d25sWFlXVjZVLVBTdVdXQllhSFBlN1lGZG80NXlUa2lpSnBUcld2amN2MElqQy1pSXFGcTFoS1d2bXRGdmJwZmdBZHltSi14MDRidHY5c19BdUxVXzlUUGpFRFdTQjhMMkRqcjV1NkJzSkFTMTZzY0EzUTVxX0M3c0hYdE1Wc0VVUFZ6cHZxYXlkUEhGS2hrQlZsMEwzZ2w3ZHhhaXpKRzRNa2tpX1dfWXgwUEQ4NklwMmdlSnJMNnI5dlBsTER2RVpONmxON2ROSjJSVkRDRUE?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "【核心】FatPipe公司强调其自动驾驶车辆连接方案可避免类似Waymo在旧金山服务中断的情况，通过冗余网络确保车辆持续在线。\n\n【意义】这凸显了自动驾驶技术中稳定通信的重要性，为行业提供了高可靠性连接解决方案，有助于提升自动驾驶系统的安全性和公众信任度。"
+  },
+  {
+    "title": "Elon Musk seems 'unhappy' with Tesla's former AI head Andrej Karpathy's answer on Google Waymo software v - Times of India",
+    "link": "https://news.google.com/rss/articles/CBMiuAJBVV95cUxNbDF6c2h0YXFjSllWdWlfUE00cmlXMzVTN3cxODJ0R2wwUmJ0Tmk1Mi1GLUxDMmZtcUhHYVF1NzBic2gwRkd1cG9zSnN0bVZmSVdBRTNGX0J5ZFYwR3R6RU1laHNlczY4Y0F0Mm1Bd1I5b3pDSDdkWm5GQjl0MXd3Q0hJZUx2TDVnZjhQcThweWpPd1JzSnJNc1BnTkd1WndGS0RyQ2lyRnpXNkVLd05pbHhZYXFLUEpkUVJFVk81ZWlUQmNEUFFfQ2EzWHZKQ1hpekFqMUVQdXhqdVpaMGRJd3dfWHMzSmpYRk5WMjF5Z0EzME9BWFhhbjhmV2o3VnEteUc3TDdyY2lDN3B6X2NiM01zMTJUQTVOT1A5djgyd2kyQmtGa09jZENOa3VPYmhTMjF1cDRERWLSAb4CQVVfeXFMTUFJZGN1a185OHZlTjhBdGJ6cDBtY1NUZnlqX3R4bGxuLXpXWjE0X1RKRV9YYW13ODZramhfaUVXazhkdWlxLVd1UlpfcF9EeGFxNmVncHNuM0pnOG9UX1RRdXltMEYxRFcxdTBlcE1pVjRieGZpa0c4SXh5UFBlcnFSdWVadWVKdmhLajJ5a3ZJb054azhOcksxaVdWOUFJNDlhZlhsN2ZuMWpiVkZmNlk5cXQtQkhuUHBKb2d6dFZTTkpOaW9kMWhMazRnS3VRaVA0RkVqampPaWFMd2t1cDNndlZJRF9sRzl6a2ctdmczdV9QTFE4MmlTeHpTVlZMWk9heXEzbk4xeTduQlFKekdSLTJOY2tBWlR0WktPSzZPTkprTE5fcy10Q3NqX01udkNNeW81SHNYai1ONm9B?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：马斯克对特斯拉前AI负责人卡帕西关于Waymo软件的评价不满，凸显特斯拉在自动驾驶技术路径上的战略焦虑。\n\n意义：这反映了特斯拉在自动驾驶领域面临的技术路线分歧与内部压力，可能影响其全自动驾驶系统的研发进程与市场信心。"
+  },
+  {
+    "title": "Tesla Signals Robotaxi Expansion With New Website - TeslaNorth.com",
+    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxNZ0tGV2hqbThyU0V6RU5vc19jYkM0ZEdQdVFoWUwzd3hlVUQ5dUwzUVFkY3hRTW1IWHMxTm9zdThqaHFNV2FDMkRhUGsxZG1SY2U2c05hWkZsR2tyUm44R2VqYlVqZ0pxNFl1ci1EV05RaVkzeVRSV3o4ZEdZLTdFV0NZUlpPY0x3bWFjNw?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "特斯拉通过推出新网站TeslaNorth.com，释放了其Robotaxi业务扩张的信号。这一举措不仅标志着特斯拉在自动驾驶技术商业化上的重要布局，也预示着共享出行领域可能迎来颠覆性变革。核心在于特斯拉正加速将自动驾驶技术从私家车场景拓展至商业运营，意义在于推动交通行业的智能化转型，同时为特斯拉开辟新的增长曲线。"
+  },
+  {
+    "title": "Waymo to strengthen fleet software after power outage caused traffic jams - Invezz",
+    "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNbDZRalZpTGhSWHA3andMNlZrVGtCWU5YMGtxRVc3bUR6bThWaXY5cHhDU25TdEcxZ09zbFVJaDU1Y3FWd1pPcVBoUkE5aFFqeEJEczlMaU5nOGJyZnJxT3pfSjlTUVpMRGIxQldpSkZuUVlUb0p6YzBqdXFROXRLWURibDBmcnhrRG9uM1NOWF83ZFYtYmtpR2ttSnNWYlA4b2V6SWF6Um01T05yd1E?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "相关。核心：Waymo因软件问题导致车队停运引发交通拥堵，正紧急升级系统。意义：暴露了自动驾驶技术对软件稳定性的高度依赖，事件提醒行业需强化系统冗余与应急响应机制，是迈向规模化商用必须跨越的可靠性门槛。"
+  },
+  {
+    "title": "Waymo Adds 11 U.S. Cities for Robotaxi Testing, But Still No North Carolina - Kiss 95.1",
+    "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxOR3oxZHIxQnVIb01ZZG1nZ0p3R1Z5MGt0R0pPWnlrRFdPdmo5QWlkeXh5eGFTQmc3REFLRXZBTnE1M3o1X0dXdlljejJjWHhDQksydWRiYkE3TVRnXzc4dHdlLXpBV2lERnV1UGJZS1UyTGx3ZlpnY0FDRDNBMjdOWlpyNnlyekZTb3g5V0s5Q1lTM202dmdwN19tRnR2YVo2RmF2MkFITjk?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "Waymo扩大在美国11个城市的自动驾驶出租车测试范围，但北卡罗来纳州仍未纳入计划。这表明Waymo正加速商业化布局，通过多城市数据积累优化算法。然而，地域选择的差异可能受当地法规、道路复杂度或合作资源影响，体现自动驾驶落地需综合考虑技术适配与政策环境。"
+  },
+  {
+    "title": "FatPipe Inc Highlights Proven Fail-Proof Autonomous Vehicle Connectivity Solutions to Avoid Waymo San Francisco Outage-like Situations - The News Journal",
+    "link": "https://news.google.com/rss/articles/CBMinAJBVV95cUxQV2FvUjJMS2RsV0k0VDJDWXRKaktVNFdyYmQzQTRlQTFOeVpHMlpRTHJIVTFiOXlENzZRajY1b0tqT1RsT0ppTUw5Q2V0UGEwVG5weHpwc2FRM0tFTFR4UGVkM3d1MVZoaUlwQjJQelRYUWN5cEFocjl0LXJCcnJNR2I0UnhZTlhrZ2lyS01JSzJxekRMQm1Bd3poNFI2elpDWUhWMUZZU0lneFZZeE1yQzVrM0xpVS1hXzZpQ0VwLXpfZTE5cDRYSVlLMVZPY0t6UHg5TEF6WDZSSkpJdkE5MEtkUWttQkJtLWF6RFlPbGdnY2VxMVJWaHBqY1dsU3d4M0daQmgwYzBSUm1QZkY4WFdtVXZqNUljWHNMLQ?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "相关。核心：FatPipe公司强调其自动驾驶车辆连接方案可避免类似Waymo旧金山服务中断的问题，确保车辆通信的稳定性和可靠性。意义：这突显了自动驾驶技术中网络连接的关键作用，为行业提供了应对通信故障的解决方案，有助于提升自动驾驶系统的安全性和公众信任度。"
+  },
+  {
+    "title": "Waymo recalls more than 3,000 vehicles due to faulty software - AOL.com",
+    "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE56dkdIcEd2YjgtSE9tOUM5TXItZS0tVjVvNzl2SDlqdVcxSDI3S3V5N2NLa3VWc29DdGpsaHNObFR5NFdIYTlIOUwxWkx4Vm9DaEEtMFhSdFVQUDdYZF91QncyaTlVQXBTRERiSDhvZVVka2ZNM0xr?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：Waymo因软件故障召回3000多辆自动驾驶汽车，涉及算法对拖车等物体的识别问题。\n\n意义：这是全球首例L4级自动驾驶大规模召回，暴露了AI系统在长尾场景中的感知局限。事件将推动行业建立更严格的自动驾驶安全标准和OTA召回机制，加速感知冗余系统和仿真测试技术迭代。"
+  },
+  {
+    "title": "Waymo Taxis in Blackouts: Can AVs Handle Quakes? December 23 - Meyka",
+    "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxOa1k2SG5xdzBOWGVybmxGdFFRSEZ0T0NrcmVYdVlGLTdDckhxUUE4cktOUTJjMVVGWHI0RkthaVR5cFdrNTZpa3VDQ05zV0Z2T2h4LUU3Z3kwNlVCUFhBTlBONnVyb2JVWEhRVEtrR3VFUlVOeVJSVjVMUnNPeTJHd2RiY1dHQ0VfV183NnZ1aWs?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：Waymo自动驾驶出租车在断电情况下应对地震等紧急状况的能力测试，探索自动驾驶在极端场景下的可靠性。\n\n意义：这标志着自动驾驶技术从常规道路向应急管理领域延伸，若验证成功将提升城市韧性，为灾害响应提供新思路，推动自动驾驶社会价值超越日常出行。"
+  },
+  {
+    "title": "Waymo Released a Revealing Postmortem on Its San Francisco Blackout Meltdown - Gizmodo",
+    "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPVEVVZEppODFVeGx2QWZFZ3EwWGJaWWsyeFlkenBUdVh1VDhsZnJCTXZSRW83czVhOW1qLTZJSXJTZ3B4a0xJLWV2NmNZM0dyZFl5T2NUb3Z6ZTU2dEF0UjhQMzJaQWpPS2NBdElKdTVjdWVNNERPWTQ1cVhlM1JJUS1la1cwUkNsMENyMVJFLXd0ZkxHeWJocEdlSWl2MVU4LThxSTNqWDduODA?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：Waymo发布事故报告，坦诚分析旧金山服务中断事件，展现对安全与透明的重视。\n\n意义：此举不仅有助于提升自动驾驶系统的可靠性，也增强了公众对新兴技术的信任，为行业树立了责任标杆。"
+  },
+  {
+    "title": "Waymo Robotaxis Get Into Standoff in San Francisco - Yahoo! Tech",
+    "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPRF9ETllYYVB2cGNHeDRzTy1SMXlWNGFOTjRVbndKeVBsX21rUGFXb1FSbFhXNWxBMmZyVVJWTDJuMUZDTWMweTRFZEZ4SFMtWndvSGUtcGRyLVR0SmxUUVRzOERLQzN1ZXdYSElZbUN1MEpZbnlBbGt1MHdZN2RCcExBRjRyOVY5ck4wN0J6N0JRMGFPVGkwZHl5LXAyVm1OaWc?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "相关。核心：Waymo自动驾驶出租车在旧金山街头陷入“对峙”僵局，暴露了自动驾驶系统在复杂城市路况中应对突发交通状况的决策局限。意义：事件凸显了自动驾驶技术从技术验证到规模化商用过程中，仍需攻克人车混行场景下的交互与应变难题，也为行业安全部署提供了现实压力测试案例。"
+  },
+  {
+    "title": "San Francisco Blackout Leaves Waymo Vehicles Flummoxed - thetruthaboutcars.com",
+    "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxORTRwQUNFd1NqeXdzTUNNczY1VllDcjdFaEl0b3U5UEFCWjVDNEtWY0xUNjU1WHN5ODZqNjZtQ2w5NTdtWVFlM3EtRVhpbXRiSjNDeWttZFNmSl9wbTcxT0U3Zm9XbE5vVjRyUVVBTWNjcHQzZ3c2bUVRMElnSWRNUkpVeThEREY1Y0V3c3FNb3VFV1N6Zy1hQ1oyekl4RE1ZMkZYTmVHeElodmpOem5Ockl3?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：旧金山大规模停电导致Waymo自动驾驶车辆集体“宕机”，暴露了自动驾驶系统对稳定网络和电力基础设施的高度依赖。\n\n意义：事件揭示了自动驾驶商业化落地的潜在脆弱性，尤其在应对突发公共事件时。这促使行业思考如何通过冗余系统设计和本地化决策能力提升鲁棒性，也为智慧城市基础设施协同提出新课题。"
+  },
+  {
+    "title": "San Francisco power outage: Waymo announces fleet-wide update, says ‘integrating lessons from the weekend - Times of India",
+    "link": "https://news.google.com/rss/articles/CBMikwJBVV95cUxORFMxY3pxS0xIbXFrSm51eUtxYTNVZ1Y5X2xKOWRXS2hGSGdMWGdfc05GMUVRTEhRSVZna2t4WnliUUx3SkFpcFdqVXItay1CSGNpUGVEaFVpWU90VUlDTmhsV2hNMFpZcWVZLWZ3MUxldHdtejdzem50Z0JRYzZJcUlraFB2OHRsUGFsVmNmRk5MR1NmR0FyM2FRd2pubmVXdW0zSV8zZ0dQSi1LdzFMdTRxaUh3b1o2QlQxa3djamlSZ2JmRkdEeTdQNTJrTlNIMWxiSVRvYVdRSk9hVVBEMHdCYVpiZm9wNXhmWjNaZXNsRC1VTEJjb2NmeF9WSDdUMF9LZW00d3djaVNtQ2l0RHllMNIBmAJBVV95cUxPdkVlcnNZLVV6aXRjNC0wUlJYMVpxdG5sWWQ1dk8yczVPejJEYkJ5XzU4VS13TzJIOXVORE41UmY4SW1vcEhra0VQOHR0SnozYUNoeTBUQXl1bjVPY0xveklnc2RiNndvbmFxWmlRZmFaNEtfUEtMVE1iaVhxWlN6d1pBWDI4VTBhcjc4UWxIZTN5MFVVOGlPUUNqTHd6MlJqMk9GdkJseU52d1hqaGRsQ2FOY2VlenFFMHNqNHptcy16OV84NlNwTXVMNjZNQk56M1dOUzR4Y19ZdnM0ME92MTZGb0gxLTh1STNpZ3dEc25NdDM4UlFKVkd5TTZ6RXNNZWx3ZWZNeEp0YVVYWVV1cTA3ZVBib3JX?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "相关。\n\n核心：Waymo在旧金山停电事件后对全车队进行软件更新，强调从实际运营中学习并快速优化自动驾驶系统的能力。  \n意义：这不仅展示了Waymo应对突发事件的响应机制，更凸显了自动驾驶技术通过真实路况数据持续迭代的重要性，为全行业在复杂城市环境中实现可靠运营提供了关键范本。"
+  },
+  {
+    "title": "Why Waymo went down in San Francisco - Fast Company",
+    "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBlX1BfUEJ3aHJKR3ZoR09OY1RnckNRTXJ2dkVpbkFVWVFOSW1RVkRkcExHVnhWRWZaSF9KWkFDNXotTENaNmw3d1FRS0FGMnpyRmF5UEJHaTlya0NCMHFpeUlESUJHc1NfeEhiUk1VeG1YUGdDQzBRVUlpLUI?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：Waymo在旧金山运营遇挫，反映自动驾驶在复杂城市环境中的技术瓶颈与监管挑战。  \n意义：事件凸显全自动驾驶商业化仍需攻克感知决策、法规适应等难题，短期可能影响行业扩张节奏，但长期将推动技术迭代与安全标准完善。"
+  },
+  {
+    "title": "Tesla Signals Robotaxi Expansion With Website Revamp — Here’s How The Competition Stacks Up - Stocktwits",
+    "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxPY01JQXZvd08tMTJTb1NFbzE2NEdIRkxzWnMycTBCNWJwMC1GVS1YR1VWSG8tMlQtNTJwaHd3cmR5eVBDNjJVbGpLaERCT1k5RW1EQzZsSHhxUTF0QXdMczJxMk80WkJnd3Uxck84OXA1YUZjZTUwQ2h1bFFISW5OT3ZHZmxtcmh4UmtGbmpPLTRpd3hTY0FRRjZGV1Iwcnc4TjZubDk5eHlTdUVKZEZKSVlQS00yREVlaWpmaFpvMmVuY3JEOEE?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "特斯拉通过官网改版释放Robotaxi业务扩张信号，这标志着其自动驾驶商业化进入新阶段。核心在于将海量行车数据转化为可落地的无人驾驶服务，构建“硬件销售+软件订阅+出行网络”的生态闭环。此举将加速L4级自动驾驶技术迭代，并可能重塑未来城市交通格局，推动整个行业从技术验证转向规模化运营竞争。"
+  },
+  {
+    "title": "Waymo explains Saturday’s self-driving shutdown in San Francisco. - The Verge",
+    "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxPWUppTzFvUVpILUcxc2QtR1dvMGNsS1pqZU50SzJkN2lxRlc0VndZYnpJR0RzbEVfRFpTYjNfME4xR2dJV0J2ajNmSWFhaTRKYTAzN1ZTUlVpckZ5SjNKZlRxVVVEalpSOFBOcUJuSTVtQV9oeXQ5d2s4SFRzTmNwd2tFS0tmOENPNU5UazAwNVplQS1ESFRZTFp6YTVHY1lCLVE?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：Waymo在旧金山发生自动驾驶车辆异常聚集事件后，主动公开解释系统故障原因，体现了其对安全透明度的重视。\n\n意义：此次事件及快速响应，凸显了自动驾驶技术在复杂城市环境中仍需完善，同时也展示了头部企业通过公开沟通建立公众信任的行业趋势，为技术迭代与监管协作提供了现实案例。"
+  },
+  {
+    "title": "Zoox Issues Software Recall to Prevent Unnecessary Lane Crossings by Robotaxis - PCMag Middle East",
+    "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNYWpFM2VzUkNTRTFQenEzTmQ0dDlfa1RqZHFaZEowN2oyOG9NTTVlZW56aV9jbXpHYXpRYnZhdUZjUnNTSzJzb0NKa0RpUDZLQkhoeENENU0wcUF1WWh1bWY2RUcyY2xxVFByeXYzZ0trT0NSMjgtRU4tZGpuNXlsWGJRRnU1RUtKNV9zSkVhRkFKYjBvWGZIS0NfQWN2bzVLa2taZG9XUkxEUnowd0Z0VUpCZ1lWTFcxeVE?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "相关。核心：Zoox因自动驾驶出租车出现不必要的车道穿越问题而发起软件召回，旨在修复算法缺陷，提升行车安全。意义：这反映了自动驾驶技术在实际应用中仍需不断优化，软件召回机制成为行业安全标准的重要一环，推动技术成熟与公众信任建立。"
+  },
+  {
+    "title": "Waymo to update software after San Francisco power outage snarls self-driving vehicles - TradingView — Track All Markets",
+    "link": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxPTkJQOEpoSXB4YzRFUWoxNDNZQksyNllGWG1IR3lhQ2MyOXdDeFhDdWEwbUlnZm54TURjdEtEWDhNR1BBbk5xZzFZQi0tQy1kaUxTVU1XZHpHQWRWdU83VDhWVjV1NDZKd3JWZTdNem5leVJJZF9fUEFFQjFJRFBGakFaUUtHNm5adGFnRkZoVU9jbm1MaGhDUnlLRHBWVzhrNGlUMU5OU3F0RmJlRXc2SkZTZzdWN3N0QUl2ZTQtWGt6VXBxRnpLWVBfRF9aY1VRZnI3WHViY0k3RER4VDkwM1ZtWkZFcUxCN0E3Tw?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "相关。核心：Waymo因旧金山停电导致自动驾驶车辆集中停滞，将进行软件更新以提升应对能力。意义：凸显自动驾驶在极端场景下的技术脆弱性，推动行业从故障中迭代，加速系统鲁棒性进化。"
+  },
+  {
+    "title": "Waymo to update software after major power outage - Tech in Asia",
+    "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFA5aWNJTjRxRFpPREZtNHFWZ3dJUUYzdzM1c2JiVUtsQTlCMXlaWVhwUl94OEZvZ1JvdUd2UklZRmxPUDBpM0xib0VydkVoQ2RlX1d0aHZDNVA0N0ppS3lwSVVCMjRPNGQ2LVptek1VT1p3SUx0dFpWcGhlV00?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：Waymo因大规模停电事件更新软件，凸显自动驾驶系统对电力稳定性的依赖及应急处理能力的重要性。\n\n意义：此次事件提醒行业需加强自动驾驶系统的冗余设计和故障恢复机制，确保在突发情况下仍能安全运行，推动技术向更可靠、更成熟的方向发展。"
+  },
+  {
+    "title": "The global robotaxi rollout is accelerating faster than expected - TechSpot",
+    "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPZFFRSF9uWmZ6R2hvZklVS2VCbWpyMEM4UHZGaERzenZ1VHRxS3RKQlA4TzZYMnJvS3ktM2tPSEg5aFBDdU5lUDJMd2hDUkFKYTRwUGZkLWVKb29Oc3Jpb1dkdldoMENvR0NPd0hoSTc4TUkyVHBrQVhlanV4RDNtSW1hWXJCMmNpLVZFdGRsYnVCSnRId1ZWdmNNR292Njg?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：全球自动驾驶出租车（robotaxi）部署速度超预期，标志着L4级自动驾驶技术正加速从测试走向规模化商业运营。\n\n意义：这不仅将重塑城市出行与交通结构，降低人力成本，更意味着自动驾驶产业链（感知硬件、算法平台、运营服务）进入商业化爆发前夜，为智慧城市与新能源体系提供关键支撑。"
+  },
+  {
+    "title": "Tesla hits all-time high on robotaxi optimism as Wall Street sees path to $3T valuation — Europe battery plans add tailwind - MSN",
+    "link": "https://news.google.com/rss/articles/CBMiuwNBVV95cUxQU2w1Z0Y0d0tfQjVpdHRhN0hDRFd0SkxNWnlZV3VkY0cxdGpWOHhLS1hkeUdwd3FYQWRfQU14b0FnYXFkMG9sTTlka2JGY0NzQUQtWW5BRTVDelktZlViaXU3TGhfRkdQV3FFa2p0X1k0VkhPUFpxdjZ2MGRSSlRjWm96VGVLVU9aVHo2cmo3dW9TYVlVUlRmd1hMQjdmTUxKZThqY0lQb054SGpUUUppY05qNUFrYjMzNWFxWUFidmV0S3F3MjNWNFFuNU1vTzdBRXh5UHFhdUxZT1NKdjVOY3F3RWlCeGxESE5MRFllTDFoUm5HVGxFMFB1WTRxaGRPck5peU5NLUYzWlR6NG9jSFZMMmRJRVZWRmtXVjBfZUtHbF9jNlFGRUtHVnk4SDhwdXp0QkxUeS1xbEtoQVF1QkJLZmZNQnE5NnZZSGRnWmNOb3BVY2hKUWMtQ3MxWllXS2dDNTY2a2lRMUNLUjZwR2NMQks5TGlHLWNlOFZndHFFdTctV1RwbUpaSC1VTWdiNjZLTW1hNGJXMGs4b05HTDE2VkpzQkpHRVJCQ0hfQjBLb0VOY0ZwT2hwRQ?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "特斯拉股价创新高，核心是市场对其机器人出租车业务的乐观预期。华尔街认为，特斯拉有望通过自动驾驶技术颠覆出行服务，实现3万亿美元估值。欧洲电池计划则为其提供了供应链保障和增长动力。这标志着特斯拉正从汽车制造商向移动出行平台转型，其技术路线和商业模式可能重塑整个交通产业。"
+  },
+  {
+    "title": "Alphabet's Waymo unveils its autonomous Chrysler minivan - Mashable",
+    "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE1OcHVYUGc0TFROMWMxU1VjN01PVV8wMmllaXJyNGthbV9OS1BvRGdpOFhPRm5EaGpVRmtkaTJQbDZ5WE1vN3BwUEdlT2tKRUFhZjZRanFwRFo5T04zYUlwSVowNzVvZw?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "Waymo推出基于克莱斯勒MPV的自动驾驶汽车，标志着其在商业化落地方面迈出关键一步。核心在于将成熟的自动驾驶系统与量产车型结合，实现技术从测试到商用的跨越。此举不仅加速了自动驾驶的商业化进程，也为未来共享出行和物流领域提供了新的解决方案。"
+  },
+  {
+    "title": "Waymo Hardens Fleet After SF Blackout Exposes Navigation Gaps - The Tech Buzz",
+    "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxQbG16WGV5bU5NS0RIMFRQSlcwdVkxUkJTSFpqUE5sQ0hDdmJlekhsZVBFajFtVWk5Wjk1d1dRRll4UzRjNkp5a2x4RnFRTkdRZ3lMNkQtUWw1MnNSSjRoaE1STDFaT1QtTVI5WHZjQ21SNS1fVGFDMTZ4SXlVRHJXWnJxbEZ0b3Z5bWtLWlBwUEExZkx4cFVmZ3pn?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "相关。核心：Waymo自动驾驶车队在旧金山停电期间暴露导航依赖网络的问题，现已通过硬件升级增强离线导航能力。意义：这标志着自动驾驶技术从依赖云端向车端智能演进的关键一步，提升了系统在极端场景下的鲁棒性与安全性，为全无人驾驶的大规模部署扫清障碍。"
+  },
+  {
+    "title": "Waymo vows to improve emergency response protocols after San Francisco power outage - Yahoo! Finance Canada",
+    "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPS2lkakplNkphX04zbUtsRVVQbmFhTWNCNGM4eDVuczdwMzdKemYzcmk4LTlfbXZXbURNRVo3dE5CQm1wMkJiSFNuMzFqRDY5SzZzdjk1N0o0bGNONGZDbmdkZXoyUThMT1d2WlhsbTgzZUoxSEFBVVRHcmlibFgwSGFISzhrQjJHR0hUcFdyOA?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：Waymo在旧金山停电事件后承诺改进应急响应协议，凸显自动驾驶系统在突发公共事件中的应对能力与责任意识。\n\n意义：此举不仅提升自动驾驶服务的安全性与可靠性，也推动行业建立更完善的应急标准，为城市智慧交通系统融入公共安全体系提供实践参考。"
+  },
+  {
+    "title": "Waymo to begin tests in several Solano County cities - Times Herald Online",
+    "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQdnQ5S0JHV29iMFdoVEZtNHV1MkpYMVdYQm12b0NGQ3pmOXBrb0JORDFfMHVjVVdSOHRXSlRiZkFsRzNYUDVaSVBFR2FER2hKTGJXZjBMRXlvUU9tUUk5ZDFtZUVfWVpBZlFMRFg4T3o1SVdZTGFQVmlGLVVOZjd0ekdkRWFrOVNjTm0zenlyNzMxOGhVekVNN0dnR3RJVjA?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "Waymo在索拉诺县多个城市启动自动驾驶测试，标志着其技术验证从核心城市向更广泛城市场景的扩展。此举不仅有助于收集多样化道路数据以优化算法，更体现了自动驾驶商业化落地的区域性推进策略，为未来规模化部署积累关键运营经验。"
+  },
+  {
+    "title": "Waymo to Update Software Across Fleet After Major Power Failure in San Francisco - Bloomberg.com",
+    "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPdkJZenJRT0ZycXdmdkUxeHhoakE5dFFDd204aVQ0U1ZLdHhJc2lmSVc5bGcxNVpEUm1yVlpxeU85Q2pzWjBHdndZRWR3UXZzQVhDNG5GdExnT0hINVR0OGU1bGlMVUo1eXVqZlhoUnB2OFo0NmQtalFsVElmQ1VhZHVjVy1uRHNtRnQ0UWNiVEsteC1QSGNyMEhzS2JpVWwwZXRQMmtBalRqV0RlTkkzdzB6V0M?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：Waymo因旧金山大规模断电导致自动驾驶车辆异常，决定全面更新软件。这暴露了自动驾驶系统在极端场景下的脆弱性，尤其是对电力基础设施的依赖。\n\n意义：事件凸显了自动驾驶技术在实际部署中面临的环境复杂性。软件更新虽能修复特定漏洞，但如何系统性地提升应对突发公共事件的能力，仍是行业必须解决的关键挑战。这推动了自动驾驶安全标准从常规场景向极端场景的延伸。"
+  },
+  {
+    "title": "‘Confused’ Waymo vehicles blocked roads during San Francisco power outage - Police1",
+    "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNRnRDQTdrSDRVZVJOY2xHS2pLaFFSTnUwbW0xV3EzVDVrM2FWMTJKZVJXVkp5d3psNFlLQzdjZV9mSkYxQ21OeGV1ckMzQzRmTDdCbnl5VmQ4RUNnV2MzdUE4YkZjX3dCOV91R0x2MGVEWk5QQU5HejhzZ1VVMkwyVjk2MVRPTzlITkpuR3VFS2s0YVY5NWtlZTNkVTZyc2NCSUpwdGF6QmVxSTMwZzZR?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：旧金山停电导致Waymo自动驾驶汽车因通信中断而出现“困惑”，阻塞交通，警方介入处理。\n\n意义：事件暴露了自动驾驶技术对稳定网络和电力基础设施的依赖，以及极端情况下的应急处理短板。这不仅影响公共安全与交通效率，也为行业敲响警钟——需加强系统的鲁棒性和离线应对能力，以推动技术更可靠地融入城市生活。"
+  },
+  {
+    "title": "Waymo to update software after San Francisco power outage snarls self-driving vehicles - MSN",
+    "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOc2dwd2hZLVFqX1NVeUtOZndQSml2U2FKX2w3MExpTENKSGFvUWk0Yjh4T1RvT2tnZXUwejVsNllZVEJjN042N0xUSVM2OF9FbG1jdFB6Z2stLU1uSGl4a0VPWnBkaVR6QUZlLVd0eXF4aEQycHhtUDlmdDB1LXJ4cWROazdGSjNUdEN1UnhNVFJidWdBamFYYTVvcVBoaUhnOGdndXVFRF9LcXFoWkJHVk8ydE5zUVJUaFdRbUM5bmJDTFA1bHJzV3ZJNHZYNUJwTUhQSDd5NA?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：Waymo因旧金山停电导致自动驾驶车辆瘫痪而进行软件更新，凸显自动驾驶系统对基础设施依赖的脆弱性。  \n意义：事件暴露了自动驾驶技术在实际应用中面临的外部风险，促使企业加强软件冗余和应急处理能力，推动行业向更鲁棒、适应性更强的系统演进。"
+  },
+  {
+    "title": "Waymo Updates Robotaxi Software After San Francisco Outage - Yahoo",
+    "link": "https://news.google.com/rss/articles/CBMijAFBVV95cUxOQldEVE91U3RvWG1HRVpYWEZHZUY4WTc5RmF2OEZyY21QSGplbjhfUnlqVzZGV2hVREFLb2lqQmF5YUt2OTlKd3lJa1JyVHpfanIwY21iRE5mOHhLRERmeF9SejlLM3lJVGRTWVhuQ1E0S3A3bUxkcTBrb0hGNnJjaS0zQ0NHMXE1eTZGTw?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：Waymo针对旧金山服务中断事件更新了自动驾驶软件，旨在提升系统稳定性和应对突发状况的能力。\n\n意义：此次更新体现了自动驾驶企业在实际运营中快速迭代、优化安全性能的闭环机制，对推动Robotaxi商业化落地具有示范意义，也反映出行业在应对复杂城市环境时持续完善技术可靠性的必要努力。"
+  },
+  {
+    "title": "‘Software Update Coming’ After Power Outage Hits Alphabet’s Waymo Fleet, Stock Up - TipRanks",
+    "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxPTlhKV1VjU2k2dWwzU0E0OTAyaWhHOUlNVEx4U1VKbExzLTFfVTg4WUszZlNPVllmNldsYXRRalB0emRJdUtZM0pHbTZkN2NjMXNJUktBSjc4bE9oNUdTSDlhaVY1N1NwQXVDUjU5TlhSdWhYZ1l0SEhqSUdVQUV1QXhINHhKLWswRFZGSHlLOGJUVV9wRjV0UjVfenJmUzJLbEQ5eDltSkR2M0U?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "相关。\n\n核心：Waymo自动驾驶车队因停电导致服务中断，公司宣布将通过软件更新解决问题，同时股价上涨。这反映了自动驾驶技术对基础设施稳定性的依赖，以及市场对技术迭代修复能力的信心。\n\n意义：事件凸显了自动驾驶规模化运营中软件系统韧性的重要性，软件更新成为保障服务连续性的关键。股价上涨则表明投资者认可Waymo通过技术手段快速响应问题的能力，对行业长期发展保持乐观。"
+  },
+  {
+    "title": "Less traffic, more lounge time, cheaper homes? How robotaxis promise a whole new world. - MarketWatch",
+    "link": "https://news.google.com/rss/articles/CBMiygNBVV95cUxPb0lfQ3pJYV9zV1FqZGFIYkNvb2pSd3k3VXhXQUVqcnB5R1NrUWxSYVdScXF6Z1dxb0RIZVBuaG5HVlppdGpzekVKS1REZnY2Y3RYMUtpZG9YZ19IajduNGJMQ0dZQ3J2YnU4eTYzeGI4dy02RUFBWElwSjdzOE9VTk4zNFJyaWNGaVE0ZG93Q2FrM3RXRlM5c1BmcTdULW81am1xVTJEQkpLZmlJdVY1ZU9LWGhxX29oaG1oNVBLM2pacnBiSXRMcVhKOXF2ai1zUDJadFg5Vl9jamFCS2YtWmViblJUbGdPSERBMGVJaXloelk2dHV5c0NqOFNCZHhxYUxfUTZmUnJCWnZUeWdvTDRPMXhEV3Z5QmxHZTBTYnZETFprY250SmlKQkVLU3Fabk1KQTRudXpTTXNsVTBKQ21CdmtDbnoycE5aV0ZsRGdmbXJzSkRFcl9HMVR0NVF2SnlDdElVNTB6aE1Dc0JTb0ZERWRSTFZBZXRmTE9ncjQ0U19TbkwtOGpTOE45SU1QSTlyN1NDSUNrNUdyZnA4ZEdyZFJnNGxKcm16Y3drMnY1c0N1eFNSZm9fc01IeDJQZEp4bS1iTF8yQQ?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：文章探讨了自动驾驶出租车（robotaxis）对城市交通、生活品质和房地产市场的潜在影响，提出减少拥堵、增加休闲时间、降低住房成本等可能性。\n\n意义：这体现了自动驾驶技术从单一交通变革向重塑城市生活方式的延伸，其经济和社会外溢效应可能深刻改变城市规划逻辑与居民生活方式，是具身智能在宏观城市尺度的重要应用展望。"
+  },
+  {
+    "title": "Woman Sits In Front Seat Of Waymo. She Didn’t Know There Would Be Consequences - InsideEVs",
+    "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE9ZZWs1Sm1NdVVvM2tSejZLbVladS1Od21KbW9tVUFXZEVpakJmbnNuaVc5WndNbWl3TFBhUXRhTzFJZW9xQmwyS2Znc3RHT3FhbktfVFcwTW5KbjR1b202cg?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：Waymo自动驾驶出租车因乘客坐前座触发安全机制，导致车辆停驶并报警。  \n意义：事件凸显了L4级自动驾驶在应对非常规乘客行为时的技术局限与安全冗余设计，同时也暴露了公众对无人车使用规则认知不足的问题。这为行业提出了人机交互界面优化和用户教育的双重挑战。"
+  },
+  {
+    "title": "Waymo explains why its robotaxis clogged San Francisco streets during a power outage - Business Insider",
+    "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxQSTVCTEU0VXB0TjlIdFpxc3FFUEJtbHc4TVE5TEhpMERkLWFuTWVzMnd3d1JXVGVJVk9TX0pDS3AwVjRpMFRFcHN4ZWVXNEx3V0hmdWo4YWRwOVRjbnVkS2ZLUlhDc2I1Vlotd29BNHdRNWZVUUI5M0Q3cE4yY1oxbDZ2ckREbjhtUzVQT1oyRjlqOVJCUWExR3ozZXpoWGw1THhLYmh4MGM?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：Waymo自动驾驶出租车在旧金山停电期间因通信中断导致车辆停滞，引发交通堵塞。  \n意义：事件暴露了自动驾驶系统对网络连接的依赖，凸显了极端场景下的技术脆弱性，为行业提供了关键的安全性与冗余设计改进方向。"
+  },
+  {
+    "title": "Waymo to update software after San Francisco power outage snarls self-driving vehicles - Reuters",
+    "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPWWpDeU44Ul83NnU5ZjBhRk5ZU1FlVkxHTk51bTZTd0xZTjFMRHNSZGRmOG8tTHZPNDFSaE82S3JMTDlqVGhKaGktX3ZsdmF4OVZubE81cFczYnBzUDZtUEloVExDTDU4U25PcmJCelA1aTlBWDFPR0hGR29TOEZSM0NCZ2ZIME9vLW5fQWVlUklzOGJpNTM5emVJWTAxVzlKaU5KT2stdGc2ZEFjYXBvbC1ySGR0ZlhrbjFwSWVkRnR3bFhNZWpPNjMwTkwyMXZfNmp6cjlNV1dUTi02eUVN?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "相关。核心：Waymo因旧金山停电导致自动驾驶车辆集体瘫痪，紧急更新软件以增强系统鲁棒性。意义：暴露了自动驾驶技术对基础设施稳定性的依赖，促使企业加强边缘场景应对能力，是行业从实验室走向复杂现实的关键压力测试。"
+  },
+  {
+    "title": "FatPipe Inc Highlights Proven Fail-Proof Autonomous Vehicle Connectivity Solutions to Avoid Waymo San Francisco Outage-like Situations - Pueblo Chieftain",
+    "link": "https://news.google.com/rss/articles/CBMilgJBVV95cUxPSGxpY24tdnZldWZ3b1FxU0tKRXk5aldXMTE0c2pzZHVqXzVMZ3psT2c4QUNCWDhhd05EVUZXX3ppWUNhSXpyZ0lIOEdrejBDcEI0WWZMRU1hclA5UnRYWVN0cTNBQkQ4Um5sYzBOQldCWnhQWEJrU1lVUWdQa2U5RzdpdDhPWFdUcnhnemsxdXpfM1NieDI1RkYwRTVsYnAwdVZnLTBCZFpYcDJfLXpJVG5hbGt6WXBIMmctS2ppREVBTzBGZG9RNUZyRjhfeW9RUHkwLWhUTGV0OVdCX1dtcTdCN0xQaDRFdEdINHM0LUppVXF4WXF2a0VLbUdZWlp2TXp5S2xudTBjdzVHaG1zcUN2eVZiQQ?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：FatPipe公司强调其自动驾驶车辆连接解决方案的可靠性，旨在避免类似Waymo在旧金山出现的服务中断问题，确保自动驾驶系统的稳定运行。\n\n意义：这突显了自动驾驶技术中高稳定性网络连接的重要性，不仅关乎技术成熟度，也直接影响公众信任与行业安全标准。"
+  },
+  {
+    "title": "San Francisco power outage: Hundreds of Google’s Waymo self-driving cars stranded across the city, compan - Times of India",
+    "link": "https://news.google.com/rss/articles/CBMilwJBVV95cUxPT2YzSU1CZWFvb2dJRUNCZkdzbkdSR1FUWkFKWXBWazdQUmo0WEdBYk5GcUhFVHM0aDdMRnVHVTRSWHpIbHhaUU5DSktTcjFJbEhYNlE2U21QbmJVRG1FS1Byam02ekhDTlEySEtzU0QyTDlHTnBUazhqVTRQRHNyNWhPclF5MF9JNnlyVXBUMEFhbFRzS21vMlh4TVpiUENZeWRyell3ZmIxTl8yY0V3Yl80WlVqWG14NEtFQ0dUTGQtWTRGWFVsdElsU0Yzb0pYMkxweHEtUDQ2azBTeFFjMkd4ckpGM1N0WVdFbURFdmJuSEMxRTQ4eUhkblRTaGlXWVRjYVBOVUdndkNzWnJ3TlVEdTRIdTTSAZwCQVVfeXFMUEctTm53a2JtUDJfSkhWWk9nRDV0S01OSE5rcXZONHpnTEZwbHhpZTlybVZ3NGFqYXlLUzFGY1ZCMFFScnVpaWlzbmQxLUJsUlJIN2dnVWJsZ0ltek1tcVVvdmxLZHJyLUpra1M5dklUY3FIeHZtNnNqenlBeE1ZQjdlQXpkZlZRd0hVYUpNTVRZSzM0bXlleHhtSXMyWUF0b19HUTNNNUI2eHZ2ZlRJLWhQVzR6X2pqZEo4bkRrS2UydjhmaTRhVkY2NThJX21vejFIbDJPQ2dPWEVSbVE2MDRZSzN5Ynh6dkZQMTNUaEJQS2xCa09nYWI1ZzQxRndKTFN5SE9aS2RUdFZFSVlZMXF5SHJpVnVzRmNhcUY?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：旧金山大规模停电导致Waymo数百辆自动驾驶汽车瘫痪，暴露了自动驾驶系统对基础设施的高度依赖。\n\n意义：事件凸显了自动驾驶商业化落地的关键瓶颈——极端场景下的系统鲁棒性。这不仅涉及车辆自身技术，更需构建车-路-云协同的冗余保障体系，对全行业具有警示意义。"
+  },
+  {
+    "title": "Tesla signals robotaxi expansion with website revamp — here’s how the competition stacks up - MSN",
+    "link": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxPcjFXd2U5cVd3UXN3aTY4TFBxMXA1cHZJTmdlRFdFWkpCZ2tzbXZDU2pvS2FYakpiLVBWUmp1ZXIzdXlzdjJHX2JiWXFYX1c5RmJsYkREc05XWHloMEZaUjItR0dQS3Z1MVJ6TC1WUnpaU0x5R3U0VmR0bzlxMS1sVlp2R2prVUdYQTBBem9ma1ZIM2FZejFkRmdPbEJnN0tRRm1yT1NjOTJ5eFdIYlZaQnh0dmc4TVIxOFhGekJaUU9TY2dzalU2R2k5RzJVNnBJWXZiSllwQ1VBNkt6Q182dl94RGttU0RfdTJkQWlfTmwyZm9rQU1JMXRBMUdzUQ?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "特斯拉官网改版突出Robotaxi服务，预示其自动驾驶商业化进程加速。此举不仅强化了特斯拉从汽车制造商向移动服务商的转型，更可能通过规模化运营重新定义城市出行生态。面对Waymo、Cruise等对手，特斯拉凭借海量真实数据和全栈自研优势，正试图以更低成本实现泛化能力，但安全性与法规适配仍是行业共同挑战。"
+  },
+  {
+    "title": "Waymo explains why robotaxis stalled during S.F. blackout - San Francisco Chronicle",
+    "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxObUZOakFXUW9mc1dhVGxGUzJ4aHlZT2FRa29PN3VCUkFib0hUNHdvd2FnYTdKRk5pOEw2VkJ3NnhBanhtYlJEbnlEWktEOW9femtNTmd2Vk5ya1hNMERvWFRjRVNITGFwNjFtajJjUnRQUHMyUXVaeWZDMEJOMXpya0ViV0lic29uaHM1NWVJV0k?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：Waymo自动驾驶出租车在旧金山停电期间因通信中断而停运，暴露了其对网络连接的依赖。\n意义：事件凸显了自动驾驶系统在极端场景下的脆弱性，推动行业思考如何增强系统的鲁棒性和冗余设计，确保在通信中断等异常情况下仍能安全运行。"
+  },
+  {
+    "title": "Here’s Why Waymo’s Robotaxis Freaked Out During The San Francisco Outage - InsideEVs",
+    "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPVXFCcHZ4QmZmWnhFWDVkRm9LTFNpcjl0U1NNVXVieWRnU3NQR01zbXVxakZIemoyRzRpTHctTnRoTkJMeWswV0wwaWZCWVhjN0FCZGdia1VJa21LN0VaUVRFY0NzRVNLM0xaN0dVX3BRcm9HTmw0enZOeURPaHNFZXRzMEl0V0Jv?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：Waymo自动驾驶出租车在旧金山网络中断时出现异常，暴露了其对稳定网络连接的依赖。\n意义：事件凸显了自动驾驶系统在极端场景下的脆弱性，推动行业关注边缘计算与离线冗余能力，是技术成熟度的重要压力测试。"
+  },
+  {
+    "title": "Waymo to Update Robotaxi Software After San Francisco Blackout Exposes Navigation Gaps - eWeek",
+    "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE5zTnpmeEhYRnkwcUlWUnV6Vkx0ZlVsWjRLd0FhOGhJUXBkYmJzUkJkR0tMSTc4RHJxX3NycUpNRXFkT0JpU1JmREg5cDZ3T0Z3ck5OS0d6QjhaWU5VNzBiM1lya0FEQjdtRWhJ?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "相关。Waymo因旧金山停电事件暴露其自动驾驶系统在无网络信号时的导航缺陷，决定紧急更新软件。核心问题在于高度依赖实时数据的自动驾驶系统在极端场景下的鲁棒性不足。此次事件凸显了自动驾驶技术从实验室走向真实复杂世界时必须解决的“边缘案例”挑战，也为行业提供了重要的压力测试样本。"
+  },
+  {
+    "title": "Waymo to update driverless cars after San Francisco power outage - USA Today",
+    "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNOTFGZUlLTGt2aERST0M5b05Ma2dMRllBdjBsMzZ4TDNyWUVMTk1VSVlDd0R2QlZiV3VEVzFoSENQTlh5WldYMGRuaXBqVTJEcXRlem9FZjZYQmhZUGotemlJSFBBalFkdjE5Qm1fQnRzcEVhdHF4R21Id0ZIRy1JZ1RXeFBNa0d1UDFPa2xQRE0yZnpwOXBnQW1nbEtqdTQ1UENYMDNhLXZUNlBhb3c?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：Waymo针对旧金山停电事件更新其无人驾驶系统，旨在提升车辆在突发公共事件中的应对能力。\n\n意义：此次更新不仅是对特定技术漏洞的修补，更是自动驾驶行业在复杂城市环境中安全部署的重要一步，标志着无人驾驶技术正从常规场景向应急管理场景深化，为未来大规模商业化运营奠定安全基础。"
+  },
+  {
+    "title": "Waymo's driverless cars arrive soon in these Southern cities - Mashable",
+    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE54UEFBV3MtYWtIdGFJeGZPZXB5cnl1bktNTkJKekhtMXk5TUltQl9jZV9mTXo0NUJrMDE3NENraHd3bXlPclNvS2xyLXRub1lOcUFRQTlzRVJMU2EyTU1EcDhoSTV0NENueVNFM1JlSXJzZw?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "Waymo即将在南方城市推出无人驾驶服务，标志着自动驾驶技术从测试阶段迈向规模化商业运营。这不仅将重塑城市交通格局，更意味着L4级自动驾驶技术正加速渗透日常生活，为未来智慧城市提供关键基础设施支撑。"
+  },
+  {
+    "title": "Here's where you can get a robotaxi in the US, and the cities they are coming to next - Business Insider",
+    "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPeHU3VDV5OUtzMkZGWXYyTm4wZ1B5dkdJZHlZT0YtbGhRbURfbW1Kcm8zOTFOeDdIWkZHSlhtcnd6TjNSX1VKZ19hYU5xOWNVVUQtZE1tQ3E3VVE1ZnRwYzFNZlV1b2w1UHlZRzhYSm1uUnNjdHhTUDRqUXRKaXV2ZW1RSXRRVVYxbHQyVnVB?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：美国自动驾驶出租车（robotaxi）正从试点走向规模化商业运营，覆盖旧金山、凤凰城等城市，并计划向更多地区扩张。\n\n意义：这标志着L4级自动驾驶技术进入实用阶段，将重塑城市交通格局，推动共享出行与汽车产业变革，同时面临法规与安全挑战。"
+  },
+  {
+    "title": "When there’s no driver to talk to: Training preps police for autonomous vehicle encounters - Police1",
+    "link": "https://news.google.com/rss/articles/CBMixgFBVV95cUxNTHNBc01vcUlScnhzZjBjWlFVajVoZkY0RkRJbmdobTY3ZmdudVphX2V4ZndmbTJFbXdGNjRqbHFDTlRkWnVWdlpLT1dVYTEybzBSV05JdjBkLUxVT09RWEdRYkxhck9vYW4tdGQ2RENMTUN5YWZMTm41MEY5aWZQellXNnhYczZodGw4SWtJT3ZVQkRydHJLbGtsWklHS2d1dXl5aWhtejBsMVZ6eXZvQ3BydzktU29hb3Q1NW5oZXFNQ2FXYXc?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：该报道聚焦于执法部门针对自动驾驶汽车普及进行的专项培训，旨在应对无驾驶人场景下的执法程序与公共安全挑战。\n\n意义：这标志着自动驾驶技术从实验室走向公共道路时，必须建立配套的社会治理体系。警方培训的提前布局，既是为技术落地铺平道路，也揭示了新兴科技与现有法律框架的融合需求，对行业规范制定具有先行示范作用。"
+  },
+  {
+    "title": "FACTBOX Driverless future gains momentum with global robotaxi deployments - Reuters",
+    "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxPVERudDlTNE96Tm96QlBDN0RfeVNaeFFCb0VBTXNoOHQwZjVWQ3ZmanIxTGNNbzk4ampxamZVbU5QVS1GMnBFYklRQ0pGVzBUaDFseTU4eHdCRHB6WmFNTVZQV19QbkpmWmVaempkLUQyYkt3bmlkc1J3SXpMNG5ES3g1M2hwMlgzaDA1TVdoTl8xOWEzV2pSdGgyLW9iTFRLeTZUOUFCSGVfaXdSbFQ4ZWRoemlLbzNpXzViYkJoTENFQQ?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Auto",
+    "lang": "EN",
+    "summary": "核心：全球无人驾驶出租车（robotaxi）部署加速，标志着自动驾驶技术正从测试走向规模化商业应用。  \n意义：这不仅将重塑城市交通模式，降低人力成本与事故率，更推动人工智能、高精地图等产业链升级，为“智慧城市”提供关键支撑。"
+  },
+  {
+    "title": "CMB Securities: Embodied AI Investment Contraction and Divergence; Focus on Three Core Investment Strategies by 2026 - 富途牛牛",
+    "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOUVFqRlBFRVo3QmJuQTlMdy03YlJ1RVRPQWpkbVluTlY2QkUtbVRlWnpzTElvU1pnRmx6a2ZuN21OblNIVjZCNWViT2Jva3F1bHEyT0F2QzlHanRUWWkzSU5OR25xbjhUZ3JyaUt0dUdNcnpDZ08wZ2dtS19fS19hYTV0NV9CLUpTZThIcmdTdkhnM0kwVzdvWm1BNWdOVzA4NmxGNFRackpSdkpxeHNqWVZBSHk?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Tech",
+    "lang": "EN",
+    "summary": "相关。标题聚焦具身智能投资，核心在于指出当前投资收缩与分化背景下，至2026年的三大核心策略。这反映了具身智能领域正从概念热潮进入理性筛选阶段，资本将更聚焦于技术落地性强、商业化路径清晰的企业。对投资者而言，需关注算法、硬件整合及特定场景解决方案的突破，这或将加速具身智能在工业、服务等领域的实际应用进程。"
+  },
+  {
+    "title": "Richtech Robotics to showcase humanoid robot Dex at CES 2026 By Investing.com - Investing.com South Africa",
+    "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPVTdTX3l5MXphZmtSSnRaRS1FVG1KN3phRHk3SGZ1MFdrbm9WUDFqUkFqcjJYOWlMZFlST2hHWTRNWkRNRDdNWG5MWmQ2Q0dLTHB4eXNuU05IMWxqYnI3cFhaYUxoOTVVMU5Xb2R2dHlVeEpubndMeEIwajdVdmR5c3R2RmFPR0JWMlN6YUJJRE5IV3ZBYW9BVy16Y1VhWnNyd1RWVldRdFhZZnRaN2ptSGk1c0lfV2c?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Tech",
+    "lang": "EN",
+    "summary": "核心：Richtech Robotics将在CES 2026展示人形机器人Dex，预示人形机器人正从概念走向商业落地。\n意义：此举不仅展示人形机器人技术的最新进展，也标志着其在特定场景（如展会、服务）的应用探索，为具身智能的产业化发展提供重要参考。"
+  },
+  {
+    "title": "Waymo旗下Robotaxi停电期间瘫痪马路 承诺更新软件兼制定应急协议 - singtao.ca",
+    "link": "https://news.google.com/rss/articles/CBMilgNBVV95cUxQQy13WjVvdnZmcEtSUVNqajRhc3F5RHVNdDhpczFHWmFKM3d3aEhKZlFtNGVxbG44TTZwMWR1eUNqcVZ1NW1uSGpXNl9kVFlQanp4a2RONW9QTklCQ2E2N2hUSHRiaGpoZEREVGhCMXB5UjN1YzVFZGFDMS11MFZzRi1DeEpDT01ZMjJiMEJ0d3J0bDdYdHgzRlVoN2tpSU1Cak13MXZDZ0hOWDhES0RpTmpWN0xJWVFZU0FGLVZ5OGlxTUdGNlE2bWJnQUtlVEFhVTJJRFlzN3dVcHRCUTVBY0pocEdqbkxoLTNVa0k2Tl9LOUM0VXhYYUh6VnZQMjl6Z05saVgtNU9sT2x3QThHNUZnWV9La0dXTXJfY0F5ZzdkR3Z6Z1lFYmhBX3NRYldULUFOQmUtb1JPaDRxaFVtaDM4SnlkeDJrLUpjZHR2X19hV2NjblJWM2pSSGtuelR6NUdoNWZxXzRidE9KTVYzZW1sLW1OQXNYdzJOTUt5YXM0VEJBZFpFWWUtZDdZWFZNSld0cEtR0gGMAUFVX3lxTFBVQnVWU1pxY1BXNUczWjRnS2hocVJfQXpzUVZTQWt1S2ZsNXF4UEh1VWpmYTluRVY4SjVFQ1U3Tm85MFFsajNFREhZNDd6eG1fOTloMDJuRXJ2OVNLNUNwU3JWTkZWOXlYSkhjMmJ6TUlSaFlCT2ZyZ191dm5tSGgzRWptTm1nWWx1Wndl?oc=5",
+    "date": "2025-12-23",
+    "source": "CN·企业",
+    "lang": "CN",
+    "summary": "相关。核心：Waymo自动驾驶出租车因软件故障导致交通瘫痪，暴露了无人驾驶系统在突发状况下的应急短板。意义：事件凸显了自动驾驶技术商业化进程中，软件鲁棒性与应急响应机制的重要性，将推动行业完善故障预案与安全标准。"
+  },
+  {
+    "title": "Waymo旗下Robotaxi停电期间瘫痪马路 承诺更新软件兼制定应急协议 - 星島頭條",
+    "link": "https://news.google.com/rss/articles/CBMikwNBVV95cUxOTk1Ea1J5X1FCaU4yMmtuYmZFQ25LMzAtWGNWUFJ4T2hZcjlPaDFsaW1icjFzajNGaER2OFg2MVZVMkYyZEkyVXZsT3ZuMEhSQm9vTVo2LTNJaE9zdGdaZmhMX2FlaF9HOUloTnhLUWRmNlpqeFFsM0hGeE1kOGUxRDd2WmdlZjk0b2dsMkltMlNoMXhGUldpWmtuT254MkRWdHM2UnNKdFBMajB4TVVpVGQ1ZWZFSzRmZi1KZ3d6OGptYlQzbGtKU1RPNGQ0cGJrbzJKMHMzcU9pVU5DekRqQklaVVVqQ0pnNkVoaUtIYWZ1Z2llRDdKa3RMOFdlT0dZTkt4ZmJVU1NRbWEyZFRtdnlwcFFya29kajJEdTNhUmM4d0lRUzVwbnZpT2pod2NmekhUVXY3aVlmNEFzSWkxRVZkdGhXZm9FajNLR2I4ZVY2TUhzeXZHcXh5YUg2Qi1vSExZQ283V20yZnFCWENuLUtQN3VTaDRNUDRaNmxBd2pud3c1bTZuZmN5dmpiZzFlbk5r?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·企业",
+    "lang": "CN",
+    "summary": "核心：Waymo旗下Robotaxi在停电期间因软件问题瘫痪于马路，暴露了自动驾驶系统在突发状况下的应急处理短板。\n\n意义：事件凸显了自动驾驶技术在实际应用中需强化系统冗余与应急协议，以确保公共安全与交通流畅，推动行业完善故障应对机制。"
+  },
+  {
+    "title": "马斯克称特斯拉FSD 支持边开车边发短信 - MSN",
+    "link": "https://news.google.com/rss/articles/CBMiuANBVV95cUxPRU9DbUhvbktNYnZaUWVrY0tKeXJxLUI1OGhneC1FUE9HdHpLYk1PY1hsVFRRU0RTSHJiVjRUOE9ULS1XdExtanZsOHJDbDgtWWdXdlNCZFNxaTFKQmRMVGMtSS1IbTlhaWotZ05uc1dYb0RTOGtlekhjQnRnQWlTWWtGeGdDTW1XRl9tb0FjdGZEVE0tQnFpTEhYZ0NiNmlVc2FSUTc0cGp5bHJsOWpnT0sxWXQ0dFlaTUlBalBKbnBZcGUzR2ZDdWdYeTZyUGhZRFFlTHZKOEZEcTljRXlqdlJDc1NEb2JMbVM5TEhzaU8yVzRYd0U4THBBanFtakhKcUk1OWpBY1Z6SlQxdnJ3MVlHVHBLQ0l4Nkhkb19PalVsVGlsMnZZb3NTYk44U2hYcC1iNDdBOWl6SU9VeGpOa3dUR2lyLW1tV2R0SS01QW9SNThNTXltMURDeU04empkUnVLY0pMMVY2b3Y2STZmUlJLc2kyaVJGZE0wQklsUnBTWUFaUENEMTFCazNxUWRDQWxzM2xtWGFWdGFGVFVHYkJ3Z3JhM0hpQ3FnUjQ5UWFwTUpYdWpaSQ?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·企业",
+    "lang": "CN",
+    "summary": "特斯拉FSD系统支持驾驶时发短信，体现了自动驾驶技术向更高级别自动化迈进的趋势。核心在于通过AI算法确保车辆在无人干预下安全行驶，解放驾驶者双手。这一进展不仅提升出行效率，也推动人车交互模式的变革，为未来智能交通生态奠定基础。"
+  },
+  {
+    "title": "旧金山自动驾驶因停电而停运…“机器人出租车”的天堂变成了交通地狱 - 朝鮮日報中文版",
+    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQakswTFBLUmtHRlYxZEFOa1VMbDM4R2VqYkIzY0V0aE0zNHZoakZrZnJ2aGkzM1JsVEVIbGhDUDhmR21RVnFGSkQ3Q0NaY3NXbE5OU1JtYnRKbEl2QUVxZHZfRERzaWFmWERHMzM5MlZobm9OeWVCeDRMUjJ5UF9MX0dZT1E2Vzg?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·企业",
+    "lang": "CN",
+    "summary": "核心：旧金山自动驾驶车辆因停电导致系统停运，引发交通混乱，暴露了自动驾驶技术对基础设施的高度依赖。\n\n意义：事件凸显了自动驾驶规模化落地需克服技术稳定性和应急响应能力，也为城市智慧交通系统的冗余设计敲响警钟。"
+  },
+  {
+    "title": "宇树科技、云深处科技中标多足智能巡检机器人项目！机器人ETF(562500) 盘中震荡企稳，快克智能领涨超5% - 中金在线",
+    "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9JVEh2NFAzLXpVQ2l4YkE0VExMWUxyU0lLSU10QlhFMWlpeTNBYmFnam8weDVEYjR5Q2VocDFULWthNWpRc1NlWmdGRHVBRHhSWVZHWGR4VEhWUHNJaHVMZXNmd2dRY2FDcFNITWdB?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·企业",
+    "lang": "CN",
+    "summary": "相关。该消息显示国内多足机器人企业在巡检领域取得商业化突破，标志着具身智能技术正从实验室走向特定工业场景应用。其核心在于通过动态平衡与复杂地形适应能力，替代人工完成高危环境作业，对能源、安防等行业的智能化巡检具有降本增效的意义。机器人ETF的企稳也反映市场对产业链长期发展保持信心。"
+  },
+  {
+    "title": "旧金山大停电引发Alphabet(GOOGL.US)旗下Waymo自动驾驶汽车陷入瘫痪，被迫全线升级应急系统提供者智通财经 - 英为财情 Investing.com",
+    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE1MM0NycWVCdTdBQWNhdlpJQ3Fub1FaTXVJa3lKbGMyU1NKdEREVy1mWVI5bi0xUmRSaHEzR3l3VHRLam9nUk8yeWNTTG5vZWNHMm56Wm1tdDNiTW11bDZQUEJKRnRyTmxmaHh6T29aUUk?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·企业",
+    "lang": "CN",
+    "summary": "核心：旧金山停电导致Waymo自动驾驶车队因网络依赖而瘫痪，暴露了自动驾驶系统对基础设施稳定性的脆弱性。  \n意义：事件凸显了自动驾驶技术需强化本地化应急处理能力，推动行业从纯云端控制向“车-路-云”协同架构升级，为全场景安全落地提供关键警示。"
+  },
+  {
+    "title": "英伟达机器人部门主管：特斯拉FSD v14是首个通过“物理图灵测试”的AI - Sohu",
+    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxObXNwUExCME0tVEdiUEo1ZVg1NTNEWjVfYm9xVTk4eDhYTHRJbmN2TTY3T21IYmhOc1ExYURmN1cwcnRvVDhGNjhGaGJwVDVKdTNrckZ2RExIQVdDMzE0TEV5S2lWWFl2eXJDS0dueTJtaHMtQTlGSDQ4aEVwZU5rS1RDa0tRS0E?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·企业",
+    "lang": "CN",
+    "summary": "英伟达机器人主管高度评价特斯拉FSD v14，称其通过“物理图灵测试”，意味着AI在真实驾驶场景中的决策能力已接近人类水平。这标志着自动驾驶技术从感知理解迈向认知决策的关键突破，为全自动驾驶商业化奠定重要基础。"
+  },
+  {
+    "title": "Waymo在旧金山大火导致的停电事件中汲取的教训 - 汽车之家",
+    "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE9fZ2JMMUZ4T0ZOemltTmFoSVljWU1LeHZLTzVoUUlOdUU4bDh2OFgxaXZ6aWluUjAtQ2RPRFRrYU5MXzQxOTVRVTJ3U1g4X01hZ0ctcTBPazI0cVo3OHk4cG0zckVnVlJrU29B?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·企业",
+    "lang": "CN",
+    "summary": "核心：Waymo在旧金山火灾停电事件中，通过自动驾驶汽车的实时数据与应急响应系统联动，验证了其在极端场景下的协同调度能力与道路适应性。\n\n意义：这一事件凸显了自动驾驶技术作为城市应急基础设施的潜力——不仅能提升交通韧性，还能通过动态路径规划与危险区域规避，为灾害救援提供数据支持，推动智能交通系统与公共安全体系的深度融合。"
+  },
+  {
+    "title": "智元机器人发布租赁平台“擎天租” - DoNews",
+    "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBLTU9DZ2VWLWtiTGF2Yk1nc09TUzlUVV9JelRXNURFNDNsQ2IyRkEtVEFnMldfU0I3RjJ4RncyY3ZzUjJkeVM5TjgtcHo1cHM1VVBCTlpoSWtQZ19FbWc?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·企业",
+    "lang": "CN",
+    "summary": "智元机器人推出“擎天租”平台，标志着具身智能领域从产品研发迈向大规模商业应用的关键一步。该平台通过租赁模式降低企业使用前沿机器人技术的门槛，加速了智能机器人在工业、服务等场景的渗透。这不仅是对现有机器人商业模式的创新，更是推动整个产业链向“机器人即服务”转型的重要尝试，有望显著提升行业整体运营效率与灵活性。"
+  },
+  {
+    "title": "【视频】Waymo自动驾驶出租车大面积瘫痪，原因竟是一次大规模停电 - 汽车之家",
+    "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTFBZeDFwUFZBcjZ4eTlsUkc3NUUxMlZ6MDNiblFrOFU4b0p0YzNyaTJ3YzJNYmZxRWlMZzBxUHYyM3ZsbUVsSTJGS0tUOG1VbVY3Z1JEbmlSNkJpUW51YVFoRElJaFBJdTFaNk5R?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·企业",
+    "lang": "CN",
+    "summary": "核心：Waymo自动驾驶出租车因大规模停电导致服务瘫痪，暴露了自动驾驶系统对基础设施的高度依赖。\n\n意义：事件凸显自动驾驶技术在实际应用中面临的稳定性挑战，提醒行业需加强系统冗余设计和应急方案，以确保服务的可靠性和安全性。"
+  },
+  {
+    "title": "宇树科技交互控制专利获授权！规模冲百亿的机器人ETF(159770)实时净申购2400万份深市同类居首，近5日“吸金”1.85亿元！ - Jiemian.com",
+    "link": "https://news.google.com/rss/articles/CBMiWEFVX3lxTE1aS3RMamprcER6cFEzX09mSlNmbHNRVGtZc2JMeHpRbFlULWxZWVpTNGxkOEZIQkpoa1JMc3dmOXVwM29MM2ttT1Q1NlNsZldmeDFkd1F4Smg?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·企业",
+    "lang": "CN",
+    "summary": "【核心】宇树科技获得交互控制专利授权，体现了其在机器人核心技术领域的持续突破。同时，机器人ETF（159770）近期获得大量资金净申购，反映出资本市场对机器人产业的高度关注和乐观预期。\n\n【意义】这既显示了像宇树这样的头部企业在技术研发上的领先地位，也揭示了机器人赛道正成为重要的投资风口。技术突破与资本涌入形成共振，有望加速整个产业的商业化进程和创新发展。"
+  },
+  {
+    "title": "宇树科技、云深处科技中标南网科技多足智能巡检机器人项目 - 证券之星",
+    "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTFBZSTd5STVoQjZRbGRVRF96SlpMMFBmY1N1c2twVEs1NkRBcFdzOEFsbW1nUjZGTGxnRDNlTHJ3aEpycGtoSUttaVQxX1psdjF1aFl4UGhDNndEZ1JNd19v?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·企业",
+    "lang": "CN",
+    "summary": "宇树科技和云深处科技中标南方电网多足机器人巡检项目，标志着具身智能在电力巡检领域实现商业化落地。核心在于多足机器人适应复杂地形，提升巡检效率与安全性。此举推动智能机器人在工业场景的规模化应用，为行业自动化升级提供新范式。"
+  },
+  {
+    "title": "智元机器人暂无调整主业计划 - DoNews",
+    "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBBQW9hTzhzMmFnVV9VbkNlUjdzZDA1QnFSWTZWcEpPTS1TTWRTLTI2TGhJdzdhVlBJZzcwQldMMUxJbHd0Qkt5eFZDYjZqazFkcEp4Q0NMOHFQRVRqQlE?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·企业",
+    "lang": "CN",
+    "summary": "智元机器人表示暂无调整主业计划，表明公司仍将聚焦于具身智能与机器人技术的研发与应用。这一决策有助于保持技术路线的连贯性，在竞争激烈的机器人市场中巩固自身定位，同时也反映出企业对当前技术路径的自信与长期投入的决心。"
+  },
+  {
+    "title": "宇树科技、云深处科技中标南网科技多足智能巡检机器人项目 - 新浪财经",
+    "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBRcFVGSU1kUDR6RHJSeWhYa1dESzR4Wm1yTXJnRnVEdUFDZHNYd3pHLXBoNGlncXBaOUw0RnpsS0xXRG5nSW9pb3ZqRQ?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·企业",
+    "lang": "CN",
+    "summary": "核心：宇树科技与云深处科技中标南方电网多足智能巡检机器人项目，标志着四足机器人在电力巡检领域的商业化落地加速。  \n意义：这不仅提升了电网巡检的自动化与安全性，也验证了多足机器人在复杂地形下的实用价值，为具身智能在工业场景的应用开辟了新路径。"
+  },
+  {
+    "title": "旧金山停电致Waymo自动驾驶出租车卡壳，官方宣布升级软件应对 - 新浪财经",
+    "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTFBxQzlxY1h2aDlfV0dncExKd3JkRHB5NENBWkJ1cE5Nc013TUMxZFVXVW1SdDdsWjZKVkw1eWtjM3c4bmZpZ3R1RnRnUnY5YzdrMDFiU1pEODQ5SEtsbm5fdENlSnV2VjBNWjZ5cUpULVFJX1NZVVo3c1VMYng?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·企业",
+    "lang": "CN",
+    "summary": "核心：旧金山停电导致Waymo自动驾驶出租车因网络依赖而瘫痪，暴露了自动驾驶系统对基础设施稳定性的脆弱性。  \n意义：事件凸显了自动驾驶技术在实际部署中面临的非技术性挑战，促使企业加强软件冗余设计和离线应对能力，推动行业从单纯算法优化转向系统级可靠性建设。"
+  },
+  {
+    "title": "旧金山全城瘫痪！Waymo断电变“废铁”，马斯克纯视觉赢麻了 - thepaper.cn",
+    "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE1mbTV2N09KZnBxY0xub1A5MjJVWG80MGEwcUpVbG0xa2JVUUNIZ05KakpqemtjS2paYmRhM3U5TXh3QlZudnQtc1U1SEkyVTBwd2U2dWFic2g4cV9TeXc?oc=5",
+    "date": "2025-12-23",
+    "source": "CN·企业",
+    "lang": "CN",
+    "summary": "核心：Waymo自动驾驶车辆因断电导致大规模瘫痪，引发对多传感器融合与纯视觉技术路线的讨论。\n\n意义：事件凸显自动驾驶系统在极端情况下的脆弱性，纯视觉方案在成本与可靠性上可能更具优势，或将加速行业技术路线的分化与成熟。"
+  },
+  {
+    "title": "旧金山停电瘫痪自动驾驶，Waymo将升级软件应对 - 电子工程专辑",
+    "link": "https://news.google.com/rss/articles/CBMiXEFVX3lxTE9nZGs3c05IT2F0ZDJTLXF3LUhQdEZBT3dfZ1NwdEZ6b2NkcW9uTmxvanMtaXBTUzd1YTdIMzlUMXJmQVQ3TURwenJwb29RT0hYY295TVM1dGVoM2dz?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·企业",
+    "lang": "CN",
+    "summary": "核心：旧金山停电导致交通信号失灵，Waymo自动驾驶系统因依赖信号灯信息而停运，暴露了当前自动驾驶技术对基础设施稳定性的依赖短板。Waymo计划通过软件升级增强系统对异常交通场景的自主决策能力。\n\n意义：事件凸显了L4级自动驾驶商业化必须突破“预设环境依赖”，从依赖规则转向实时环境理解与应急决策。软件升级方向标志着行业从“完美道路假设”向“现实混乱道路适应”的关键转型，是自动驾驶真正融入复杂城市生态的必经压力测试。"
+  },
+  {
+    "title": "Waymo将对无人驾驶车队进行升级，优化断电期间的车辆导航能力 - 新浪财经",
+    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxOV0lOSG44T1V4cVRHZ2NZMU0xQV8tNFZPR2ZFd2QxVXVxem5NbDJ5NkVvZWl5elB6S2RVRGlHMnMyOGlyTWx6QU0yOXBOZXFPbHI1N0lZM0RQTkVKXzlZbUdZZnNvTW9aVUw4aUpzMi1nMW9aSFdHdDVodGZJdzdKZGdSV05LbHc?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·企业",
+    "lang": "CN",
+    "summary": "相关。Waymo升级自动驾驶系统，核心在于提升断电等异常情况下的车辆导航与决策能力，这标志着无人驾驶技术正从常规场景向安全冗余和系统鲁棒性深化。其意义在于推动全无人驾驶迈向更高安全等级，为大规模商业化落地提供关键可靠性保障。"
+  },
+  {
+    "title": "旧金山大停电致Robotaxi“瘫痪”堵路后，Waymo紧急升级软件：赋予车辆更多自主权 - 华尔街见闻",
+    "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1sNUlCNzZKQlRKOUU2SG1FSHR4Yk9XNkpOeWRiWDU0VXJMQmNJWU5jcFMtWHNMLXBoTVp0em94eEhNRGd4X3doNkpXVl9RTWNCelNJ?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·企业",
+    "lang": "CN",
+    "summary": "相关。核心：Waymo在Robotaxi因断电瘫痪后，通过软件升级赋予车辆更多自主权，使其能在网络中断等异常情况下自主脱困。意义：这标志着自动驾驶从依赖中心化控制向边缘智能演进，提升了系统鲁棒性，为大规模商业化部署扫除关键障碍。"
+  },
+  {
+    "title": "特斯拉FSD通过物理图灵测试 - 新浪财经",
+    "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE1fcWFYQlRNdW03cmtaWXYtZzFQTTJ4V1R0NjJqOVhpQUFJcWx5ZGQ4ai0wbEUxY2ZkbzNoZHctTnZrcG5yRzVPUGpZOA?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·企业",
+    "lang": "CN",
+    "summary": "特斯拉FSD通过物理图灵测试，标志着自动驾驶系统在复杂环境下的决策能力取得突破。这意味着系统不仅能识别路况，还能像人类一样灵活应对突发情况，为全自动驾驶的商业化铺平道路。"
+  },
+  {
+    "title": "AI进化速递丨宇树科技、云深处科技中标南网科技多足智能巡检机器人项目 - 第一财经",
+    "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTE9Pd1hwZFBZN0Nvck00T1FvWno5MmtoNWdjaHVpQjFZTkMtZ0RHLUQ0aUo3OW9tbG9vU1k0ZjV3MlRLaGJFdlp5V0xiZUk4al9K?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·企业",
+    "lang": "CN",
+    "summary": "相关。核心：宇树科技与云深处科技中标南方电网多足机器人巡检项目，标志着四足机器人技术正式进入电力巡检等工业场景。意义：从实验室走向实际应用，体现具身智能在复杂环境作业中的优势，推动特种机器人产业化进程。"
+  },
+  {
+    "title": "无界动力携手ZF LIFETEC，共同推动具身智能规模化赋能先进制造-yeeyi - yeeyi",
+    "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE83NkU3bDZGMVpkb2dZR3Z1WmZ5VTAzZ1BlTE9KZllWWTlyTTNxREdKOEpiMnR2bjJRVTBzOWdTdTVaTlpwY1UwclAyZ01IYlNfSzlqWmFB?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业",
+    "lang": "CN",
+    "summary": "核心：无界动力与ZF LIFETEC合作，旨在通过具身智能技术规模化应用于先进制造领域，提升生产自动化与智能化水平。  \n意义：此次合作标志着具身智能从实验室走向工业场景的加速落地，有望优化制造流程、降低人力成本，推动制造业向柔性化与高效化转型，为产业升级提供关键技术支撑。"
+  },
+  {
+    "title": "国泰海通：具身智能迈向商业验证阶段国内商业航天进展加速_股市直播_市场 - 中金在线",
+    "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE9aTmZybzVIZ0N2VnFZdVM4VzJIR2NrNTN4RVR5bkFtRFRLd1RYTlROVTNpM2Z5NGFsUFk2Ti1YSE1hZ3JtX0JxQnYzQTJxQnFhcXFyc2hFbG0tMXRJNkFIQmhYQ045c05qV0F6RA?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业",
+    "lang": "CN",
+    "summary": "国泰海通指出，具身智能正从技术研发迈向商业验证阶段，这意味着智能体与物理环境的交互能力将加速落地。同时，国内商业航天进展提速，为具身智能提供了更广阔的数据与通信支持。这两大领域的结合，有望推动自动驾驶、机器人等产业实现跨越式发展，加速智能技术在实际场景中的应用。"
+  },
+  {
+    "title": "北京“搭台”助力机器人产业破局 - thepaper.cn",
+    "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTFBZcndLbXFzVVBSaHhVMWlwcjFTWk1aV2doX21VRVp1clRSejFaVGF5TWRTS0FYbmc4UHFFZXNQTkNkVUxnRmpLc2Z2dS0wWmtPcEltNENBelVjZ0lUaEE?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业",
+    "lang": "CN",
+    "summary": "北京为机器人产业搭建平台，旨在突破技术瓶颈与市场应用难题，推动产业链协同创新。此举不仅加速了机器人技术的商业化进程，也为智能制造和智慧城市发展注入新动能，助力中国在全球机器人竞争中占据更有利位置。"
+  },
+  {
+    "title": "“人形机器人第一股”大动作！16.65亿元入主这家A股公司，股票复牌！ - 新浪财经",
+    "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5LdXVUY09yOE54bTMwZ3BfSU41ZE04azBPM0hEZnh6aWROSFlSZ1lwdFYyLUdUeWVvQ3BjaDg5NkoteW12bEhqMHdVMlBKUnJwUDR3MDZtLXRORzBMWnBQOFl3YnQxUHlBV3hST0FiTnVnS1hET3FVNw?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业",
+    "lang": "CN",
+    "summary": "相关。核心：优必选作为“人形机器人第一股”，以16.65亿元控股A股公司，实现资本深度整合。意义：此举不仅加速优必选技术商业化落地，更通过资本市场联动，推动人形机器人产业链资源优化，为行业规模化发展注入强心剂。"
+  },
+  {
+    "title": "16.65亿元，“人形机器人第一股”优必选将入主锋龙股份 - Sohu",
+    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPN3dHOHFFU1VYdmdkeVNiSmFpVVMzc1Zsbm9HYjRScmwxMFB4YnpMc1prVkZVT2JiVXlBaDdwcGpaQmdDUXBRWk9oeGc1LTRYTU43VFd4My1RS3YzQjA3b1h2QzZUZGVCTVliSjIzZTVFYTRlU2Q4TDhPMG12aWpJZWtIOS1lbk0?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业",
+    "lang": "CN",
+    "summary": "优必选作为“人形机器人第一股”，以16.65亿元入主锋龙股份，标志着人形机器人产业资本整合加速。此举不仅为优必选注入制造业资源，提升产业链控制力，更可能推动人形机器人从技术研发向规模化生产迈进，加速商业化落地进程。"
+  },
+  {
     "title": "VOIC: Visible-Occluded Decoupling for Monocular 3D Semantic Scene Completion",
     "link": "http://arxiv.org/abs/2512.18954v1",
     "date": "2025-12-22",
