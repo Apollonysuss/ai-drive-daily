@@ -5,13 +5,20 @@ import time
 import datetime
 import os
 
+print("🚀 脚本开始运行...") # 调试日志
+
 API_KEY = os.environ.get("DEEPSEEK_API_KEY")
 
 def fetch_history(keyword, tag):
-    print(f"🔍 挖掘: {keyword} ...")
+    print(f"🔍 正在挖掘: {keyword} ...")
     url = f"https://news.google.com/rss/search?q={keyword}&hl=zh-CN&gl=CN&ceid=CN:zh-CN"
     try:
         resp = requests.get(url, timeout=20)
+        # 如果返回不是200，说明被墙了或者网络问题
+        if resp.status_code != 200:
+            print(f"⚠️ 请求失败，状态码: {resp.status_code}")
+            return []
+            
         root = ET.fromstring(resp.content)
         items = []
         for item in root.findall('./channel/item'):
@@ -22,19 +29,23 @@ def fetch_history(keyword, tag):
                 date_str = dt.strftime('%Y-%m-%d')
             except:
                 date_str = "2024-01-01"
-            items.append({"title": title, "link": link, "date": date_str, "source": tag, "lang": "CN" if "CN" in tag else "EN"})
+            
+            items.append({
+                "title": title, 
+                "link": link, 
+                "date": date_str, 
+                "source": tag,
+                "lang": "CN" if "CN" in tag else "EN"
+            })
+        print(f"   -> 找到 {len(items)} 条")
         return items
-    except:
+    except Exception as e:
+        print(f"❌ 挖掘出错: {e}")
         return []
 
 def call_ai(text, lang):
-    if not API_KEY: return "No API"
-    prompt = """
-    你是一名科技情报分析师。请阅读标题，用中文生成一段约 80-100 字的深度解读。
-    格式要求：
-    1. 【核心内容】：简述发生了什么。
-    2. 【关键意义】：对行业的影响。
-    """
+    if not API_KEY: return "未配置 API Key"
+    prompt = "一句话概括核心价值（中文）。"
     url = "https://api.deepseek.com/chat/completions"
     payload = {
         "model": "deepseek-chat",
@@ -46,45 +57,67 @@ def call_ai(text, lang):
         res = requests.post(url, headers=headers, json=payload, timeout=20)
         return res.json()['choices'][0]['message']['content']
     except:
-        return "Thinking..."
+        return "生成中..."
 
 def main():
+    # 关键词任务
     tasks = [
         {"kw": "具身智能 2024", "tag": "CN·具身智能"},
-        {"kw": "Tesla Optimus progress", "tag": "EN·Embodied AI"},
-        {"kw": "端到端自动驾驶 进展", "tag": "CN·自动驾驶"},
-        {"kw": "Waymo vs Tesla FSD", "tag": "EN·AutoDriving"},
+        {"kw": "Tesla Optimus", "tag": "EN·Embodied AI"},
+        {"kw": "端到端自动驾驶", "tag": "CN·自动驾驶"},
         {"kw": "site:arxiv.org Embodied AI", "tag": "Paper·论文"}
     ]
     
     new_items = []
     for task in tasks:
-        new_items.extend(fetch_history(task['kw'], task['tag']))
+        # 无论成功失败，都继续下一个，防止脚本中断
+        try:
+            items = fetch_history(task['kw'], task['tag'])
+            new_items.extend(items)
+        except Exception as e:
+            print(f"⚠️ 任务 {task['kw']} 跳过: {e}")
         time.sleep(1)
 
+    # 读取旧数据 (如果文件不存在，就创建一个空的)
     if os.path.exists('data.json'):
-        with open('data.json', 'r', encoding='utf-8') as f:
-            try: old_data = json.load(f)
-            except: old_data = []
+        try:
+            with open('data.json', 'r', encoding='utf-8') as f:
+                old_data = json.load(f)
+        except:
+            old_data = []
     else:
+        print("📂 本地没有 data.json，将创建新文件。")
         old_data = []
 
     seen = set(i['title'] for i in old_data)
     final_data = old_data
     
+    # AI 摘要处理
+    process_count = 0
     for item in new_items:
         if item['title'] in seen: continue
-        print(f"新发现: {item['title'][:15]}...")
-        item['summary'] = call_ai(item['title'], item['lang'])
+        
+        # 为了防止超时，只处理前 5 条新数据，其他的先存标题
+        if process_count < 5:
+            print(f"🤖 AI 分析: {item['title'][:10]}...")
+            item['summary'] = call_ai(item['title'], item['lang'])
+            process_count += 1
+        else:
+            item['summary'] = "等待后续更新..."
+            
         final_data.append(item)
         seen.add(item['title'])
-        time.sleep(0.5)
 
+    # 排序
     final_data.sort(key=lambda x: x['date'], reverse=True)
 
+    # ⚠️ 关键：无论如何都要写入文件！哪怕是空的！
+    print(f"💾 正在保存 {len(final_data)} 条数据到 data.json ...")
     with open('data.json', 'w', encoding='utf-8') as f:
         json.dump(final_data, f, ensure_ascii=False, indent=2)
-    print(f"✅ 考古完成，库中共有 {len(final_data)} 条。")
+    
+    print("✅ 脚本运行结束，data.json 已生成。")
 
+# --- ⚠️ 最最关键的启动命令，千万不能漏 ---
 if __name__ == "__main__":
     main()
