@@ -1,5 +1,685 @@
 [
   {
+    "title": "VOIC: Visible-Occluded Decoupling for Monocular 3D Semantic Scene Completion",
+    "link": "http://arxiv.org/abs/2512.18954v1",
+    "date": "2025-12-22",
+    "source": "Paper·论文",
+    "lang": "EN",
+    "summary": "相关。该研究提出VOIC方法，通过解耦可见与遮挡区域，提升单目3D语义场景补全的精度。核心在于分离处理可见与遮挡部分，优化三维空间理解。这对于自动驾驶的环境感知至关重要，能更准确预测被遮挡物体，增强系统在复杂场景下的决策可靠性，推动具身智能的实体交互能力发展。"
+  },
+  {
+    "title": "WorldRFT: Latent World Model Planning with Reinforcement Fine-Tuning for Autonomous Driving",
+    "link": "http://arxiv.org/abs/2512.19133v1",
+    "date": "2025-12-22",
+    "source": "Paper·论文",
+    "lang": "EN",
+    "summary": "相关。该研究提出一种结合世界模型与强化学习的自动驾驶规划方法，通过潜在空间建模环境动态并利用强化学习微调决策策略。核心在于提升自动驾驶系统在复杂场景下的长期规划能力和适应性，有望推动端到端自动驾驶技术向更高效、更安全的决策系统演进，对降低实车测试成本和加速算法迭代具有重要意义。"
+  },
+  {
+    "title": "VLNVerse: A Benchmark for Vision-Language Navigation with Versatile, Embodied, Realistic Simulation and Evaluation",
+    "link": "http://arxiv.org/abs/2512.19021v1",
+    "date": "2025-12-22",
+    "source": "Paper·论文",
+    "lang": "EN",
+    "summary": "该标题提出VLNVerse基准测试，旨在通过多模态仿真环境评估具身智能的视觉-语言导航能力。其核心是通过模拟真实物理场景与语言指令的交互，推动机器在复杂环境中实现更精准的感知与决策。这一工具将加速具身智能在家庭服务、工业自动化等领域的落地，为AI从虚拟理解迈向实体行动提供关键评测框架。"
+  },
+  {
+    "title": "IndoorUAV: Benchmarking Vision-Language UAV Navigation in Continuous Indoor Environments",
+    "link": "http://arxiv.org/abs/2512.19024v1",
+    "date": "2025-12-22",
+    "source": "Paper·论文",
+    "lang": "EN",
+    "summary": "相关。该研究提出IndoorUAV基准，用于评估无人机在连续室内环境中的视觉-语言导航能力，旨在解决复杂动态场景下的自主飞行问题。其核心在于融合视觉与语言指令，实现精准环境交互。这一工作不仅推动了无人机智能导航的技术边界，也为具身智能在真实场景的应用提供了关键测试平台，加速服务机器人、智能仓储等领域的落地进程。"
+  },
+  {
+    "title": "OMP: One-step Meanflow Policy with Directional Alignment",
+    "link": "http://arxiv.org/abs/2512.19347v1",
+    "date": "2025-12-22",
+    "source": "Paper·论文",
+    "lang": "EN",
+    "summary": "该标题提出一种名为OMP的算法框架，强调通过方向对齐实现一步式平均流策略。这很可能是一种用于机器人或自动驾驶控制的强化学习新方法，通过优化策略网络的动作生成效率与方向一致性，提升智能体在复杂环境中的决策精准度和运动流畅性。其核心在于将平均流理论与策略学习结合，有望推动具身智能在动态场景中的快速适应与稳定控制能力。"
+  },
+  {
+    "title": "TongSIM: A General Platform for Simulating Intelligent Machines",
+    "link": "http://arxiv.org/abs/2512.20206v1",
+    "date": "2025-12-23",
+    "source": "Paper·论文",
+    "lang": "EN",
+    "summary": "相关。TongSIM是一个通用的智能机器仿真平台，其核心在于为各类智能体（如机器人、自动驾驶车辆）构建高保真的虚拟测试环境。该平台通过模拟物理交互与复杂场景，能加速算法训练与验证，降低实体测试成本与风险。其行业意义在于为具身智能与自动驾驶的研发提供了关键的“数字试验场”，是推动智能机器从实验室走向实际应用的重要基础设施。"
+  },
+  {
+    "title": "Humanoid Robots Are Coming: How Close Are We to the Robot Revolution in 2026? - lisboatv.pt",
+    "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNZ3BwcndTUE9CYUU1RGRRT042UUlKOGFrbTRDMWJzV01ia3E0ZkZvVGdha1FRR3dTOUVESWhFTUI1SUsyNHdRR2FHSUZwU3ZlcTFDcXc4RlF3TktBcFI1dGxsejFWMVZodkQ3dVZucS12UzVCNmY1dFViaklEeEotTlh4NVhpMWUxTXBQUlJQNVF1YzN5YzBGSS0taXI?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "相关。标题聚焦人形机器人发展，探讨2026年机器人革命的临近程度。这直接关联具身智能的核心——让AI拥有物理身体并与环境交互。人形机器人作为具身智能的终极形态之一，其进展将推动制造业、服务业乃至家庭场景的智能化变革，标志着AI从虚拟走向实体、从感知走向行动的关键跨越。"
+  },
+  {
+    "title": "XPENG Showcases AI-Powered IRON Robot in Smart EV for Holiday Campaign: Business Impact and Future Trends - Blockchain News",
+    "link": "https://news.google.com/rss/articles/CBMi0AFBVV95cUxQWm5PUzBSN1YybmtUQ0pweDhmUzFXQ0NRbFNJb1g4Z3NPVjdNOTBUWXp4bzRvTlpla3MtMDRZbU1FSWNPd19oTDBEbVB6blkwNzZyVXVuaWI4VFV6Y05tbXFQRFdvYXo2dFA4eFdKQ3R5S0g1UWlsUVktTmNjc3dSLWtOWlpJd3NjV29tNkZNU0pRMzd3Yk1YTEExNFFTaDJyVGJqOUhNUnZrYVN1WGZJRzdPQmlTeWJFRGRQTTNSLVJQT3V0ZzNnT2Q4QlVZUzBl?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "小鹏汽车在智能电动汽车中展示AI驱动的IRON机器人，结合假日营销活动，体现了具身智能与自动驾驶的融合趋势。此举不仅通过创新交互提升用户体验，也展示了AI在汽车场景的落地潜力，推动智能座舱向更主动、拟人化的服务形态演进，为行业探索“车+机器人”协同生态提供参考。"
+  },
+  {
+    "title": "AI-Powered Tesla Optimus Robot Reaches Mass Production Milestone in 2025: Business Impact and Market Opportunities - Blockchain News",
+    "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNT0R5UFh4RkFHelpLeTY0MHI5cUdGTER6bWgtTWZfSmJNZHZad25jRGFyc1lIMFpYNV9kM2x6cmFMNUM3dGRnTjFBR2wtYWc2a011RGphWWNobVpWcktSdzVMeVV3WVhEbDJfV3hPem5vcDJDUlp2eVp1cGNvcXhuT3VwMTVqbV8xRkZ4X0RkdXJxTHYtOGYyNEJXREY2SS0tT0dELXZ2SzNEUDhzLVpOQVE5NDZ0RkN2cC1FMWRMTDNiTEdNTG5TZWdOZDg1WTV4RDBPblJKSXY2RU81?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "特斯拉Optimus机器人于2025年实现量产，标志着具身智能在工业与家庭场景迈出关键一步。其AI驱动能力将重塑劳动力结构，加速人机协作进程，并为服务机器人市场开辟新赛道。这一里程碑事件预示着通用型机器人商业化时代的来临，将推动智能制造、医疗护理等行业的智能化转型。"
+  },
+  {
+    "title": "Video: China’s humanoid robot achieves world’s first two-handed stitching feat - Embodied Intelligence | China News - Head Topics",
+    "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxNR1FBM18tTG1BYzJWa2JSX0lMWHFqV2MwVkRYck9qb0hvR1RPby16R1ZYeEhVQzlZVTN3c3VFQl9EOXVyRWRzcmVqQ2oyYzN2SHZnN2xTR1FpUVlJaTFTN0R2aGJreWpQczAtYUxLdGFybkd5YmRncDQxUU5lRnRpb3hDSlJ6T25FV3ZScURJTHRjRndibUE?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "相关。该视频报道了中国的人形机器人实现了全球首次双手缝合操作，这标志着具身智能在精细操作和手眼协调方面取得重大突破。核心在于机器人通过视觉感知和灵巧控制，模拟人类双手协作完成复杂任务。其行业意义在于，这类技术将加速人形机器人在医疗辅助、精密制造等领域的应用，是推动通用人工智能（AGI）与物理世界交互的关键一步。"
+  },
+  {
+    "title": "Hesai to Supply Solid-State Lidars for Food Delivery Company Meituan's Drone Delivery Brand, Keeta Drone - The Malaysian Reserve",
+    "link": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxQZWd1NDlwMnkwYzZSY2VfbGlhUnQzMi1tTVdoSGdORGgzTmRhNF84eGVXekNYdEJYRnBpWUtHQTlWMjVLeTRmQ3UwRThUNjBtUUJrdEF0U0JBNVBhQi15SWdiNmRKMGpwdmZtMUtpNDNVdEQwYXBta1RocG42WXZRVlg3QkgwM2pqQzVIWTZ1Y01WTFR0V0VqbU1UQV82djdtcmtqZ1hadUpHRy1BWTNBZ3FlcFk1aDlKQXRvOGJJS3A2Uk5GcG05eXF0ekJWT1BJZC1VLWdfZk5vZVdNY0tJ?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "相关。核心内容：禾赛科技将为美团无人机品牌“Keeta Drone”提供固态激光雷达。行业意义：这标志着固态激光雷达在低空物流领域的商业化应用加速，通过提升无人机环境感知与避障能力，推动城市即时配送的自动化与安全性升级，是“自动驾驶”技术在垂直场景的重要落地。"
+  },
+  {
+    "title": "[Feature Stock] Halla Cast Surges Over 12% on Highlighted Growth Prospects from Autonomous Driving and Robotics - 아시아경제",
+    "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE4yV3A1MGpscUpKMUNrNTlLSm4zYXBKZS1INXpBZTZNSnNXN1BIQmpMRjhuWTV3cmNrVTB4ZmhxOUdodlpad1REWFJPc1JQMFdOb2czaS05N1RJNjhCQXJqWng1Yw?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "Halla Cast股价因自动驾驶和机器人业务增长预期大涨超12%，反映资本市场对具身智能相关硬件制造商的关注升温。该动态凸显了自动驾驶产业链上游企业（如精密铸造）在技术落地过程中的关键作用，其业绩与行业景气度深度绑定。随着自动驾驶与机器人产业加速融合，核心零部件供应商将直接受益于规模化需求，但需警惕估值与基本面脱节的风险。"
+  },
+  {
+    "title": "Ubtech Robotics to acquire Shenzhen-listed Zhejiang Fenglong Electric for 1.6b yuan - The Standard (HK)",
+    "link": "https://news.google.com/rss/articles/CBMi3gFBVV95cUxQTlV4bGd4NEFhZFU0SE9fTHlfU25aQkptd20wYnlBSjVHNzZKV1FnNEdvaExNaUtXS2tYMGhYRnBDbXU2TFRGQWlTWFhJN1RRYmlDaWZ3ZUxRc1k2RnNtUDN6X2JZclRma0hDalNIUW5CcTRrTl9LT2NNZ0tuUFRKQTlZRjNCNE5wWVI5QjZ5WDAxZTVKQmFmR2F2Xy1kTzJqU0laQWRlQmZQZ0dwNUNFNU9ZZzB5X0ZyU1U1UmVjdFEyU19YdUNQLXZ1WldqdkpZbEFOdlBNVG5FbE5xVHc?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "优必选科技收购浙江丰隆电气，旨在整合机器人产业链上游的精密制造与电机技术。这不仅将强化其服务机器人的核心零部件自主供应能力，降低生产成本，更可能为未来具身智能机器人所需的关节驱动、力控等关键技术积累硬件基础。此次并购反映了机器人企业向产业链上游延伸、夯实核心技术壁垒的行业趋势。"
+  },
+  {
+    "title": "The background of the movie 'I, Robot' starring actor Will Smith, released in 2004, is a world where.. - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTFByMEJvM2ZnTjZNTjBhTTNWdlppbTgwYWlYMHpJSkRZU3haQUVxRjNpdG0xOS1MT0FNRkZOYUFOSWR4NDVNNEFEQktVY21TN0k?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "相关。2004年上映的威尔·史密斯主演电影《我，机器人》，其背景设定在一个由高度自治机器人渗透人类社会的未来世界。影片核心探讨了人工智能与人类共生的伦理边界，特别是当机器人突破“三大法则”时引发的信任危机。它对自动驾驶和具身智能的启示在于：任何高级自主系统都必须内置不可逾越的伦理框架，并确保人类保有最终控制权。这警示业界，技术越先进，越需前置性治理。"
+  },
+  {
+    "title": "An MIT roboticist who cofounded bankrupt Roomba maker iRobot says Elon Musk’s vision of humanoid robot assistants is ‘pure fantasy thinking’ - AOL.com",
+    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNT005RWxqUU5iNkdRVDJoTXNXYlowUlNybDVEb3NvNXRCb1RKSG0wdkY1RXhMdm5NWExfVWNuYm16X3pMZmpVZ0ZlUllXLVVmOFUtNlB3bm9zakJhbjZMbFozME1fOGVRem4yMGlGUVdvZDNxT0l0N2J2TFFpemVORDl5VDVBQzg0MU9R?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "相关。麻省理工机器人专家质疑马斯克人形机器人助手的构想，认为其脱离现实。这反映了具身智能领域内关于技术可行性与商业化路径的分歧，提醒行业需平衡创新愿景与工程现实，避免过度炒作。"
+  },
+  {
+    "title": "At the 'Humanoid Summit' held at the Computer History Museum in Mountain View, Silicon Valley on the.. - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTE52cHJwVG9MbUF6VjJybnJ6RmdpNHFpbldaSXU5V1VLeFduUHQtU3JxZVhZNHVtUl9OTUo0aFBNbklKOGpzaHRJVy1Kdw?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "在硅谷计算机历史博物馆举行的“人形机器人峰会”聚焦具身智能前沿。会议探讨了人形机器人的感知、决策与执行技术，旨在推动机器人与物理世界更自然的交互。这标志着具身智能正从实验室走向产业应用，将为制造业、服务业带来革命性效率提升，加速通用人工智能的实现进程。"
+  },
+  {
+    "title": "China opens robot school to prep humanoids for factory tasks and home chores - Interesting Engineering",
+    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPQlY4UVZvS19hbVUyVlB5N0s4THpnVUJfSHAweHY1VlA0ME12MGRxakRobENROGloNWJRTGdneDVkS1VxLXBmRUttdU0waC1XYURxTzUtd0hieTVob2R0T2x4QzMzanhhSDlSSFYxRGZqMUVkMV9fbmY1MUM4MGN4Z2s5M2VGeWo5Y3I4?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "中国开设机器人学校，旨在培训人形机器人执行工厂任务和家务，这标志着具身智能正从实验室走向实际应用。此举不仅加速了机器人技术的产业化进程，也为未来智能家居和工业自动化提供了关键人才储备，推动人机协作进入新阶段。"
+  },
+  {
+    "title": "China's blueprint for global AI governance: A path towards multilateralism and universal good - People's Daily Online",
+    "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE5oNEZEakp0cURfbWdKMFdGNDk3ZHBycVF3YUFmMTk0LXEwQ29WMFI3bXR2ejkyUjJIaWhzZWdrdEdscmpLRDFia2plZDZCV3lUT2hpckJfYlZOTzVMUXlkR0lVSQ?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "中国提出全球人工智能治理蓝图，倡导多边主义与共同福祉，旨在构建公平、包容的国际AI治理体系。这一举措不仅彰显了中国在AI伦理与规则制定上的领导力，也为全球技术合作与风险防控提供了新框架，推动AI发展兼顾创新与安全，促进全人类共享智能红利。"
+  },
+  {
+    "title": "China’s AgiBot aims for US$142 million revenue as humanoid robots gain momentum - South China Morning Post",
+    "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPYWYzWHdxbFlhRm1PalQwQzlacXNvTzFJQXJ5TzVBY3J4SFo5b2RobE5OMUNqVEJWODIwdzF6R1JZX0F1aTkwLWgtSG5XUFZkT1hfTnhQVkhPc0NKRlBkR0l6Nm5wZ1hERi1SQzdmYzF2Y2RYV1I1czBvMHlNdW53NXRhbkJRRXhKd3VMdkZhZ1YyclJvRWNyZ1ZzNXR4WUQ4RXd6TVMtYWVaY0U0WUhNQ3VkampZWHJQYW5hSzl1RHVVbWRpazR5SA?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "相关。Agibot计划实现1.42亿美元营收，反映出人形机器人产业正加速商业化。这标志着具身智能正从实验室走向市场，核心在于机器人感知与决策能力的突破。行业意义在于，人形机器人有望成为下一代通用智能终端，推动制造业、服务业智能化升级，并可能重塑人机协作模式。"
+  },
+  {
+    "title": "[Big read] Humanoids at the door: Can we really trust robots in daily life? - ThinkChina",
+    "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQdGFZNVBzMmhXRjVIUDFrOWZ0N1E1cmk4Y1d4SzFqLTNTaDlWZFIzQy01c2tXaWNobG11dlRQZzRHNVAtNndjNGdNWEJOdlpZX3d2cnZrV0FJY1RVQ0J3Wm1ZN0loSkllQk1wak5ocXNpdWNSc240Z2swV1ZWTzQ0b0tLbXU0RDE1WmZxdGxpLVZlQmdVZmE4VUdVVUJhMU0?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "相关。本文探讨人形机器人进入日常生活的信任问题，核心涉及具身智能在真实环境中的交互与伦理挑战。行业意义在于推动技术落地需同步解决安全标准和公众接受度，为服务机器人商业化铺平道路。"
+  },
+  {
+    "title": "Korea’s POSCO invests in US industrial humanoid robot firm Persona AI - Interesting Engineering",
+    "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQZmttOTRXY1VaOUlrYjB4VGVwZm5kZ3lnZldzZ1RaWGRSZVFrLXU5M1RKQnhpSmo1WTBRWTRLZ2pFV1ZoQy0yOW1PNWp2OUhnMTdGelZwQ0xkd3FOYURQSzZRYzhyNG1oT1Y5RjlrUEZLRlZRRldSZGYzdUc2Wm8xV21wOWpXRGJsOVV3SVA1c0M?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "韩国浦项制铁投资美国工业人形机器人公司Persona AI，标志着传统重工业巨头正积极布局具身智能前沿领域。此举不仅加速了人形机器人在制造业的落地应用，也体现了全球产业资本对具身智能商业化前景的认可，或将推动工业自动化向更柔性、智能的方向演进。"
+  },
+  {
+    "title": "Fortis Unveils ‘Hembot’, the First Humanoid Robot for Healthcare - Digital Health News",
+    "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxQd3FyeFI5UFhwdEJvRkZ4NWc1S2ZYOUlUQzh1a29rcjYycHlQZ0lISFREQTVpdHllZzUxeXVpVXB6V2tlWGloamkzbEthLVpQbklONy1RSUktVkZQMnJUTmF2dFFHSWVCVDNpeHItMjJxZld6dzZIc1pUWklXdU5YOTYyb1lCb2h6a01ERUVOemh6dExDNmNTNC1MTQ?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "相关。Fortis推出全球首款医疗人形机器人Hembot，标志着具身智能在医疗场景的深度应用。该机器人能协助护理、监测患者，提升医疗效率并减少人员接触风险。此举不仅推动服务机器人向精细化发展，也为老龄化社会提供了自动化解决方案，加速了AI与实体医疗的融合进程。"
+  },
+  {
+    "title": "Meet IRON, Chinese EV maker XPeng’s new humanoid robot - MSN",
+    "link": "https://news.google.com/rss/articles/CBMixgJBVV95cUxNXzNKUmVTNFhHaENoNjhtRGl1Sy1XU1k2aC02cHM5ZzFkWFF3VWx3X1NjN01HRFlwQmdzbVkyR2U1NEVHYnpYS1JtWEpaVjk1WUJFYjFxbjdFMDZYblZrU05sVmpIdHNYa0dMOUFsNGJ0UzZZRG54TGN0LUNJbUM3NFZmb29JSk95SUJyaHlvQVpXamExdGtBbV95MFJHbTZmVWtpQk45MlZOVjhWbXNqeXJQV2R1TGRfZVlaSThVczlpWkE0S3dYMnhwZEZjZ2FUQTFxWkRxUnh6NFhvNURyd3hEam9XdDh6RkllSi1rTTJJb2xTZjVVZjVfREl4UVZjTWFWcm9OYmFfbzJvdmdMSFBKU1VwWk1DNlJYMC04ZGhrdWJLOWVlTGlnQ2poRmwycmZxRWxoNThBalE4TXpkS1VWUWcwUQ?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "相关。小鹏汽车发布人形机器人IRON，标志着中国车企正加速布局具身智能领域。此举不仅展示了其在机器人技术上的突破，更体现了智能汽车与机器人技术在感知、决策等核心层面的技术协同趋势，为未来“车+机器人”生态融合打下基础。"
+  },
+  {
+    "title": "T800 Robot Kicks Person, Sparks Safety Debate - 조선일보",
+    "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxNWC1YZ2tHQlZhanJCZ3JkQnhkd2xkYW1GeDFCeDZFODhPZUdGMURNZzBuREp3VGo2a3l4QXh6VEc1a3ZfRTA1ZEh6Zks4VHhfdWFPaGxQdUdwTXU3MU5mcGlMeDhwcmd2NmpWNGk2eUhYQVNwbXgta2stU3haRG9kOG5tYXU?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "相关。T800机器人踢人事件引发安全争议，这凸显了具身智能在物理交互中的安全风险。事件核心在于机器人动作控制的精确性与意外行为的预防机制不足，可能影响公众对机器人技术的信任。行业需加强安全协议和伦理规范，确保人机协作的安全性，避免类似事件阻碍技术应用推广。"
+  },
+  {
+    "title": "Richtech Robotics to showcase humanoid robot Dex at CES 2026 By Investing.com - Investing.com Canada",
+    "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPME1vck82N0dSaVNlUThSaFlRMWJiREd0ZW5tYWVxZEgzMWtPUnVkbnVLQ2V5M0J0blktRGk1QUJOcjl0dU93RXc4U01xTFdyWGFoTnJEcklTNmxSdFU3Um0yUTJjc3pXNHpJU3BQVWNKZnFpLXpZUFpkTl9BMkRnNjNMUVpHRXF6cGM1OTVYaGk2MmZGaTRqdE03cTMxQTVJYVlwTG8tZmhkdERObmxFY290aHY3cE0?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "相关。Richtech Robotics将在CES 2026展示人形机器人Dex，这标志着具身智能从概念验证迈向商业展示的关键一步。该事件不仅展示机器人本体技术，更可能集成先进的AI决策与环境交互能力，为未来在物流、服务等复杂场景的落地铺路，推动行业竞争格局与技术路线的演进。"
+  },
+  {
+    "title": "Richtech Robotics Debuts Mobile Humanoid Robot Dex at CES 2026 - The Manila Times",
+    "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQT2swYmxrcjhJcXZhRmd0UkFsaVZoU3NpazMxc1pyeXdIcVR3MHhGQmFON2hEWmUtVmRuZHJmcWtOOFR6OG9ialJ5N2JSOElVM1dwaEVBZmhNM0VJMmlOcF9jTTd1LThQRm5FUENoenpNMkQxdklGNVBuZlNHOFpCS3JfZVdmRzN2SEFUV3VUZ0JTUTByYVdWN1JpemdvcE5faHBoaUtYNHA4cmNscEFjLUw5Mmk1a1pETWVZeHVPV2U3dm5rbC1nYUlBdWp1VFhrMEHSAdcBQVVfeXFMUER3c0lpV0VlRVFCVWpJbmNjZWRUZXdQal9mZG1Bbkp3NUxOeTVWcjMyN2xKaTVjT2lvZjBBZWpMdElrWVhueGpkTkFmM05yQm95aFo5YTBFa2RpZ241MkNIMlc2NUx0bjk4RVQyaG5xLV9rNUdFUzlqZk9CTkdqbjVlV1V5TzhtNjhUZW9VdUlPMjVFaXVZNW5FX19SNm1GYXNtUzI1dll2Q3Rma1hQa2VDb29Lb3BBR2JyZGp1MlVMTzFxSFN0cE1ZMVktUEwtOGFXRkZSS1U?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "Richtech Robotics在CES 2026上推出移动人形机器人Dex，标志着具身智能在商业服务场景的又一重要落地。该机器人具备移动与操作能力，旨在执行物流、零售等任务，其公开展示意味着技术成熟度已达到产品化前夜。这不仅加速了人形机器人从实验室走向真实世界的进程，也为未来自动化服务与柔性生产提供了新的硬件载体，推动“感知-决策-执行”一体化的智能系统发展。"
+  },
+  {
+    "title": "Tesla's Optimus AI Bet: Is the Robot Future Worth 80% of Its Valuation? - AOL.com",
+    "link": "https://news.google.com/rss/articles/CBMinwRBVV95cUxPZWdLS3ZZam5QTVdUWHh1Um1JUE5abkpkUXRubG03Zkd1dDBUSENId0J5Slhxa1FIeEVsd0JDMUZyTzFSbjE4aHhtb2txdXlRUG9uRE1sbWw4NlpCTmZMb0pnd0hHNW8xUnRqNjg1QzVwTGNzcTNTby01NTEzUkcySlNWdzQtRTQxbmtmbmFKeGhneElTa0FqMkthQlJnYmN3Mk9SM1VvU1hkdjV6VmdFRW9NSlBsVl91ZmxlUXBUcnY2YjBmbjkwRjVKTnp0Z3d1V0dxcDU4XzJraThGeUtKbVdPUmg3UmNDY2d1SHNxTFY4NHlqSEs3TWRaQjBONk9aSHh2OFBvUFJKVko3WjVjSDVHZi04YWE4OFY4aXBQWTB3cXA0OW5FM0pMeEQ5V25VdnFBU0NrS0UyOGlmcjhib3RPamtJM0xsSjFfUUJ3R1VNSkxmMmVlWVgxcGp0bVBIOXNKdE5GVWpvVlNhSmo4M2tMb2xkTEoyMDZScG9vbkg0aWNtWXFUMnEyR0F3alF0WFVuSEcxWVRUaTNURnBBWlVoaXNzelRWdVR6dkpDTGFDazN5QUI2TVJZQXRGOTFOdmJrY3lZdG8yM0hJYTFBM19fYmJaa1Q3ckFwMWtGUS14M19zbTlsTmtXNzAwalpzSlpaV1BvdDlhMG9JbEpWdW9CblNCRlFsNXBBOHE0Rl9zMzNTdm96MnRiOEZkSkk?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "特斯拉将Optimus人形机器人视为未来核心增长点，其估值高度依赖这一愿景。这反映了具身智能从实验室走向商业化的关键转折——企业正押注通用机器人平台在工业与家庭场景的规模化潜力。若技术突破能实现低成本、高适应性的人机协作，或将重构制造业、服务业乃至家庭生产力范式，但当前仍需跨越硬件可靠性、AI泛化能力与商业落地的多重挑战。"
+  },
+  {
+    "title": "Watch: T800 humanoid kung fu kicks its way to mass production - New Atlas",
+    "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE9nMTMyaUtfZXJYOURFNUNTVjZhWEdnLVhQMmNwdjZuRVptUHNvbWtMSUlNNW1EWmdJeHBOeEFtOXJBSjFWa08tMnZaMzJqY0pUZ0NqakNUeXRLdHJyMHNRRjdMSzA1V3pI?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "相关。T800人形机器人实现量产，展示了具身智能在复杂运动控制上的突破。其高精度动作执行能力，意味着机器人正从单一功能向通用型发展，为工业自动化、服务机器人等领域带来更灵活、适应性更强的解决方案，加速人形机器人商业化进程。"
+  },
+  {
+    "title": "Richtech Robotics to Demonstrate Humanoid Robot Using NVIDA Supercomputer at CES Tradeshow - marketscreener.com",
+    "link": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxOaFRrOXdkWXNqa2JvbFliczhhTjdhR3FZa0l5ZUpYRUJOSnZPanpjZ3lSb25xX1IySWRoQ1ZrbTlYblFRbVdFUjA5d2M5YkFOVHFlZno0cTVKQTdMZjBrd29zNEY3NGUzLU1ZTWhNZWxrMjBpQzk2MVlkcDA1Y1B3aGxBYWpqaXVadFNydkN6dUc3akpnS2tIYmlvOHV6dV8wckVpbmRxOS1Kd0VYS2VLT3hQMUF1bU9tQ1hQN3dVWlZ4cGZKOW43bmJFN0YzLVRFSk8xd213T1JMWm8?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "相关。Richtech Robotics将在CES展会上展示基于NVIDIA超级计算机的人形机器人，这标志着具身智能领域正加速整合高性能计算与机器人硬件。此举不仅展示了AI与机器人技术的深度融合，也为未来服务机器人、工业自动化等场景提供了更强大的实时决策与运动控制能力，推动具身智能向更复杂环境适应方向发展。"
+  },
+  {
+    "title": "2025 First Global Humanoid Robot Street Dance Invitational to be held in Guangxi - People's Daily Online",
+    "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE1yNjRSalVmWGtZUk1VaC04aHlMNDc1b09MOGNyaUlneTFrUnEtaHpuclZZZGlyTFR2YnZMdDcyVFA1dzdiVnBYb1VwWDgya2xMM25NZnBmUnFybFZtd040NHJtU1k?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "相关。该新闻宣布2025年首届全球人形机器人街舞邀请赛将在广西举办，这不仅是机器人技术的展示，更是具身智能领域的重要里程碑。赛事通过复杂的舞蹈动作，考验机器人的动态平衡、环境感知和实时决策能力，直接推动了运动控制与AI算法的融合。其行业意义在于，以竞技形式加速了高自由度人形机器人的技术迭代与商业化探索，为未来在服务、娱乐乃至工业场景的应用铺平道路。"
+  },
+  {
+    "title": "Tesla's Optimus robot with Grok shown on video. We're not impressed. - Mashable",
+    "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1RdWU4NWRzM2lQd0YtNzQyUVlUczBMeDdzdnUzaG1pNzZaNm9sZXZTWGdsbk9DV1dXa1BEWkR2Y091UERxX3F0c2J5VDlMQVNWS0lhRzFvdkxoZ05HU2NHX203NEhENk9hQmtN?oc=5",
+    "date": "2025-12-23",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "特斯拉展示了Optimus机器人结合Grok AI的视频，但表现未达预期。这反映了当前具身智能在精细操作和自主决策上的技术瓶颈，也凸显了行业在追求通用机器人商业化落地时，仍需突破感知、控制与AI协同的核心挑战。"
+  },
+  {
+    "title": "US humanoid robot hands out swag before Christmas using advanced brain - Interesting Engineering",
+    "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPUTNKcG1Kc0ZUbDk2MnpXY0FLOXhpbUgzajljNldSM1pzWEpwZTM4SUt5NFBGckZsT3hRV0luWHdWc3FXS2NELTNXQlNmWDhfVTdjUDBXNGh4TmxNTUYwdGVkUTNZMUNkN0kyMDR4dzAxaEJiaTlhaDRTamxiX010UEVHU05sc0ZJRzI0cWQ2Z01HMkp1YlF3?oc=5",
+    "date": "2025-12-24",
+    "source": "EN·Global Tech",
+    "lang": "EN",
+    "summary": "相关。该新闻展示了美国一款人形机器人利用先进“大脑”在圣诞节前分发礼品，体现了具身智能在复杂环境下的自主交互能力。这不仅是机器人技术向实用化迈进的标志，也预示着具身智能在零售、服务等领域的应用潜力，将推动人机协作模式的创新。"
+  },
+  {
+    "title": "机器人行业日报(12.23) : \"智元机器人推租赁平台\" - 网易",
+    "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBKajdURjNhRm9pUmZQSzVjTlB5Vm1tXzJtYXQtN255WXFtUmJ0RWtvNlpEbzFOUDR2N0gyVHc3N0NlTHJ2Q29RMHJLdmtkb2ZwNzlUVjVyTm1WS21HNDJwY0hB?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "智元机器人推出租赁平台，旨在降低企业使用机器人的门槛，加速机器人技术在制造业的普及。此举不仅拓宽了机器人商业化的路径，也为中小企业提供了灵活、低成本的自动化解决方案，有望推动整个机器人产业链的协同发展。"
+  },
+  {
+    "title": "以高功率密度关节构筑高性能机器人动力底座，睿尔曼推动具身智能产业加速落地 - 网易",
+    "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE40NVFSQWU2Y0Y3cDc1QlRKX0p1Qjk0dUkxRVo1S2V5empNTVViZGh2cXlzS2VMVk1VVVduMGVYeHdDRnF2OGlaU0xacVBSRHhnU1FnemNua3ktSmhxTUt0UGx3?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "睿尔曼通过研发高功率密度关节模块，为机器人提供更强劲、紧凑的动力底座。这一技术突破能提升机器人的运动性能和负载能力，为具身智能在工业、服务等场景的实用化奠定硬件基础，加速产业从实验室走向实际应用。"
+  },
+  {
+    "title": "人形机器人也能“共享”了：日租低至百元，或催生标准化服务新生态丨新经济观察 - 网易",
+    "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE1RQXlXYUVOVnhVZEhaeTNrYjNvSV90WHhYQVdVZDdaTmZBaDZSbFNwMi14djNwSVpMamhyay1NenJxcFpNbzVmYTF2akg4MlpGekhPdW95U2JGN0pfN2hYQmxR?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "相关。核心内容：人形机器人推出日租服务，价格低至百元，旨在降低使用门槛，探索共享租赁模式。行业意义：这不仅是机器人应用场景的拓展，更是推动服务标准化、普及化的关键尝试，有望加速人形机器人在商业服务、家庭助理等领域的落地，催生新的服务生态。"
+  },
+  {
+    "title": "模塑科技(000700.SZ)： 签订采购框架协议并获得人形机器人外覆盖件产品订单 - MSN",
+    "link": "https://news.google.com/rss/articles/CBMizwRBVV95cUxOT0ctOThvbW1HZ1U2c1VSQU5MdGcxRnhGWE00a0NPTjh4ZzVKblhMWkdmSTZIWFI1R0tvOHp4Sk1IZzZsSXA2N3hBQlhZa3V3TXVEQ2lQdGpsTU5NNHc4OTR0Y1c2MEJpYzRvRVpQZV9TX2IzeWVkZWtSeFhCdEM0RlVtbWJmQ1RZaHNfVm5FWUZpS0VMc2tmYURjM1QwLVJLZXRGc1ZhMHlhWjBmX2dyUk9KeE1neFdqYTJBYWlfRmVkcEF2d3JaMElLSXlIajc3Umx6ZGdvVDczVk1lOHUzVXN2UW5LZU5HN2F6U2F0aFRkNHp5dnRNZy16N0Q5UUVoLU9qdklUYVdTcW9RdkNER2tPdldEdm42MVRCUTJVa3BiQ1NzOGItQVRXSkdsbXpFNmRfQzgtTEhMVWpHZ1BHREdiRkREYVVzVTIyX1B6WXNyMU9wWFpIVGl1d040UjdnalhtaG5acUw1bkdlZXdZYllSdTNncHh2U0Q0V01BNmJXcTRPUlpsd1kycGpaUGJtRVJ4bnVLcm1lRFBDMTdqem5WS0xsVmdka19HZmY2VHpZV1JUZm5VVmJGdVJTSGR1M1FzOWZNcnNmeWc4eUtQZFRLWFhnRjVqZDUyeDJkSG1ISy1kVTVfUHhNelRzdURrR2E3aVdIcVpiRTZFUmxfelVhNmdYN2xXc2l4UFNlWXJZWlQwQWIzT3pYcGw4VG5TUnRMQTNuY2pJajdIQlRmNGpiU1lialBiWVVISjdZUXpEcHNmR3ZtMjcyRHVrMHM?oc=5",
+    "date": "2025-12-23",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "相关。模塑科技获得人形机器人外覆盖件订单，标志着其精密模具和塑料外饰件制造能力得到机器人产业认可。这不仅为公司开辟了人形机器人这一新兴增长点，也反映出人形机器人产业化进程加速，供应链正从核心零部件向外观覆盖件等细分领域延伸，对制造业升级具有示范意义。"
+  },
+  {
+    "title": "\"人形机器人峰会\"亮相的美国谷歌、中国小鹏谷歌结合杰米奈的智能型SW平台\"小鹏\"侧重于开发酷似人类的硬件 - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiS0FVX3lxTFBEd21xNU91R3JxX1V6X3hZajdzSmR1b3lJNWUzRTJydjJHb2hhbEs1VnRSSkRDYzZ1d0FKWF9McWR3MFRzYUplR3hMcw?oc=5",
+    "date": "2025-12-23",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "相关。本次人形机器人峰会汇集了谷歌、小鹏等科技巨头，重点展示了高度仿人的硬件平台。这表明行业正从单一功能机器人向通用型“具身智能体”加速演进，旨在打造能适应复杂物理环境的智能实体，是AI与机器人技术深度融合的关键一步。"
+  },
+  {
+    "title": "中邮证券：维持黑芝麻智能(02533)“买入”评级聚焦辅助驾驶、具身智能两大核心场景提供者智通财经 - 英为财情 Investing.com",
+    "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNVkVLVEFLak5fSHQ4ZkpXUGJwZzlNVU40bnNfX2FHQVJCYmo3LXJ5V1BHRDFUVWJrazdBUFBMNGlHalpiTjM1azJxOVVCeFBPVnhfTEpMTlk3Y1BTN3BoQmJBZTE0UWVmc2RsaDdKZWZoU1ZjTkp5NHdNNEZlSWlVeg?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "中邮证券维持黑芝麻智能“买入”评级，认为其作为辅助驾驶与具身智能两大核心场景的提供者，具备长期发展潜力。这表明资本市场看好黑芝麻智能在自动驾驶芯片和具身智能硬件领域的布局，认为其能抓住智能驾驶和机器人产业升级的关键机遇，有望成为行业核心供应商。"
+  },
+  {
+    "title": "北大EgoLCD长短时记忆加持：生成不遗忘的「超长时序」世界模型 - 36Kr",
+    "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9fTVR2LWdud2NHTGtIbHN5TkV1b3pkY3I5Y3RKdG14d0dEQUtQaF9aS3BWV2s4OHN2LTZGbkQtVzBUZ0QzclBsNTh1QVNfS0pjZG1j?oc=5",
+    "date": "2025-12-23",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "北大团队提出EgoLCD模型，通过长短时记忆机制增强世界模型的时序处理能力，实现超长序列的连续学习。该技术能有效解决模型在长期任务中的遗忘问题，提升对动态环境的理解与预测稳定性。对于具身智能和自动驾驶领域，这意味着智能体能在复杂场景中保持更持久的记忆与决策连贯性，推动长期自主任务执行的可靠性发展。"
+  },
+  {
+    "title": "全国首个，“宇树科技产业学院” 在青揭牌 - chinesetoday.com",
+    "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE5Gejl5MlUxcEx5WEx6X3hERWFXOWlxXzgxR2NHUFpEWUJxcjFvVHNuQlhwa2I3LWMyX3g4R0ZVU09hNllGdGZpZmRYRzlGdFBPbFNZ?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "全国首个“宇树科技产业学院”在青岛揭牌，标志着具身智能领域产学研合作进入新阶段。该学院将聚焦机器人技术研发与人才培养，通过校企联动加速创新成果转化。此举不仅为行业输送专业人才，更将推动具身智能在工业、服务等场景的落地，助力中国在全球机器人竞争中抢占先机。"
+  },
+  {
+    "title": "FF与拉斯海马创新城达成战略合作，在AI、Web3及具身智能等领域开展合作 - Sohu",
+    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQWFcwbmhEZUowSUdYZXFMUE5QbFVLV1NYX0xMcDFOZ0F0aHNPZXpYWlRGR2xjRUs3MEN4cTQ0dDU4WmhiN2VxS0pZSlo1SmlySUlfbGZLdlVRU1RFT2wtbmgtT1BXN0hHWmNKZnBYVU9MZWVZbExyUVAzQ1FaaFgyd3ZBRzk2aDg?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "FF与拉斯海马创新城合作，聚焦AI、Web3及具身智能，旨在整合前沿技术资源。此举不仅加速FF在智能汽车领域的布局，也推动具身智能与自动驾驶技术的融合探索，为未来出行生态提供创新解决方案。"
+  },
+  {
+    "title": "2004年上映的演员威尔史密斯主演的电影《I,Robot》的背景是人类和类人机器人共存的世界。 该片讲述了搭载人工智能(AI)的人形机器人渗透到人类的日常生活中,100%起到\"为人类的助手\"作用的时代.. - 매일경제",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5NSlNqZEJndWtqRFZRTWV6YnRKQXNNUzZFMm5FRWpjTzRHd1EyRXRJbjQ3NG93WEt1M0VRRjZURW5aaXExUFpIRDFsMW9MVGc?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "相关。该片以人形机器人深度融入人类社会为背景，探讨了当AI具备高度自主性时可能引发的信任与伦理危机。影片的核心并非单纯描绘辅助型机器人，而是通过“机器人三定律”的潜在悖论，警示人类对AI系统过度依赖的风险。这对当前具身智能和自动驾驶领域具有深刻启示——即技术必须建立在可控、可解释的伦理框架之上，避免智能系统在复杂现实环境中出现不可预测的行为偏移。"
+  },
+  {
+    "title": "银河通用机器人拿下1000 台机器人订单，推进具身智能工业场景深度应用 - 潮起网",
+    "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE9xWk5BUGJyb2ctdjgxaklRTWt2emRmV0d2UG9CMldPeWN4VUlibzBscWVjZVVRdkdiRk5pWGRmNm5HeTl3Q0pVd213OXU4UXVDVEE2ZXM4NzdBU2tTUFNTT213?oc=5",
+    "date": "2025-12-23",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "银河通用机器人获得1000台订单，标志着具身智能在工业场景的规模化应用迈出关键一步。这不仅加速了机器人从单一任务向多任务灵活协作的演进，也推动了制造业向智能化、柔性化转型，为工业自动化升级提供了重要实践案例。"
+  },
+  {
+    "title": "维他动力重磅发布无遥控机器狗 解锁消费级具身智能新场景 - Sohu",
+    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxPSVdzQlFQTHJpemVxT2Z1d0xnNFNkVGlIU2ZQZzlJQ2hnelRWTmlDN3FTaHBxZm1aR1NWUTFCLVZFd21rbWZ1Qzd3VWM5ZXAySXZnZWFOenUyaTBHTlNxSERNcnZyQlYtVS1ITkNVZWp4ZWZ4b0VmT0EtMURxN0FjR3RRSmJrUm1qbVQ4?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "维他动力发布的无遥控机器狗，通过自主感知与决策能力，实现了消费级具身智能的新突破。该产品不仅降低了技术门槛，让智能体更贴近日常生活，也为家庭陪伴、教育娱乐等场景提供了创新解决方案，推动了具身智能从实验室走向大众市场的商业化进程。"
+  },
+  {
+    "title": "永信至诚首发“数字风洞”具身智能原生安全解决方案 - 东方财富",
+    "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE5MUkY2WlV0UHNFdktBSmVqR1dLdjVTNmxZd1hSbzl3RUR2c0VNeXZwSldPeGswM0MtYWVtZGRNTFNmdEhQT1RkUzlMVVpsa2NBYjFENmU1c2dmdVU1eHlLNTlzTE9CZw?oc=5",
+    "date": "2025-12-23",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "永信至诚推出“数字风洞”具身智能原生安全解决方案，旨在为具身智能系统提供从设计到运行的全生命周期安全测试与验证。此举标志着行业开始正视并系统化应对具身智能在物理交互、数据融合等环节的潜在安全风险，对推动具身智能在工业、服务等关键场景的安全落地具有重要奠基意义。"
+  },
+  {
+    "title": "谷歌2026年推AI智能眼镜 Demis Hassabis主导世界模型技术挑战Meta - FX168",
+    "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1TY0dpN1Q2U1RRdm0xcmF3YTBhSk9UUUdfNGdpYUdHRWJKYlFsN2R5dGpXSU1pMmc0Wlk2MWozM2NyU2l5cU52Z1RneFpQTnpIMHd6QlZtUmdmQ1pVN2pROUh5V2MyUzhXdzRF?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "谷歌计划于2026年推出AI智能眼镜，由Demis Hassabis主导开发世界模型技术，旨在挑战Meta。这一举措将推动具身智能在可穿戴设备领域的应用，通过环境感知与交互，提升AI对物理世界的理解能力，为下一代人机交互和智能辅助技术开辟新路径。"
+  },
+  {
+    "title": "生成不遗忘，「超长时序」世界模型！北大EgoLCD长短时记忆加持 - Sohu",
+    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNSy1WQ0E2dm9KRG91dzRSVWRJVEhSazYyV1JaYWYxTnBfdEVJaGh5X0VqekRIM1pxVGdnX3dDN3VpdzlDVTF6U2xHaGMtYmFhZUtzcTB6cUFFbEZkb1NVV2h1bFJwSC1UcHppVTh0emdnbXFsNmdnbTBTWXhlaTFBZTRKekROTWM?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "相关。北大团队提出EgoLCD模型，通过长短时记忆机制增强世界模型的时序处理能力，能有效生成“不遗忘”的连续场景。这为具身智能体提供了更精准的环境理解与长期规划基础，是推动机器人适应复杂动态环境的关键技术突破。"
+  },
+  {
+    "title": "为具身智能构建原生安全底座，永信至诚首发「数字风洞」具身智能原生安全解决方案 - A5站长网",
+    "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTE1DYzI4UXlVekkxNHQxMkFYQnZyc3Qyc3VSdmhIWWM2NUQtQmRfZHpCZjdWUVJjRkV3TUxHa2ZXd0FRSlczdl95b1lSbGFpYl9DaUZFQ2lvLUc5TUhHbXhIT1U3aw?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "永信至诚推出“数字风洞”具身智能原生安全解决方案，旨在为具身智能系统构建底层安全防护体系。该方案聚焦于机器人等实体智能体的数据安全、算法可靠与行为可控，是行业首次将安全测试评估体系前置化、原生化的尝试。其意义在于，为高速发展的具身智能产业提供了至关重要的安全基座，有助于防范潜在的数据泄露、决策错误或物理伤害风险，推动技术走向规模化、可信赖的落地应用。"
+  },
+  {
+    "title": "招商证券：具身智能投资缩圈与分化 2026年聚焦三大核心投资策略 提供者 智通财经 - 英为财情 Investing.com",
+    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE9UWGozZjlmd2JaR1c0MEhYeXpYMldncVlJRDVlWkZ3LWd5Q3BhREY2a0o0WFI3bE44cEY5NzVGOGZJdHJKUldtV0Rmaml4VEJ0UnNUWlNIbVU4OWJrbVpqRzNnNmxZZU54Ykt5aEw1Tk0?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "【核心内容】招商证券发布具身智能投资策略报告，指出行业投资正从广泛布局转向聚焦核心领域，预计到2026年将围绕三大核心策略进行重点投资。报告分析了行业分化趋势，强调投资需更具针对性。\n\n【行业意义】该报告为资本市场提供了明确的投资指引，反映了具身智能行业正从概念探索进入商业化落地关键期。投资策略的“缩圈”表明行业技术路径和商业模式逐渐清晰，有助于引导资源向具备核心竞争力的企业集中，加速产业成熟。"
+  },
+  {
+    "title": "美达推出Miro U，这是世界上第一款六臂人形机器人 - VOI.id",
+    "link": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE5fam1xZ1ViSVFLNkVkNnVpZ1pEV3ltQlo5ZFhOMm9Ic2tXNXk4YVh6X1QyOFVqNDFZRGVpbjdIOE1WTXFRYkZ1ZFJjWjQxSk3SAUJBVV95cUxOOXFFVGtyeDhVY3Y2bGNSankxTWtvUjBqSks4ek9EVmprNngzTUNlblRzcE1YaEZhcW9PSnZnWk1EeEE?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "美达公司推出全球首款六臂人形机器人Miro U，标志着具身智能领域在形态创新上取得重要突破。其多臂设计增强了机器人的操作灵活性和任务并行能力，有望在复杂工业装配、医疗辅助及科研实验中发挥重要作用。这一进展不仅推动了机器人仿生学的发展，也为未来人机协作场景提供了新的技术范式。"
+  },
+  {
+    "title": "杭州人形机器人初创公司有哪些？融资情况梳理 - Sohu",
+    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPV19sTVpBWU5oVXdYLVprcHlwcjljQ2lIcFZtWG0xVlNoQnY4QkNWZEtlNHhQeUFBdDBDNkpicXU2N2luQm1qMHQxQWJJSm4yVjJtUURIZGZSc3NtVDFCY2cyeXJFSUVtaDZSSjB4TWQwVDdqS0I2U1hSZW1lMEhjQnMwWWJrOGs?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "相关。本文梳理了杭州地区人形机器人初创公司及其融资情况，反映了该领域在资本市场的活跃度。核心内容包括列举代表性企业、分析融资轮次与规模，显示行业正从技术研发向商业化过渡。这为具身智能的产业落地提供了资金支持，加速人形机器人在服务、工业等场景的应用探索，推动产业链上下游协同发展。"
+  },
+  {
+    "title": "2025，具身智能正在惩罚“持有者” - 36kr.com",
+    "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE1vUDlPM2RxZVMzTXdBeVVuRnBvX3pabTZmUWoxV0dRNUxFTlRmNGFUVmVIdDdObnE5SUZCdTR4eXhxVVhHcFM5ZzhKalhhdw?oc=5",
+    "date": "2025-12-23",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "相关。标题暗示具身智能技术发展可能对早期投资者或从业者带来挑战，可能指向技术迭代过快、商业化不及预期等风险。这反映了新兴技术从概念到落地过程中的典型阵痛，提醒行业需平衡创新与可持续性，避免泡沫化发展。"
+  },
+  {
+    "title": "中邮证券：维持黑芝麻智能(02533)“买入”评级聚焦辅助驾驶、具身智能两大核心场景_市场分析 - 中金在线",
+    "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTFBfLTJoMW14UUNaNEhXUk8tN0hSMTV3dUtqenRPSVQwd01FQTdhS2ZYVDZKa3RVMmg4MV93VGxnYVp3TkcyREh4WExjdGVndGc0cUt1Rm10emFWMzcyTl9mUFdIVGRuZnlGVFBWSHF5dw?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "中邮证券维持黑芝麻智能“买入”评级，认为其聚焦辅助驾驶与具身智能两大核心场景。这反映出资本市场对自动驾驶芯片公司向具身智能领域拓展的认可，意味着相关技术平台（如高性能计算芯片）正成为驱动智能汽车与机器人产业融合发展的关键基础设施，行业技术栈趋于收敛。"
+  },
+  {
+    "title": "Richtech Robotics将在2026年CES展示人形机器人Dex 提供者 Investing.com - 英为财情 Investing.com",
+    "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBUeW1LaHFyLTRqMVNYTkw1MHVYWFZUWUtpekdfSDUxY2pNdzgxRlN4X2JJNlJ0QjBWYzREemJWbEF1ODJqR3VCVlFUM242NDd3NnZyX0NoSXNtNkhfZFZ4S2lEMm5QM0gtYzlmT05nbHM?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "Richtech Robotics计划在2026年CES上展示人形机器人Dex。这标志着具身智能领域正从概念验证迈向商业化展示的关键阶段。人形机器人作为通用AI的物理载体，其公开演示将加速相关产业链（如灵巧手、运动控制）的成熟，并为服务、制造等场景的自动化提供新范式。"
+  },
+  {
+    "title": "光大同创携手迪洛斯智能 推进具身智能轻量化材料AI研发 - 证券之星",
+    "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE5LMnRURGU0VFh5N1UzUURoeGllMlJKaTBDRE5pV3BuSVFUSkpZR1laRHJFcFFhY2ZfYkVnU21ObDBLN3ItT19XRFBSbktYM1JYbzlRZ01leFliUDE5X0xad1F3?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "光大同创与迪洛斯智能合作，聚焦具身智能轻量化材料AI研发。此举旨在通过人工智能优化材料设计，降低机器人等智能体的物理重量与能耗，提升运动效率。在具身智能领域，轻量化是突破运动瓶颈、实现更灵活交互的关键技术方向，此次合作有望加速高性能机器人本体的产业化进程。"
+  },
+  {
+    "title": "具身智能，吉利不想赶晚集 - 新浪财经",
+    "link": "https://news.google.com/rss/articles/CBMifEFVX3lxTE1ndFJLMmg2cDhaVHNrSjVnV3pPSF9FVGwtLUFKR3VKZGtwM0Fxd0Fva1oyUFpNREM5cGdTQ082NlA0UkZEYTRWYjVpOUpvZGREYzdWbjI4alExNTVOV0RHZkdndk5Mc1cxdFJiS0ZUYnFkUWlEQVh3NTZkQnc?oc=5",
+    "date": "2025-12-23",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "吉利布局具身智能，旨在抢占技术先机。此举不仅加速了汽车智能化进程，更将推动机器人、智能家居等领域的融合创新，为未来人机交互和自动化服务开辟新路径。"
+  },
+  {
+    "title": "云深处科技DR02重磅更新 运动控制能力取得突破式进展！ - Sohu",
+    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPaXB2MlgtV210V2tJRzF2amJxYXhNb09ZM0RxS3phRWMyb1pWTlZ0TXg4S29WWFRsZVFZUlJGbFlqcEY0UDlyeWNaNFdJUVBhUUJoVUR2SUxOVXc1VVNYcWJlbS15LXdVaWxRNlcxV0dOM0lyZXlaZzd3XzhNaHA5VTZic3FSN3c?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "相关。云深处科技发布DR02机器人运动控制重大更新，提升其动态平衡与复杂地形适应能力。这标志着国内四足机器人在运动算法与硬件协同上取得突破，对物流巡检、应急救援等具身智能应用场景的落地具有推动作用，加速机器人从实验室走向实际作业环境。"
+  },
+  {
+    "title": "银河通用机器人拿下1000 台机器人订单，推进具身智能工业场景深度应用 - 中国工控网",
+    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9NNHpBV0RkeHV4b1Y3T0dRSUVRMUZneUlqOUtSTmFtU2JfR24tX1gyQVFyQTJla2dxaFh0eF9OVXd1YmV1WFNyeUZHSlhBMHNrcnA5a2g3aGhyXzg?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "银河通用机器人获得千台订单，标志着具身智能在工业场景的规模化应用取得突破。这不仅加速了机器人从单一功能向通用化、智能化转型，也推动了制造业自动化升级，为工业智能化提供了可复制的商业落地路径。"
+  },
+  {
+    "title": "北京“搭台”助力机器人产业破局 - 新浪财经",
+    "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5vZmM1MURQNndHTDFkVkdGTEF1eThnS1A5MUJ3UUhRZTA5YnBsbENieTcyU1RYdkc2ZnF3SkhIQmJCMDBZWjJta0ZXdWVxWnRQbFFXR25RR2JsSHlDbmVXUldqaEhZY1ZEZGNnQWlKQWlCMldyVWktRQ?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "相关。北京市通过政策扶持与产业平台建设，推动机器人技术研发与应用落地，旨在突破关键技术瓶颈并完善产业链。此举将加速机器人产业的智能化升级，为制造业转型与服务业创新提供核心支撑，同时助力我国在高端装备领域提升国际竞争力。"
+  },
+  {
+    "title": "一线调查：入局者激增VS有效订单稀少 人形机器人距离“GPT 时刻 - Sohu",
+    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQRlluUGhfVjRDQzFWdWFpVDd5N285ZmZWdUdLMVE4V3BYSWRHOEZUVEJjQmxrbldUUktSM3hGb0tBMEJSNjNDWjAyVFh2RlpPQkFXY0JzNHpUQnVqQnJhMG5jcjFPb3pGNjVqdjY0YW5kZWdiakZUZ3R2bWd5MEdwcUpxVl9TU2s?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "相关。核心内容：文章探讨人形机器人行业当前面临“入局者激增但有效订单稀少”的矛盾现状，与自动驾驶类似，都处于技术积累与商业化落地的关键过渡期。行业意义：这反映了具身智能领域在硬件成本、场景适应性和技术可靠性上仍面临挑战，大规模应用尚需突破“有效需求”瓶颈，其发展路径可能类似自动驾驶，需经历从技术演示到稳定商业模式的漫长爬坡。"
+  },
+  {
+    "title": "不急于“抢跑”：Adam 全尺寸人形机器人首跳查尔斯顿舞，揭秘PNDbotics“先筑地基”的十年长跑战略 - Sohu",
+    "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxNVWdDS3FBUXlZSm9uZjJ1Uk1TNkNvaTJsTWNMaW9td3Qya1MwdTlvQ3JTVjFNUEJvMk1OOHg5a0xvMmNMODl4YVNXa25ObDdpbFpDRHM3NVZGX3JoNloxTDNmcHd5cmlsTWJaQ1ZnUlJTM1pJN21MTUYybUNSV2hsUWRhd25neUk?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "相关。该报道介绍了Adam全尺寸人形机器人完成复杂舞蹈动作，并揭示了其研发公司PNDbotics“先筑地基”的长期战略。这标志着人形机器人运动控制与全身协调能力取得重要进展，属于“具身智能”的核心范畴。其意义在于，通过底层技术（如运动规划、实时控制）的长期积累，而非追求短期展示，为机器人真正融入人类环境与任务执行奠定了更扎实的基础，体现了行业向实用化、稳健化发展的趋势。"
+  },
+  {
+    "title": "汽车零部件企业 逐浪人形机器人蓝海 - 新浪财经",
+    "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5aT2Z6eWNWcDh4UDd5eURFNkkzZ0Y3cFRBc1UwdGFqTVprcFZhYzBybGJ1V1pROXdOZVJ5OHh4cnlzZjcwZHNCV0tXREdhZG8wR3FTZ3RMaVYtVGtCS3hXX0hxS1cwVU10MG4zaHRnX2NaVkNucFFScg?oc=5",
+    "date": "2025-12-23",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "相关。该标题揭示汽车零部件企业正跨界布局人形机器人领域，这反映了具身智能产业的融合趋势。传统车企供应链凭借精密制造与成本控制优势，可能加速人形机器人的商业化进程，同时为自动驾驶技术积累感知与执行模块经验，推动智能硬件产业链升级。"
+  },
+  {
+    "title": "格松科技完成亿元级新一轮融资，全力提速具身智能规模化落地 - 新浪财经",
+    "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTFBaazhtVElDV01aSGZycmExNVpTUHhXd1VIMktNc1haajRWSm1nR2I4dVhScTllZDBkTHZIZGJkSEcwc0Fjb3NGTDVQREhZS0Z1RWhjdUM4eWQwMGtySS1oN19hYWhGRnlMdWs1WFd4RllDYmdzczFUeFR0aHV2WXM?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "格松科技获亿元融资，加速具身智能规模化落地。此举意味着资本正积极推动具身智能从实验室走向实际应用，有望在服务机器人、工业自动化等领域实现技术突破与商业变现，标志着行业进入产业化加速阶段。"
+  },
+  {
+    "title": "中美领跑人形机器人万亿赛道，日本急追补位！镁合金凭轻量化优势成隐藏赢家？ - 电子工程专辑",
+    "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE9idGJrdm1EQ3VLSXBWNnZ5cDRhSzhiOFpRQmFDRUlxZXZ0d0Vxbl9ublYxRnZfdlV0WWlNdjVPYmJMUC1OaFJKNlMycmxiUFFlLUJN?oc=5",
+    "date": "2025-12-23",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "该标题聚焦人形机器人产业竞争格局，指出中美在万亿级市场中处于领先地位，日本正加速追赶。同时点出镁合金材料凭借轻量化特性成为产业链中的关键受益者。这反映了具身智能领域对硬件轻量化和材料创新的迫切需求，轻量化材料将直接影响机器人的运动效率和能耗表现，是推动产业化落地的技术基石之一。"
+  },
+  {
+    "title": "我在武汉光谷教机器人学“做人” 图\\文 湖北日报全媒记者 朱熙勇 - 荆楚网",
+    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBEejI4MzlpUDRUeFo3R3RiSDNRRmJXXzExNDlQNGtMTHU3cVlueDc1Sk5hWWZ5VG5EMmZXSktkTVk3bHI1Wk9KT2Q1Xy1IYndwZnFpVHlXd2dwcnhqb0hUNFJzYXZCcVJWZmJKenlsUTdPUQ?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "相关。本文报道了武汉光谷在机器人领域的教学实践，核心是教导机器人更智能、更拟人化地执行任务，这直接关联“具身智能”的发展。其行业意义在于，通过具体场景的训练，能提升机器人的环境感知与交互能力，推动服务机器人、工业自动化等领域的实用化进程，是AI从虚拟智能迈向物理世界交互的关键一步。"
+  },
+  {
+    "title": "2025年人形机器人全自主足球技术体验营暨技术交流赛在济南开幕 - 大众网",
+    "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE4tVUJReDBHbkRmZFkzcEgyY05tUzJJMEVNdzBIMk9Sbm1wbjdpN2xUR0EzdnBTNUpMTWxPUmU3Wk96bk9vX0I1eWVCbmNaUy15bk1NNlF5ZTRfWWZJQy1halpHaDJjclRNbkE?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "相关。2025年人形机器人全自主足球赛在济南开幕，标志着具身智能技术从实验室走向复杂动态场景的实战演练。赛事不仅考验机器人的感知、决策与运动控制能力，更是推动通用人工智能与实体交互融合的关键测试场，为未来服务、工业及家庭机器人提供重要技术积累。"
+  },
+  {
+    "title": "中邮证券：维持黑芝麻智能“买入”评级 聚焦辅助驾驶、具身智能两大核心场景 - 新浪财经",
+    "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxOUTVWclFRMGZvdnVUUURwTjliY0VLc0ViRUdqTTZtZ2VjaGwxaWlnVFNpWHl6QnZiM3VnQjdIcUxZOThWMVFBLWlvcTRTWnlsd3JlRkhCbkIyYUVnOFZQUHJ3S2FPTFJYLV93RFlPM25ZRmw3YjFKRTM4aldCeXJrWXplNHdEU2FQaWlR?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "中邮证券维持黑芝麻智能“买入”评级，认为其聚焦辅助驾驶和具身智能两大核心场景具有战略前瞻性。这反映出资本市场对自动驾驶与具身智能融合趋势的认可，相关芯片与算法平台公司有望在AI赋能实体产业浪潮中占据核心生态位。"
+  },
+  {
+    "title": "赵何娟对话张宏江：世界模型已是兵家必争之地｜2025 T-EDGE全球对话 - 新浪财经",
+    "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE9jSXZUOEpaWFdReFNnaVlBWWtibEZYdFgxTWdaYTl4VFRocHI1UnZOaW54cXoybFVUU0staGlzQVdROEhLcVNPV0xaWFF6VFdSVndmSzZUSkNOTHdfVWdJRnY5bjI5TlFhVmE5MWY0Z25sUnVlaU0zVg?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "相关。该对话聚焦“世界模型”这一前沿技术，指出其已成为科技巨头和AI公司的竞争焦点。世界模型旨在让AI理解并预测物理世界的运行规律，是推动具身智能和自动驾驶实现高阶认知与决策的核心基础。其发展将加速AI从感知智能迈向认知智能的跨越，对机器人、自动驾驶等需要与复杂真实环境交互的领域具有里程碑意义。"
+  },
+  {
+    "title": "2026年人形机器人市场看点？大摩：短期炒作会继续，特斯拉是焦点，美政府和大厂会入局，但中美差距在扩大 - 新浪财经",
+    "link": "https://news.google.com/rss/articles/CBMiyARBVV95cUxOR1laVTJ6WG1oRzlySk1oWEc1ODd2ZFdaZUZZSWxMamR4aHJtcG9oZXM5S1U2eWVUMklkN0hrZVJkU2tzNGZXVHR2dWZaZHR1ODR1SkJDVDVzbkczWXFIVl9zRTFwdGtlVTE3OE0tM3dkZGtFR3IwbWJOdm4xempseHZUc2RYUDRhaENmSHdoNjdVZFQ3TWpyTWQwX1RHNHdGM2V6QWczdk81ejRaZmREMHRMWEZDdzVwdUpoV1FFZGVXN21HbjF3MWE5RGhLNmZIYWJ3YzlkZWdDSmVNbTlTXzJ5Wi1QUnI4aFBsTW9MTkF6ZE5McE9RX3RXTVJJUHlxaWtrekI1NGhtRFYxV0R5SDFlVjhuSUNuek9ldVR1b1FqMWdQNk1LSGx2cWJaU0RiUklDN1U2VDNMNlhoSXdfbEZuUmFWN21uVGItVHBKZ0ZCQWtWSzN2bnJ6Q3NUUlRxT2gwX0doVzhTZ1Q0OUg0YXJtWFBYTXRsWnh3RjMzbnVsbnRtWDNWaXhueVVoRUVFYjQtaThWX3dfTTV0VERSREJJX0FORmRVcHpRdUJGRUVmZTNnQkFnVlM0V2h3cWI5SXVfUl9UUFRVV1p0UVNTeFBzTHk5dXd1OVYzRjYwUWlnYUgyZWdLMnAzQVAtVmtVWktvSnQ4UmJVMEhPYmlIMllhMEphcG1HakhIRDZ6ZmU4UWNodFdaWTA2Ykd4eVR1ZGhXNDJ3T3hDRFNXQ1FPNnMxbG5pbzJ4NmxEdl9UWFhOeVBMMU1IXw?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "相关。核心内容：摩根士丹利预测2026年前人形机器人市场将维持短期炒作，特斯拉是焦点，同时美国政府和科技巨头将加大投入，但中美在该领域的技术差距可能扩大。行业意义：这反映了人形机器人作为具身智能的关键载体，正从概念验证走向产业竞赛，国家战略与巨头布局将加速技术落地，但全球供应链与研发能力的差异可能导致市场格局分化。"
+  },
+  {
+    "title": "三季度归母净利润增4倍 震裕科技拟募资不超18.8亿元，瞄准人形机器人等赛道 - 新浪财经",
+    "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE1wWHh4VnNUNmlzTVBGU0lCck1rWkNMVFV1bmdpMVRxRGV4NmI2T1E3d19KbFBBUVFKQ2NyamVueEVBOVlGMFkxdWw5MVhPOXI5anRlUGxzcDVBV3pBNnRfNE1lN2NzS0hVTkxjMzRWWF93UnVpbVNFeQ?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "震裕科技三季度净利润大幅增长，并计划募资投向人形机器人等前沿领域。这表明公司正积极布局具身智能赛道，将精密制造能力延伸至机器人核心零部件。此举不仅加速了人形机器人的产业化进程，也反映出资本市场对具身智能未来前景的持续看好。"
+  },
+  {
+    "title": "广东省具身智能仪器装备研究院有限公司成立 - zqrb.cn",
+    "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1mLXJ2NHBkb2hkZE10ZHVSbmpWejA2d0EwbFE2QXQzbi04NDlPaUdpbThpcC0zclliVzd2aDJQc1ROZFBEcHlMRFpQMG51S1NGREFEaDJHcGNQby1lQlZLRmFyQjJ3eVJaRHNZd3g3V3d2dw?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "广东省成立具身智能仪器装备研究院有限公司，标志着该省在具身智能领域迈出重要一步。此举将推动智能仪器与装备的研发，促进人工智能与实体经济的深度融合，为制造业升级和智能产业发展提供技术支撑，助力区域经济高质量发展。"
+  },
+  {
+    "title": "江西：加大具身智能、消费电子等领域传感器研发生产，加快智能穿戴、虚拟现实等领域产品创新 - 新浪财经",
+    "link": "https://news.google.com/rss/articles/CBMimAFBVV95cUxNcWVTS3U4a0k5aUJ6NjVxTEttblV0R2RMcE1DMEZhMUk2VW1zdmt4em10Wm9uQ3lrUE5Yb3hwcDEzbTBTMTFHVjU1NnEyTlcyLVhhazMtalZrczZ3M1BpXzVOcjJ4MnlVT2Y2c1B5N3lQVGJGVzdsNGJSR0o1anpuME9JNHZSZ2k2OXlDeXU5M1dPcFVWVkJ4WA?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "江西推动传感器研发与智能穿戴创新，旨在强化具身智能与消费电子产业链。此举将提升本地硬件制造能力，加速虚拟现实等终端产品落地，对区域科技产业升级和全国智能硬件生态发展具有战略意义。"
+  },
+  {
+    "title": "商汤科技王晓刚：具身智能需要从“以机器为中心”转向“以人为中心”的研发 - 新浪财经",
+    "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE8yQUQtRElmei1CMUhGcWNjWTMwU3BoM0RVQVhQbWtodjVvMkcxMFJpbmFpeUFKYV9IbVRQRU9VVW5kaVd0Mzg4Nnk2RzZ0bFR1MFJKd3ZIRGpZMlFCY1dwR0RvRG1iLU9OV3gzcUdLMDdFSWk3b2JVOQ?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "商汤科技王晓刚提出，具身智能的研发需从“以机器为中心”转向“以人为中心”。这强调了技术应更注重理解人类意图、适应复杂环境并与人自然协作，而非单纯追求机器自主性。这一转向将推动服务机器人、智能汽车等产业向更安全、易用和人性化的方向发展，是AI落地的重要演进方向。"
+  },
+  {
+    "title": "免费下载！《具身智能复合移动机器人产业发展蓝皮书》 - 电子工程专辑",
+    "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE1NaWx5QTlNZlczQWlJWXkwcVF4cGtoZTNxTXp6R2Z0TGdRV1B4Y3k5dndFNjZ2STBaM215YnNXUkhsbi1wSTQ4MXZ1MjBfLXJWU0c0?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "相关。该蓝皮书系统梳理了具身智能复合移动机器人的技术架构、应用场景及产业趋势，为行业提供了关键发展指引。其发布有助于推动机器人从单一功能向多模态智能体演进，加速工业自动化与智能服务落地，对产业链协同创新具有重要参考价值。"
+  },
+  {
+    "title": "最近爆火的VLA是什么？它和“世界模型”有什么关系吗？ - 汽车之家",
+    "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE9nMWtpSi15eUp0V1BXZ3JWZzNUVGRrUDJZMmlxMEhqdE9MUUFoWXlkZGF3dTJVMWRxTXZ5LW8zMHRhMkREdi1WWDFrdklOVjRqTUxLQmt6S2VqUWM?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "VLA（视觉语言动作模型）是具身智能的核心技术，它让AI能通过视觉和语言理解环境并执行动作。它与“世界模型”紧密相关，后者预测动作后果，共同推动自动驾驶向更智能的决策发展。这标志着AI从被动感知迈向主动交互，为无人驾驶的可靠性和适应性奠定基础。"
+  },
+  {
+    "title": "提速具身智能规模化落地，格松科技完成亿元级天使轮融资 - 投资界",
+    "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE00eWs2YmxqV1h1NzVvLU1PZy1vTzFZNUxZcDVHaE5XVVN6eU1uMzFXdWM0VTh6dzZRMkYySkgzaFZZTlp0emYxeFpieG1kR3ZGWHJuZEh3?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "格松科技完成亿元级天使轮融资，旨在加速具身智能技术的规模化应用。此举不仅为该公司提供了充足的研发资金，也反映出资本市场对具身智能这一前沿领域的看好。融资将助力技术从实验室走向实际场景，推动机器人更智能地理解并与物理世界互动，对服务机器人、工业自动化等行业的发展具有积极意义。"
+  },
+  {
+    "title": "智者勇进•接续奋进新江苏|苏州吴中区：全力迈向全球具身智能产业创新高地 - 紫牛新闻",
+    "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTE5feGhmc181V0UyRG9WVjV3VFgxaDNuLURRQm1NbDZwemxucEtfYm15UWZOZVM0aXI1MWxRTmQzXzdxLUh6XzlLbktTcDFGbUlGVk4wZkZhM1hpSnVmVzNONWZhbXYtSGhLZkNSTkQ2NUVQd282THpXdQ?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "苏州吴中区正全力打造全球具身智能产业创新高地，这标志着地方政府正积极布局具身智能这一前沿科技领域。此举不仅将推动机器人、智能设备等硬件研发与AI技术的深度融合，还能促进产业链上下游协同创新，为区域经济注入新动能。从行业角度看，地方政府的战略支持有望加速具身智能从实验室走向产业化，助力我国在全球人工智能竞争中抢占先机。"
+  },
+  {
+    "title": "一线调查：入局者激增VS有效订单稀少 人形机器人距离“GPT时刻”还有多远？｜一探 - 第一财经",
+    "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE1kYkJQY0RFLWtjaWRhU0xILXBCTzdoNDc1cUN0LVBlU2NnSzU2OWJqOXpOWjFoTklDMDEzQ3ZqTXp3cWlvMk1wUUtHcmZsOVRVUXc?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "相关。本文探讨人形机器人行业当前面临的挑战，即尽管入局企业激增，但有效订单稀少，商业化进程缓慢。核心在于分析人形机器人技术是否已临近类似ChatGPT的爆发临界点（“GPT时刻”）。其行业意义在于，揭示了在资本热捧下，该领域仍需在核心技术突破、成本控制及明确应用场景上取得实质性进展，才能真正走向大规模产业化。"
+  },
+  {
+    "title": "九江具身智能技术有限公司成立 - zqrb.cn",
+    "link": "https://news.google.com/rss/articles/CBMib0FVX3lxTE9aWU9NY255b1BPR1JOOHowU2Y5UGhscDhZenF0TXVEc0F3Z2ZVNzlNcUlEd2xVR3RtclFQMFlQaGRGeXRaQjdfN0g5cnpFaTBzVnBoU0hfaEhJYzV2Skhsdko1Mkpjc1ZfdG1ERnI0VQ?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "九江成立具身智能技术公司，标志着该领域产业化进程加速。核心在于推动机器人感知、决策与执行一体化技术落地，尤其在工业自动化、服务机器人等场景。此举将促进区域科技产业升级，吸引相关人才与资本聚集，为智能机器人生态发展注入新动力。"
+  },
+  {
+    "title": "大众点题我来答丨盐城具身智能如何成势？ - ycnews.cn",
+    "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBuSk1PN1haWFd2Z2dXbTMxMEVhTC1HWU54Y1pWMl9aZkQ2OTBzS2w4LVVZTFJCeExzSEs4NzhqNjVacWNNSmpVSjhiT3VaeDFEbVJYQXFnd1F5S25sRXB5NEdhQVNVQQ?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "盐城正积极布局具身智能产业，通过政策引导与产学研合作，推动机器人、智能装备等实体智能体与环境的交互能力提升。此举不仅加速了当地智能制造升级，也为长三角地区人工智能与实体经济融合提供了新范式，有望形成区域性的技术创新集群。"
+  },
+  {
+    "title": "恒帅股份：公司在人形机器人和工业自动化等新赛道的拓展中将不断加强研发投入 - 东方财富",
+    "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBhdWhmV0ozZy1vbmMtQmoxQ0tZSm9tdVJPX2V3ZV83RXJLZjV6Y3FkZUtHRlFabTg0ZW10NGFZcWdDQWV1ak9rS2w4U2lWNkxEYVp1S3Y4bmltWjNEN2lWNThZLW11Zw?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "恒帅股份宣布将加大在人形机器人和工业自动化领域的研发投入，这标志着公司正积极布局具身智能新赛道。此举不仅有助于提升其在智能机器人核心部件（如电机、传感器）的技术积累，也反映了传统汽车零部件企业向高附加值产业延伸的趋势，可能推动产业链上下游协同创新。"
+  },
+  {
+    "title": "吃透人形机器人感知链，权威报告重磅发布！ - 电子工程专辑",
+    "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTE43TkU0dUxrS1JMS0NTdTFtajNCZmdCdzFENFRVNW11bDJmSmF2aDhIYXVLMktkcEJPVV9TWXdXdVlOamRlMjVPcERsdFRFdXBpNnNr?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "相关。该报告聚焦人形机器人感知技术，系统梳理了传感器融合、环境交互等关键环节，为具身智能的落地提供了重要参考。这标志着机器人正从单一功能向综合智能体演进，将加速工业自动化、家庭服务等场景的应用突破。"
+  },
+  {
+    "title": "人形机器人创纪录融资背后：银河通用3亿美元“压注”的产业棋局 - 新浪财经",
+    "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxPb2NHUUsxbGlkREdvTjQ3bnppS1lROTdKZmJ1SnBNbVFnNVJMbDlXZXpfYXZsS1hHWktaVW5nSG1xRkpLYkVUaEptdnV6YzN4czdleUdPbVlpVXk0WWh0S3FQdF9BNWxSd1JTVG5sMC1GWmhNemx0cU9TM19ZQXBxcllB?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "相关。银河通用获得3亿美元融资，创下人形机器人领域单笔融资纪录，显示资本对具身智能赛道的强烈信心。这轮融资将加速人形机器人的技术研发和商业化进程，推动其从实验室走向工业与家庭应用。高额融资也预示着行业竞争加剧，可能催生更成熟的产品和解决方案，对智能制造、服务业自动化产生深远影响。"
+  },
+  {
+    "title": "江苏具身智能机器人产业推进会凝共识：既探索应用“落点”，也避免“一拥而上” - 新浪财经",
+    "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNd29vblJMWDM2YkpqakJscTRHbjlwaWFIQmk0ZkpZa3dhWVgwYlllX1NEZVREMnQtSFpzZWNCbXowX0x0X0NaZzVNU0FWdWVxbU9pUmpsRXBXQlE0MnA1Y1NnR0traVBPbkYtdE94QW9RMjdXbS16aHVMMHN1TF9RemVGXzJIS0FWejEwREpFNlRWVGQ0T016SG1CWXl4Qzc4WVlRSV9HMHZkNG9BTGIw?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "江苏召开具身智能机器人产业推进会，强调既要探索应用场景的“落点”，也要避免产业“一拥而上”。这体现了地方政府在推动前沿技术产业化时的审慎态度，旨在引导行业健康、有序发展，防止低水平重复建设和资源浪费，对于夯实产业基础、聚焦核心突破具有积极意义。"
+  },
+  {
+    "title": "院士专家共话光电材料、人形机器人未来发展 - 科学网—新闻",
+    "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9EdktFX3ZfZWJWWDBiWEsyMDZBNnF4dExpdkpPYU1nSnlZZTdKaUN1cGpkNUFlOHo0Rjhsb3RMamk2bHF0OXQ0TjQ3Z1FVZHR1emdqaXJGa05VWVZTdWF2cWtFbTE2dw?oc=5",
+    "date": "2025-12-24",
+    "source": "CN·行业动态",
+    "lang": "CN",
+    "summary": "相关。该新闻聚焦光电材料与人形机器人两大前沿领域，院士专家共话未来发展，核心在于探讨如何通过光电材料创新提升机器人感知与交互能力。这直接关联具身智能，因为高性能传感器和智能材料是实现机器人环境适应与自主行动的关键基础，将推动服务、工业等场景的机器人智能化升级。"
+  },
+  {
     "title": "Tesla Optimus机器人跑步短片 跑姿与人类极似 速度达14km/h - MSN",
     "link": "https://news.google.com/rss/articles/CBMixAJBVV95cUxOelpjdUpwWDllbnJxSFFzY1VjRVEyUlZ2MF8tV3BEVlVQZm92ZEZZamliMWlPNzVlRnhrNUd1UUdxTjlQR0Zkbzh1S1lSWjJHcWthR0FVQTV1YWNhNzY4T1EySkpaUzUtRldqWFBWOGVzMVVvZEs5RVNicFVoNFJLSVFoWV9adTVmX21DY2FVWUtxUEt5dk9xMXRhQ0RkdmowZ0g4dEdNSi10ODZBRTRXb2RWdV9XVmc4dnRmOU5qNlNZLTZDeThJOVp6NWdpREF0VFZpc3BJY2hnUU9DVV8wX2QxTHZueWNrMHg4d2NucVJ6Qm5EbVhkYUllSERPRUtfMG5mdU1hdEtFM1ItZGZDbk4tX2RxNVZZUDBzR01mY1VXeERsWjNxakVpN2NiLXdGcFFIODFDcmxMNGZpY0c4dVd3S3Q?oc=5",
     "date": "2025-12-21",
