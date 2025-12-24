@@ -6,55 +6,54 @@
     <title>具身智能 & 自动驾驶内参</title>
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
     <style>
-        /* --- 全局设置：更现代的字体和背景 --- */
+        /* --- 全局设置 --- */
         :root {
-            --primary-color: #3498db; /* 主色调：科技蓝 */
+            --primary-color: #3498db; /* 科技蓝 */
             --secondary-color: #2c3e50; /* 深色文字 */
             --bg-light: #f8f9fa; /* 浅色背景 */
-            --sidebar-bg: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); /* 侧边栏渐变背景 */
+            --sidebar-bg: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
         }
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; 
             background: var(--bg-light); color: #333; margin: 0; padding: 0; line-height: 1.6;
         }
         
-        /* --- 核心布局：Grid 双栏 (增加整体内边距) --- */
+        /* --- 布局 --- */
         .container {
             max-width: 1200px; margin: 0 auto; padding: 30px 20px;
             display: grid; 
-            grid-template-columns: 340px 1fr; /* 左侧稍宽一点 */
+            grid-template-columns: 340px 1fr;
             gap: 35px; align-items: start;
         }
 
-        /* --- 左侧日报栏 (美化重点) --- */
+        /* --- 侧边栏 --- */
         .sidebar {
             background: var(--sidebar-bg); color: rgba(255,255,255,0.9); 
             border-radius: 16px; padding: 30px;
             position: sticky; top: 30px;
             max-height: calc(100vh - 60px); overflow-y: auto;
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15); /* 更强的立体感 */
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
         }
         .sidebar-header { border-bottom: 1px solid rgba(255,255,255,0.15); padding-bottom: 15px; margin-bottom: 20px; }
         .sidebar h2 { margin: 0; font-size: 1.5em; color: white; display: flex; align-items: center; gap: 10px; }
         .sidebar-date { font-size: 0.85em; color: rgba(255,255,255,0.6); margin-top: 5px; display: block; }
         
-        /* Markdown 内容美化 */
+        /* Markdown 内容 */
         .brief-content { font-size: 0.95em; }
         .brief-content h3 { color: #5dade2; margin-top: 25px; font-size: 1.15em; display: flex; align-items: center; }
-        .brief-content h3::before { content: '🔹'; font-size: 0.8em; margin-right: 8px; } /* 给小标题加装饰 */
-        .brief-content strong { color: #f4d03f; font-weight: 600; } /* 强调文字标黄 */
+        .brief-content h3::before { content: '🔹'; font-size: 0.8em; margin-right: 8px; }
+        .brief-content strong { color: #f4d03f; font-weight: 600; }
         .brief-content ul { padding-left: 20px; }
         .brief-content li { margin-bottom: 10px; }
         .sidebar-loading { text-align: center; color: rgba(255,255,255,0.5); padding: 40px 20px; background: rgba(0,0,0,0.1); border-radius: 12px; }
 
-        /* --- 右侧新闻流 --- */
+        /* --- 主内容区 --- */
         .main-content { min-width: 0; }
-        
         .header { margin-bottom: 30px; text-align: center; }
         .header h1 { margin: 0; color: var(--secondary-color); font-size: 2em; font-weight: 800; letter-spacing: -1px; }
         .header p { color: #666; margin-top: 5px; }
 
-        /* 筛选按钮 (胶囊样式) */
+        /* 筛选按钮 */
         .filters { display: flex; gap: 12px; justify-content: center; margin-bottom: 30px; flex-wrap: wrap; }
         .filter-btn { 
             background: white; border: none; padding: 8px 18px; border-radius: 30px; 
@@ -64,17 +63,14 @@
         .filter-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
         .filter-btn.active { background: var(--primary-color); color: white; box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3); }
 
-        /* --- 新闻卡片 (更干净、悬浮感) --- */
+        /* 新闻卡片 */
         .card { 
             background: white; border-radius: 16px; padding: 25px; margin-bottom: 20px; 
-            /* 去掉边框，改用柔和的阴影 */
-            border: none;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.03); 
+            border: none; box-shadow: 0 4px 12px rgba(0,0,0,0.03); 
             cursor: pointer; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
             position: relative; overflow: hidden;
         }
         .card:hover { transform: translateY(-5px); box-shadow: 0 12px 24px rgba(0,0,0,0.08); }
-        /* 给卡片加一个微妙的顶部彩色条装饰 */
         .card::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: linear-gradient(90deg, var(--primary-color), #a1c4fd); opacity: 0; transition: opacity 0.3s; }
         .card:hover::before { opacity: 1; }
 
@@ -83,21 +79,16 @@
         .tag-cn { background: #ebf5fb; color: #2980b9; }
         .tag-en { background: #f4ecf7; color: #8e44ad; }
         .tag-paper { background: #fef5e7; color: #d35400; }
-
         .title { font-size: 1.3em; font-weight: 700; color: #2c3e50; margin-bottom: 15px; line-height: 1.4; }
         
-        /* AI 摘要框 (重新设计成对话气泡风格) */
         .summary-box { 
-            background: #f1f9ff; /* 极淡的蓝色背景 */
-            padding: 15px 20px; border-radius: 12px; 
+            background: #f1f9ff; padding: 15px 20px; border-radius: 12px; 
             font-size: 0.95em; color: #445566; line-height: 1.6;
-            position: relative;
-            display: flex; gap: 12px; align-items: flex-start;
+            position: relative; display: flex; gap: 12px; align-items: flex-start;
         }
-        /* 加一个机器人图标 */
         .summary-box::before { content: '🤖'; font-size: 1.4em; }
 
-        /* --- 翻页 & 跳转 (新增样式) --- */
+        /* --- 翻页 & 跳转栏 --- */
         .pagination { 
             display: flex; justify-content: center; align-items: center; gap: 15px; 
             margin-top: 40px; background: white; padding: 20px; border-radius: 16px; 
@@ -117,8 +108,8 @@
         .jump-btn { background: var(--secondary-color); color: white; border: none; padding: 8px 18px; border-radius: 8px; cursor: pointer; font-weight: 600; transition: 0.2s; }
         .jump-btn:hover { background: #1a252f; transform: translateY(-1px); }
 
-        /* --- 弹窗美化 --- */
-        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(44, 62, 80, 0.7); /* 深色半透明背景 */ z-index: 1000; align-items: center; justify-content: center; backdrop-filter: blur(5px); /* 背景模糊 */ }
+        /* --- 弹窗 --- */
+        .modal-overlay { display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(44, 62, 80, 0.7); z-index: 1000; align-items: center; justify-content: center; backdrop-filter: blur(5px); }
         .modal-content { background: white; width: 90%; max-width: 650px; border-radius: 20px; padding: 35px; position: relative; box-shadow: 0 20px 40px rgba(0,0,0,0.2); animation: slideUp 0.3s ease; }
         @keyframes slideUp { from {transform: translateY(20px); opacity: 0;} to {transform: translateY(0); opacity: 1;} }
         .close-btn { position: absolute; top: 20px; right: 25px; font-size: 28px; cursor: pointer; color: #ccc; transition: 0.2s; }
@@ -128,7 +119,6 @@
         .read-btn { display: flex; align-items: center; justify-content: center; gap: 10px; width: 100%; text-align: center; background: var(--primary-color); color: white; padding: 15px; border-radius: 12px; text-decoration: none; font-weight: 700; font-size: 1.1em; transition: 0.2s; box-shadow: 0 4px 15px rgba(52, 152, 219, 0.4); }
         .read-btn:hover { background: #2980b9; transform: translateY(-2px); }
 
-        /* 移动端适配 */
         @media (max-width: 900px) { 
             .container { grid-template-columns: 1fr; gap: 30px; } 
             .sidebar { position: static; max-height: 500px; } 
@@ -151,7 +141,6 @@
             <div class="sidebar-loading">
                 <p style="font-size: 3em; margin-bottom: 10px;">📊</p>
                 正在分析今日数据，生成 AI 综述...<br>
-                <span style="font-size:0.8em; opacity:0.7;">(若长时间未显示，请检查 Actions 运行状态)</span>
             </div>
         </div>
     </aside>
@@ -182,7 +171,7 @@
             
             <div class="jump-box">
                 <span style="color:#999; font-size: 0.9em;">跳转至</span>
-                <input type="number" id="jumpInput" class="jump-input" min="1">
+                <input type="number" id="jumpInput" class="jump-input" min="1" onkeypress="if(event.keyCode==13) jumpToPage()">
                 <button class="jump-btn" onclick="jumpToPage()">Go</button>
             </div>
         </div>
@@ -195,9 +184,7 @@
         <span id="m-tag" class="tag" style="font-size: 0.8em;">TAG</span>
         <h3 id="m-title" class="modal-title"></h3>
         <div id="m-body" class="modal-body"></div>
-        <a id="m-link" href="#" target="_blank" class="read-btn">
-            阅读原文 / 查看详情 ↗
-        </a>
+        <a id="m-link" href="#" target="_blank" class="read-btn">阅读原文 / 查看详情 ↗</a>
     </div>
 </div>
 
@@ -205,37 +192,64 @@
     let allData=[], filteredData=[], curPage=1; 
     const perPage=6; // 每页显示 6 条
 
-    // 1. 加载新闻
-    fetch('data.json?t='+Date.now()).then(r=>r.json()).then(data => {
-        if(!data.length) { document.getElementById('list').innerHTML='<div style="text-align:center;padding:60px;color:#aaa;">📭 暂无数据，请等待 AI 抓取...</div>'; return; }
-        data.sort((a,b) => new Date(b.date)-new Date(a.date));
-        allData = data; 
-        filter('all');
-        document.getElementById('pagination').style.display='flex'; // 数据加载成功显示分页栏
-    }).catch(e=>console.log(e));
+    // 1. 加载新闻数据
+    fetch('data.json?t='+Date.now())
+        .then(r => {
+            if (!r.ok) throw new Error("无法读取文件");
+            return r.json();
+        })
+        .then(data => {
+            initApp(data);
+        })
+        .catch(e => {
+            console.warn("数据加载失败 (可能是本地运行或文件缺失)。正在生成测试数据以展示 UI...", e);
+            // --- 模拟测试数据 (确保你能看到 UI) ---
+            const mockData = Array.from({length: 25}, (_, i) => ({
+                title: `[测试] 这是第 ${i+1} 条新闻标题`,
+                source: i%3===0?'Paper':(i%2===0?'Embodied AI':'Auto Drive'),
+                date: '2025-01-01',
+                summary: '这是一条自动生成的测试数据，用于演示【翻页】和【跳转】功能是否正常。因为 data.json 加载失败了，所以你看到的是这些假数据。',
+                link: '#',
+                lang: i%4===0?'EN':'CN'
+            }));
+            initApp(mockData);
+        });
 
-    // 2. 加载日报
+    // 2. 加载日报 (非核心，失败忽略)
     fetch('daily_brief.json?t='+Date.now())
         .then(r => r.ok ? r.json() : Promise.reject())
         .then(data => {
             document.getElementById('brief-date').innerText = data.date;
-            // 使用 marked 渲染 Markdown
             const htmlContent = marked.parse(data.content);
-            document.getElementById('brief-container').innerHTML = `
-                <div class="brief-content">${htmlContent}</div>
-            `;
+            document.getElementById('brief-container').innerHTML = `<div class="brief-content">${htmlContent}</div>`;
         })
         .catch(() => {
-            // 保持默认的加载中占位符
+            document.getElementById('brief-container').innerHTML = '<div style="padding:20px;opacity:0.6;text-align:center;">暂无日报数据</div>';
         });
+
+    // --- 核心逻辑 ---
+    function initApp(data) {
+        if(!data || !data.length) { 
+            document.getElementById('list').innerHTML='<div style="text-align:center;padding:60px;color:#aaa;">📭 暂无数据</div>'; 
+            return; 
+        }
+        // 按日期排序
+        data.sort((a,b) => new Date(b.date)-new Date(a.date));
+        allData = data;
+        
+        // 显示分页栏 (关键！)
+        document.getElementById('pagination').style.display = 'flex';
+        
+        // 初始渲染
+        filter('all');
+    }
 
     function filter(tag) {
         document.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
         event.target.classList.add('active');
-        filteredData = tag==='all'?allData:allData.filter(i=>i.source.includes(tag)||(tag==='具身智能'&&i.source.includes('Embodied')));
+        filteredData = tag==='all' ? allData : allData.filter(i=>i.source.includes(tag)||(tag==='具身智能'&&i.source.includes('Embodied')));
         
-        // 每次筛选重置为第一页
-        curPage = 1; 
+        curPage = 1; // 切换分类时重置到第一页
         render();
     }
 
@@ -243,14 +257,14 @@
         const list = document.getElementById('list'); 
         list.innerHTML='';
         
-        // 分页逻辑
+        // 分页切片
         const start = (curPage - 1) * perPage;
         const end = start + perPage;
         const pageData = filteredData.slice(start, end);
 
         if(!pageData.length) { 
             list.innerHTML='<div style="text-align:center;padding:60px;color:#aaa;">该分类下暂无内容</div>'; 
-            updatePageInfo(); // 更新页码显示为 1/1 或 0
+            updatePageInfo();
             return;
         }
         
@@ -262,7 +276,7 @@
                 <div class="meta"><span class="tag ${tagType}">${item.source}</span><span>${item.date}</span></div>
                 <div class="title">${item.title}</div>
                 <div class="summary-box">
-                    <div>${item.summary||"AI 正在全力生成解读中，请稍后..."}</div>
+                    <div>${item.summary || "暂无解读"}</div>
                 </div>
             `;
             list.appendChild(d);
@@ -276,7 +290,7 @@
         const displayTotal = total > 0 ? total : 1;
         document.getElementById('pageInfo').innerText = `${curPage} / ${displayTotal}`;
         
-        // 控制按钮状态
+        // 按钮状态控制
         document.getElementById('prev').disabled = curPage === 1;
         document.getElementById('next').disabled = curPage === displayTotal || displayTotal === 0;
     }
@@ -284,7 +298,6 @@
     function changePage(d) { 
         curPage += d; 
         render(); 
-        // 翻页后平滑滚动到列表顶部
         window.scrollTo({ top: 0, behavior: 'smooth' }); 
     }
     
@@ -297,9 +310,9 @@
             curPage = p; 
             render(); 
             window.scrollTo({ top: 0, behavior: 'smooth' }); 
-            input.value = ''; // 清空输入框
+            input.value = ''; 
         } else {
-            alert('请输入有效的页码 (1-' + total + ')');
+            alert('请输入有效的页码 (1-' + (total||1) + ')');
         }
     }
 
@@ -307,13 +320,10 @@
         const tagEl = document.getElementById('m-tag');
         tagEl.className = `tag ${tagType}`;
         tagEl.innerText = item.source;
-
-        document.getElementById('m-title').innerText=item.title;
-        const bodyText = item.summary === "AI 正在全力生成解读中，请稍后..." ? "🤖 AI 尚未完成对该内容的深度分析，请稍后再试。" : (item.summary || "暂无解读");
-        document.getElementById('m-body').innerText = bodyText;
-
-        document.getElementById('m-link').href=item.link;
-        document.getElementById('modal').style.display='flex';
+        document.getElementById('m-title').innerText = item.title;
+        document.getElementById('m-body').innerText = item.summary || "暂无详细解读";
+        document.getElementById('m-link').href = item.link;
+        document.getElementById('modal').style.display = 'flex';
     }
 </script>
 </body>
