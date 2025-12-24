@@ -17,13 +17,12 @@ jobs:
         python-version: '3.9'
     - run: pip install requests
     
-    # 👇【核心修改1】在运行脚本前，先把远程最新的 data.json 拉下来
-    # 如果远程没有 data.json，这一步会提示但不会报错，不影响后续
-    - name:以此为基准拉取最新数据
+    # 关键步骤：先拉取远程最新数据
+    - name: 拉取最新代码
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git pull origin main || echo "远程还没有 data.json，跳过拉取"
+        git pull origin main || echo "远程暂无数据，跳过"
     
     - name: 运行历史挖掘
       env:
@@ -34,5 +33,4 @@ jobs:
       run: |
         git add data.json
         git commit -m "History update" || echo "无新数据"
-        # 👇【核心修改2】最后上传时，如果又冲突了，强制以现在的为准
         git push origin main
