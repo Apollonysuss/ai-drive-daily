@@ -19,12 +19,12 @@ jobs:
         python-version: '3.9'
     - run: pip install requests
     
-    # 👇 先拉取旧数据
-    - name: 拉取最新数据
+    # 关键步骤：先拉取远程最新数据
+    - name: 拉取最新代码
       run: |
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git pull origin main || echo "远程暂无数据"
+        git pull origin main || echo "无需更新"
     
     - name: 运行每日抓取
       env:
